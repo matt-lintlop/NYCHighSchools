@@ -27,6 +27,9 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail()
             return
         }
+        let url = URL(fileURLWithPath: path)
+        let nycHighSchoolsXMLData = try? Data(contentsOf: url)
+        XCTAssertNotNil(nycHighSchoolsXMLData)
     }
     
     private func load_NYC_HighSchools_SAT_XML_Data() {
@@ -34,6 +37,9 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail()
             return
         }
+        let url = URL(fileURLWithPath: path)
+        let nycSATXMLData = try? Data(contentsOf: url)
+        XCTAssertNotNil(nycSATXMLData)
    }
 
     override func tearDown() {
