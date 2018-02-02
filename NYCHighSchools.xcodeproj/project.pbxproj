@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		348F8E862023FC0100762920 /* Test_High_Schools_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E842023FC0100762920 /* Test_High_Schools_Data.xml */; };
-		348F8E872023FC0100762920 /* Test_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E852023FC0100762920 /* Test_SAT_Data.xml */; };
 		34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C462023E58D0025DE07 /* AppDelegate.swift */; };
 		34B28C492023E58D0025DE07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C482023E58D0025DE07 /* ViewController.swift */; };
 		34B28C4C2023E58D0025DE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B28C4A2023E58D0025DE07 /* Main.storyboard */; };
@@ -28,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		348F8E842023FC0100762920 /* Test_High_Schools_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_High_Schools_Data.xml; sourceTree = "<group>"; };
-		348F8E852023FC0100762920 /* Test_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_SAT_Data.xml; sourceTree = "<group>"; };
 		34B28C432023E58D0025DE07 /* NYCHighSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCHighSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B28C462023E58D0025DE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B28C482023E58D0025DE07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,15 +56,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34776CBD2023FB0F00DC21E1 /* Testing */ = {
-			isa = PBXGroup;
-			children = (
-				348F8E842023FC0100762920 /* Test_High_Schools_Data.xml */,
-				348F8E852023FC0100762920 /* Test_SAT_Data.xml */,
-			);
-			path = Testing;
-			sourceTree = "<group>";
-		};
 		34B28C3A2023E58D0025DE07 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +83,6 @@
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
 				34B28C4F2023E58D0025DE07 /* LaunchScreen.storyboard */,
 				34B28C522023E58D0025DE07 /* Info.plist */,
-				34776CBD2023FB0F00DC21E1 /* Testing */,
 			);
 			path = NYCHighSchools;
 			sourceTree = "<group>";
@@ -203,8 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348F8E872023FC0100762920 /* Test_SAT_Data.xml in Resources */,
-				348F8E862023FC0100762920 /* Test_High_Schools_Data.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
