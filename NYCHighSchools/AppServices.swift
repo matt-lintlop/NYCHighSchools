@@ -65,4 +65,10 @@ class AppServices : NSObject, XMLParserDelegate {
     func parserDidEndDocument(_ parser: XMLParser) {
         print("Finished parsing XML")
     }
+    
+    // MARK: Utility
+    
+    func replaceAmpersandInXML(_ xml: String) -> String {
+        return xml.replacingOccurrences(of: "&", with: "&amp;")
+    }
 }
