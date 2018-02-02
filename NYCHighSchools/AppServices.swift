@@ -8,6 +8,14 @@
 
 import Foundation
 
+//NYC High Schools XML URL:
+//https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD
+//
+//
+//NYC High School SAT Data:
+//https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD
+
+
 class AppServices : NSObject, XMLParserDelegate {
     var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
     

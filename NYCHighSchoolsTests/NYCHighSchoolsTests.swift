@@ -18,10 +18,16 @@ class NYCHighSchoolsTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        
+        // create the app services
+        services = AppServices()
+        XCTAssertNotNil(services, "AppServices should not be nil")
+
+        // get the bundle that contains this test class and not the main bundle
         bundle = Bundle(for: type(of: self))
+        
         load_NYC_HighSchools_XML_Data()
         load_NYC_HighSchools_SAT_XML_Data()
-        services = AppServices()
     }
     
     private func load_NYC_HighSchools_XML_Data() {
@@ -31,7 +37,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         let url = URL(fileURLWithPath: path)
         let nycHighSchoolsXMLData = try? Data(contentsOf: url)
-        XCTAssertNotNil(nycHighSchoolsXMLData)
+        XCTAssertNotNil(nycHighSchoolsXMLData, "NYC high school names testing data is nil")
         print("\n>> PARSING HIGH SCHOOL NAMES:")
         services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
     }
@@ -43,7 +49,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         let url = URL(fileURLWithPath: path)
         let nycSATXMLData = try? Data(contentsOf: url)
-        XCTAssertNotNil(nycSATXMLData)
+        XCTAssertNotNil(nycSATXMLData, "NYC high schools SAT testing data is nil")
         print("\n>> PARSING HIGH SCHOOL SAT SCORES:")
         services?.parseHighSchoolSATScores(withXMLData: nycSATXMLData!)
    }
