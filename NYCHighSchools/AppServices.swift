@@ -20,20 +20,26 @@ enum AppServiceJSONElements: String {
     case numberOfTestTakers = "num_of_sat_test_takers"              // # of test takers
     case averageSATReadingScore = "sat_critical_reading_avg_score"  // average SAT reading score
     case averageSATMathScore = "sat_math_avg_score"                  // average SAT writing score
-    case averageSATWritingScore = "sat_writing_avg_score"                  // average SAT writing score
+    case averageSATWritingScore = "sat_writing_avg_score"            // average SAT writing score
+}
+
+protocol AppServicesDelegate {
+    func didDownloadHighSchoolsData(_ highSchoolsData: [HighSchoolData], forCity: String)
+    func errorDownloadHighSchoolsData(_ error: Error, forCity: String)
 }
 
 class AppServices : NSObject, XMLParserDelegate {
-    var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
-    var currentElementName: String?                     // the name of xml element being parsed
-    var parsingHighSchoolNames = false                  // flag = true if parsing high school names
+    var nycHighSchoolsDataList: [HighSchoolData]?                    // list of data for each high school in NYC
+    var nycHighSchoolsDataDict: [String:HighSchoolData]?             // dictionary data for each high school in NYC where key = hotl name
+    var currentElementName: String?                                 // the name of xml element being parsed
+    var parsingHighSchoolNames = false                              // flag = true if parsing high school names
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
         parser.delegate = self
         parsingHighSchoolNames = true
         parser.parse()
-        print("# of High Schools Data Parsed: \(nycHighScoolsData.count)")
+        print("# of High Schools  Parsed: \(nycHighSchoolsDataList?.count)")
     }
     
     func parseHighSchoolSATScores(withXMLData xmlData: Data) {
@@ -47,11 +53,15 @@ class AppServices : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
+        currentElementName = elementName
+
         if elementName == AppServiceJSONElements.schoolName.rawValue {
             if parsingHighSchoolNames {
-                currentElementName = elementName
             }
             else {
+                // found the name of a high school while parsing SAT data.
+                // see if the high school's data exists.
+                
                 print("FOUND school_name parsing SAT scores")
             }
         }
@@ -92,9 +102,19 @@ class AppServices : NSObject, XMLParserDelegate {
     // MARK: Utility
     
     func addHighSchoolDataForHighSchoolWithName(_ name: String) {
+        // create the high school data class for the high school with the given name
         let highSchoolData = HighSchoolData(name: name)
-        nycHighScoolsData.append(highSchoolData)
+        if nycHighSchoolsDataList == nil {
+            nycHighSchoolsDataList = []
+        }
+        nycHighSchoolsDataList!.append(highSchoolData)
         print("Added high school data for school with name = \(name)")
+        
+        // add the high school data to the dictionary for fast lookup by high school name
+        if nycHighSchoolsDataDict == nil {
+            nycHighSchoolsDataDict = [:]
+        }
+        nycHighSchoolsDataDict![name] = highSchoolData
     }
     
     func replaceAmpersandInXML(_ xml: String) -> String {

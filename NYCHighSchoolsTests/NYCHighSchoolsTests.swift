@@ -13,14 +13,19 @@ class NYCHighSchoolsTests: XCTestCase {
     
     var nycHighSchoolsXMLData: Data?
     var nycSATXMLData: Data?
+    
     var bundle: Bundle?
     var services: AppServices?
 
     override func setUp() {
         super.setUp()
         
-        // create the app services
-        services = AppServices()
+        // get the app services
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            XCTFail("App delegate should not be nil")
+            return
+        }
+        services = appDelegate.services
         XCTAssertNotNil(services, "AppServices should not be nil")
 
         // get the bundle that contains this test class and not the main bundle
@@ -47,8 +52,6 @@ class NYCHighSchoolsTests: XCTestCase {
         XCTAssertNotNil(nycHighSchoolsXMLData, "NYC high school names testing data is nil")
         print("\n>> PARSING HIGH SCHOOL NAMES:")
         services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
-        sleep(5)
-        print("\n>> DONE PARSING HIGH SCHOOL NAMES:")
     }
     
     private func load_NYC_HighSchools_SAT_XML_Data() {
@@ -66,7 +69,6 @@ class NYCHighSchoolsTests: XCTestCase {
         XCTAssertNotNil(nycSATXMLData, "NYC high schools SAT testing data is nil")
         print("\n>> PARSING HIGH SCHOOL SAT SCORES:")
         services?.parseHighSchoolSATScores(withXMLData: nycSATXMLData!)
-        print("\n>> DONE PARSING HIGH SCHOOL SAT SCORES:")
    }
 
     override func tearDown() {
