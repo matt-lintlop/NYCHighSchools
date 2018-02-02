@@ -24,8 +24,8 @@ enum AppServiceJSONElements: String {
 }
 
 protocol AppServicesDelegate {
-    func didDownloadHighSchoolsData(_ highSchoolsData: [HighSchoolData], forCity: String)
-    func errorDownloadHighSchoolsData(_ error: Error, forCity: String)
+    func didDownloadNYCHighSchoolsData(_ highSchoolsData: [HighSchoolData])
+    func errorDownloadNYCHighSchoolsData(_ error: Error)
 }
 
 class AppServices : NSObject, XMLParserDelegate {
