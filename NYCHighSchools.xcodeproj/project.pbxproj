@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		348F8E94202402E000762920 /* Test_NYC_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E92202402DF00762920 /* Test_NYC_High_Schools_Names.xml */; };
 		348F8E95202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E93202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml */; };
-		348F8E972024091D00762920 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E962024091D00762920 /* Services.swift */; };
+		348F8E972024091D00762920 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E962024091D00762920 /* AppServices.swift */; };
 		348F8E992024097000762920 /* HighSchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E982024097000762920 /* HighSchoolData.swift */; };
 		34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C462023E58D0025DE07 /* AppDelegate.swift */; };
 		34B28C492023E58D0025DE07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C482023E58D0025DE07 /* ViewController.swift */; };
@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		348F8E92202402DF00762920 /* Test_NYC_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_Names.xml; sourceTree = "<group>"; };
 		348F8E93202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
-		348F8E962024091D00762920 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		348F8E962024091D00762920 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		348F8E982024097000762920 /* HighSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolData.swift; sourceTree = "<group>"; };
 		34B28C432023E58D0025DE07 /* NYCHighSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCHighSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B28C462023E58D0025DE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				34B28C462023E58D0025DE07 /* AppDelegate.swift */,
 				34B28C482023E58D0025DE07 /* ViewController.swift */,
 				34B28C4A2023E58D0025DE07 /* Main.storyboard */,
-				348F8E962024091D00762920 /* Services.swift */,
+				348F8E962024091D00762920 /* AppServices.swift */,
 				348F8E982024097000762920 /* HighSchoolData.swift */,
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
 				34B28C4F2023E58D0025DE07 /* LaunchScreen.storyboard */,
@@ -215,7 +215,7 @@
 			files = (
 				34B28C492023E58D0025DE07 /* ViewController.swift in Sources */,
 				348F8E992024097000762920 /* HighSchoolData.swift in Sources */,
-				348F8E972024091D00762920 /* Services.swift in Sources */,
+				348F8E972024091D00762920 /* AppServices.swift in Sources */,
 				34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

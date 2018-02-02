@@ -14,6 +14,7 @@ class NYCHighSchoolsTests: XCTestCase {
     var nycHighSchoolsXMLData: Data?
     var nycSATXMLData: Data?
     var bundle: Bundle?
+    var services: AppServices?
 
     override func setUp() {
         super.setUp()
