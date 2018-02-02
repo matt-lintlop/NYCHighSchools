@@ -14,4 +14,12 @@ struct HighSchoolData {
     var satWritingScore: Float      // average SAT Writing score
     var satMathScore: Float         // average SAT Math score
     var testTakersCount: Int        // Number of Test Takers
+    
+    init(name: String) {
+        self.name = name
+        self.satMathScore = 0.0
+        self.satReadingScore = 0.0
+        self.satWritingScore = 0.0
+        self.testTakersCount = 0
+    }
 }

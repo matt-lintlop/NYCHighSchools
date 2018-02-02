@@ -15,20 +15,27 @@ import Foundation
 //NYC High School SAT Data:
 //https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD
 
+enum AppServiceJSONElements: String {
+    case schoolNameElement = "school_name"
+}
 
 class AppServices : NSObject, XMLParserDelegate {
     var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
     var currentElementName: String?                     // the name of xml element being parsed
+    var parsingHighSchoolNames = false                  // flag = true if parsing high school names
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
         parser.delegate = self
+        parsingHighSchoolNames = true
         parser.parse()
+        print("# of High Schools Data Parsed: \(nycHighScoolsData.count)")
     }
     
     func parseHighSchoolSATScores(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
         parser.delegate = self
+        parsingHighSchoolNames = false
         parser.parse()
     }
     
@@ -36,12 +43,12 @@ class AppServices : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
-        if elementName == "school_name" {
+        if parsingHighSchoolNames && (elementName == AppServiceJSONElements.schoolNameElement.rawValue) {
             currentElementName = elementName
- //           print("Started elemet named: \(elementName) attributes: \(attributeDict)")
         }
         else {
-            currentElementName = nil
+ //          print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+           currentElementName = nil
         }
     }
     
@@ -59,7 +66,12 @@ class AppServices : NSObject, XMLParserDelegate {
         guard let currentElementName = self.currentElementName else {
             return
         }
-        print("Parser found: \(string) Element: \(currentElementName)")
+        if parsingHighSchoolNames && (currentElementName == AppServiceJSONElements.schoolNameElement.rawValue) {
+            addHighSchoolDataForHighSchoolWithName(string)
+        }
+        else {
+            print("Parser found: \(string) Element: \(currentElementName)")
+        }
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
@@ -67,6 +79,12 @@ class AppServices : NSObject, XMLParserDelegate {
     }
     
     // MARK: Utility
+    
+    func addHighSchoolDataForHighSchoolWithName(_ name: String) {
+        let highSchoolData = HighSchoolData(name: name)
+        nycHighScoolsData.append(highSchoolData)
+        print("Added high school data for school with name = \(name)")
+    }
     
     func replaceAmpersandInXML(_ xml: String) -> String {
         return xml.replacingOccurrences(of: "&", with: "&amp;")
