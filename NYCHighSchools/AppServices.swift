@@ -18,6 +18,7 @@ import Foundation
 
 class AppServices : NSObject, XMLParserDelegate {
     var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
+    var currentElementName: String?                     // the name of xml element being parsed
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
@@ -34,16 +35,31 @@ class AppServices : NSObject, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
         if elementName == "school_name" {
-            print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+            currentElementName = elementName
+ //           print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+        }
+        else {
+            currentElementName = nil
+        }
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if currentElementName == elementName {
+            currentElementName = nil
         }
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         print("Error parsing: \(parseError)")
     }
+    
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-//        print("Parser found: \(string)")
+        guard let currentElementName = self.currentElementName else {
+            return
+        }
+        print("Parser found: \(string) Element: \(currentElementName)")
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
