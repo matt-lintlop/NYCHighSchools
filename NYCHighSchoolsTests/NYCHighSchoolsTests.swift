@@ -11,29 +11,30 @@ import XCTest
 
 class NYCHighSchoolsTests: XCTestCase {
     
-    nycHighSchoolsXMLData: Data?
-    nycSATXMLData: Data?
+    var nycHighSchoolsXMLData: Data?
+    var nycSATXMLData: Data?
+    var bundle: Bundle?
 
     override func setUp() {
         super.setUp()
+        bundle = Bundle(for: type(of: self))
         load_NYC_HighSchools_XML_Data()
         load_NYC_HighSchools_SAT_XML_Data()
     }
     
     private func load_NYC_HighSchools_XML_Data() {
-        guard let path = Bundle.main.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
-            XCTAssertNotNil(path)
+        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
+            XCTFail()
             return
         }
     }
     
     private func load_NYC_HighSchools_SAT_XML_Data() {
-        guard let path = Bundle.main.path(forResource: "Test_NYC_High_Schools_SAT_Data", ofType: "xml") else {
-            XCTAssertNotNil(path)
+        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_SAT_Data", ofType: "xml") else {
+            XCTFail()
             return
         }
-
-    }
+   }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
