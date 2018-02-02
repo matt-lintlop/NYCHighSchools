@@ -31,13 +31,20 @@ class NYCHighSchoolsTests: XCTestCase {
     }
     
     private func load_NYC_HighSchools_XML_Data() {
-//        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
-        guard let path = bundle?.path(forResource: "Test", ofType: "xml") else {
+        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
             XCTFail()
             return
         }
         let url = URL(fileURLWithPath: path)
-        let nycHighSchoolsXMLData = try? Data(contentsOf: url)
+        
+        guard var nycHighSchoolsXMLString = try? String(contentsOf: url, encoding: .utf8) else {
+            XCTFail("NYC High School Test XML string = nil")
+            return
+        }
+        nycHighSchoolsXMLString = services!.replaceAmpersandInXML(nycHighSchoolsXMLString)
+        
+        let nycHighSchoolsXMLData = nycHighSchoolsXMLString.data(using: .utf8)
+        
         XCTAssertNotNil(nycHighSchoolsXMLData, "NYC high school names testing data is nil")
         print("\n>> PARSING HIGH SCHOOL NAMES:")
         services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
