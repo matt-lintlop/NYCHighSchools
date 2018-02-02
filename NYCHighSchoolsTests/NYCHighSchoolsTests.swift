@@ -31,7 +31,8 @@ class NYCHighSchoolsTests: XCTestCase {
     }
     
     private func load_NYC_HighSchools_XML_Data() {
-        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
+//        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
+        guard let path = bundle?.path(forResource: "Test", ofType: "xml") else {
             XCTFail()
             return
         }
