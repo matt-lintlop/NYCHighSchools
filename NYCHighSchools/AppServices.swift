@@ -15,16 +15,12 @@ import Foundation
 //NYC High School SAT Data:
 //https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD
 
-
-//Started elemet named: num_of_sat_test_takers attributes: [:]
-//Started elemet named: sat_critical_reading_avg_score attributes: [:]
-//Started elemet named: sat_math_avg_score attributes: [:]
-//Started elemet named: sat_writing_avg_score attributes: [:]
-
-
 enum AppServiceJSONElements: String {
-    case schoolName = "school_name"                     // high school name element
-    case numberOfTestTakers = "num_of_sat_test_takers" // # of test takers element
+    case schoolName = "school_name"                                 // high school name
+    case numberOfTestTakers = "num_of_sat_test_takers"              // # of test takers
+    case averageSATReadingScore = "sat_critical_reading_avg_score"  // average SAT reading score
+    case averageSATMathScore = "sat_math_avg_score"                  // average SAT writing score
+    case averageSATWritingScore = "sat_writing_avg_score"                  // average SAT writing score
 }
 
 class AppServices : NSObject, XMLParserDelegate {
