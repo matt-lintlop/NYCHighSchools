@@ -8,7 +8,17 @@
 
 import Foundation
 
-class Services {
+class Services : NSObject, XMLParserDelegate {
     var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
+    
+    func parseHighSchoolNamesInNYC() {
+        
+    }
+    
+    func parseHighSchoolSATScoresInNYC() {
+        
+    }
+    
+    // MARK: XML Parsing
     
 }
