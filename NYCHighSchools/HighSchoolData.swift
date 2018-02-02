@@ -13,5 +13,5 @@ struct HighSchoolData {
     var satReadingScore: Float      // average SAT Reading score
     var satWritingScore: Float      // average SAT Writing score
     var satMathScore: Float         // average SAT Math score
-    var testTakersCount: Int
+    var testTakersCount: Int        // Number of Test Takers
 }
