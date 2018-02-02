@@ -21,6 +21,7 @@ class NYCHighSchoolsTests: XCTestCase {
         bundle = Bundle(for: type(of: self))
         load_NYC_HighSchools_XML_Data()
         load_NYC_HighSchools_SAT_XML_Data()
+        services = AppServices()
     }
     
     private func load_NYC_HighSchools_XML_Data() {
@@ -31,6 +32,8 @@ class NYCHighSchoolsTests: XCTestCase {
         let url = URL(fileURLWithPath: path)
         let nycHighSchoolsXMLData = try? Data(contentsOf: url)
         XCTAssertNotNil(nycHighSchoolsXMLData)
+        print("\n>> PARSING HIGH SCHOOL NAMES:")
+        services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
     }
     
     private func load_NYC_HighSchools_SAT_XML_Data() {
@@ -41,6 +44,8 @@ class NYCHighSchoolsTests: XCTestCase {
         let url = URL(fileURLWithPath: path)
         let nycSATXMLData = try? Data(contentsOf: url)
         XCTAssertNotNil(nycSATXMLData)
+        print("\n>> PARSING HIGH SCHOOL SAT SCORES:")
+        services?.parseHighSchoolSATScores(withXMLData: nycSATXMLData!)
    }
 
     override func tearDown() {

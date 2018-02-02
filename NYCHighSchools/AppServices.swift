@@ -11,12 +11,16 @@ import Foundation
 class AppServices : NSObject, XMLParserDelegate {
     var nycHighScoolsData: [HighSchoolData] = []        // data for each high school in NYC
     
-    func parseHighSchoolNamesInNYC() {
-        
+    func parseHighSchoolNames(withXMLData xmlData: Data) {
+        let parser = XMLParser(data: xmlData)
+        parser.delegate = self
+        parser.parse()
     }
     
-    func parseHighSchoolSATScoresInNYC() {
-        
+    func parseHighSchoolSATScores(withXMLData xmlData: Data) {
+        let parser = XMLParser(data: xmlData)
+        parser.delegate = self
+        parser.parse()
     }
     
     // MARK: XML Parsing
