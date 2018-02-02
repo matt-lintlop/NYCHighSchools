@@ -27,7 +27,7 @@ class NYCHighSchoolsTests: XCTestCase {
         bundle = Bundle(for: type(of: self))
         
         load_NYC_HighSchools_XML_Data()
-        load_NYC_HighSchools_SAT_XML_Data()
+//        load_NYC_HighSchools_SAT_XML_Data()
     }
     
     private func load_NYC_HighSchools_XML_Data() {
@@ -40,6 +40,8 @@ class NYCHighSchoolsTests: XCTestCase {
         XCTAssertNotNil(nycHighSchoolsXMLData, "NYC high school names testing data is nil")
         print("\n>> PARSING HIGH SCHOOL NAMES:")
         services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
+        sleep(5)
+        print("\n>> DONE HIGH SCHOOL NAMES:")
     }
     
     private func load_NYC_HighSchools_SAT_XML_Data() {

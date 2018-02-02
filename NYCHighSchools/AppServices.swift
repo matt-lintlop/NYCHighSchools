@@ -34,8 +34,18 @@ class AppServices : NSObject, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+        if elementName == "school_name" {
+            print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+        }
     }
+    
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("Error parsing: \(parseError)")
+    }
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+//        print("Parser found: \(string)")
+    }
+    
     func parserDidEndDocument(_ parser: XMLParser) {
         print("Finished parsing XML")
     }
