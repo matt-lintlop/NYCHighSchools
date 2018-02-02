@@ -11,11 +11,30 @@ import XCTest
 
 class NYCHighSchoolsTests: XCTestCase {
     
+    nycHighSchoolsXMLData: Data?
+    nycSATXMLData: Data?
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        load_NYC_HighSchools_XML_Data()
+        load_NYC_HighSchools_SAT_XML_Data()
     }
     
+    private func load_NYC_HighSchools_XML_Data() {
+        guard let path = Bundle.main.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
+            XCTAssertNotNil(path)
+            return
+        }
+    }
+    
+    private func load_NYC_HighSchools_SAT_XML_Data() {
+        guard let path = Bundle.main.path(forResource: "Test_NYC_High_Schools_SAT_Data", ofType: "xml") else {
+            XCTAssertNotNil(path)
+            return
+        }
+
+    }
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
