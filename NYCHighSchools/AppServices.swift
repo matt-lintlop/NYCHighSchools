@@ -15,8 +15,16 @@ import Foundation
 //NYC High School SAT Data:
 //https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD
 
+
+//Started elemet named: num_of_sat_test_takers attributes: [:]
+//Started elemet named: sat_critical_reading_avg_score attributes: [:]
+//Started elemet named: sat_math_avg_score attributes: [:]
+//Started elemet named: sat_writing_avg_score attributes: [:]
+
+
 enum AppServiceJSONElements: String {
-    case schoolNameElement = "school_name"
+    case schoolName = "school_name"                     // high school name element
+    case numberOfTestTakers = "num_of_sat_test_takers" // # of test takers element
 }
 
 class AppServices : NSObject, XMLParserDelegate {
@@ -43,12 +51,19 @@ class AppServices : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
-        if parsingHighSchoolNames && (elementName == AppServiceJSONElements.schoolNameElement.rawValue) {
-            currentElementName = elementName
+        if elementName == AppServiceJSONElements.schoolName.rawValue {
+            if parsingHighSchoolNames {
+                currentElementName = elementName
+            }
+            else {
+                print("FOUND school_name parsing SAT scores")
+            }
         }
         else {
- //          print("Started elemet named: \(elementName) attributes: \(attributeDict)")
-           currentElementName = nil
+            if !parsingHighSchoolNames {
+                print("Started elemet named: \(elementName) attributes: \(attributeDict)")
+            }
+            currentElementName = nil
         }
     }
     
@@ -66,7 +81,7 @@ class AppServices : NSObject, XMLParserDelegate {
         guard let currentElementName = self.currentElementName else {
             return
         }
-        if parsingHighSchoolNames && (currentElementName == AppServiceJSONElements.schoolNameElement.rawValue) {
+        if parsingHighSchoolNames && (currentElementName == AppServiceJSONElements.schoolName.rawValue) {
             addHighSchoolDataForHighSchoolWithName(string)
         }
         else {
