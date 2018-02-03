@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		340CBF38202533610057710B /* NYC_2017_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */; };
 		340CBF39202533610057710B /* NYC_2017_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */; };
-		348F8E94202402E000762920 /* Test_NYC_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E92202402DF00762920 /* Test_NYC_High_Schools_Names.xml */; };
-		348F8E95202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 348F8E93202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml */; };
 		348F8E972024091D00762920 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E962024091D00762920 /* AppServices.swift */; };
 		348F8E992024097000762920 /* HighSchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E982024097000762920 /* HighSchoolData.swift */; };
 		34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C462023E58D0025DE07 /* AppDelegate.swift */; };
@@ -34,8 +32,6 @@
 /* Begin PBXFileReference section */
 		340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_Names.xml; sourceTree = "<group>"; };
 		340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
-		348F8E92202402DF00762920 /* Test_NYC_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_Names.xml; sourceTree = "<group>"; };
-		348F8E93202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
 		348F8E962024091D00762920 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		348F8E982024097000762920 /* HighSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolData.swift; sourceTree = "<group>"; };
 		34B28C432023E58D0025DE07 /* NYCHighSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCHighSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				34B28C5B2023E58E0025DE07 /* NYCHighSchoolsTests.swift */,
-				348F8E92202402DF00762920 /* Test_NYC_High_Schools_Names.xml */,
-				348F8E93202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml */,
 				34B28C5D2023E58E0025DE07 /* Info.plist */,
 			);
 			path = NYCHighSchoolsTests;
@@ -217,8 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348F8E95202402E000762920 /* Test_NYC_High_Schools_SAT_Data.xml in Resources */,
-				348F8E94202402E000762920 /* Test_NYC_High_Schools_Names.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

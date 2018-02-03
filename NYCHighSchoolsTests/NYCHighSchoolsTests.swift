@@ -11,10 +11,6 @@ import XCTest
 
 class NYCHighSchoolsTests: XCTestCase {
     
-    var nycHighSchoolsXMLData: Data?
-    var nycSATXMLData: Data?
-    
-    var bundle: Bundle?
     var services: AppServices?
 
     override func setUp() {
@@ -27,49 +23,24 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         services = appDelegate.services
         XCTAssertNotNil(services, "AppServices should not be nil")
-
-        // get the bundle that contains this test class and not the main bundle
-        bundle = Bundle(for: type(of: self))
         
-        load_NYC_HighSchools_XML_Data()
-        load_NYC_HighSchools_SAT_XML_Data()
+        // load the testing NYC High school names
+        parse_test_NYC_HighSchools_XML_Data()
     }
     
-    private func load_NYC_HighSchools_XML_Data() {
-        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
-            XCTFail()
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        
-        guard var nycHighSchoolsXMLString = try? String(contentsOf: url, encoding: .utf8) else {
-            XCTFail("NYC High School Test XML string = nil")
-            return
-        }
-        nycHighSchoolsXMLString = services!.replaceAmpersandInXML(nycHighSchoolsXMLString)
-        
-        let nycHighSchoolsXMLData = nycHighSchoolsXMLString.data(using: .utf8)
+   func parse_test_NYC_HighSchools_XML_Data() {
+        let nycHighSchoolsXMLData = services?.load_Offline_NYC_HighSchools_XML_Data()
         XCTAssertNotNil(nycHighSchoolsXMLData, "NYC high school names testing data is nil")
         print("\n>> PARSING HIGH SCHOOL NAMES:")
         services?.parseHighSchoolNames(withXMLData: nycHighSchoolsXMLData!)
     }
     
-    private func load_NYC_HighSchools_SAT_XML_Data() {
-        guard let path = bundle?.path(forResource: "Test_NYC_High_Schools_SAT_Data", ofType: "xml") else {
-            XCTFail()
-            return
-        }
-        let url = URL(fileURLWithPath: path)
-        guard var nycHighSchoolsSATDataXMLString = try? String(contentsOf: url, encoding: .utf8) else {
-            XCTFail("NYC High Schools Test SAT Data XML string = nil")
-            return
-        }
-        nycHighSchoolsSATDataXMLString = services!.replaceAmpersandInXML(nycHighSchoolsSATDataXMLString)
-        let nycSATXMLData = nycHighSchoolsSATDataXMLString.data(using: .utf8)
+    func test_parse_NYC_HighSchools_SAT_XML_Data() {
+        let nycSATXMLData = services?.load_Offline_NYC_HighSchools_SAT_XML_Data()
         XCTAssertNotNil(nycSATXMLData, "NYC high schools SAT testing data is nil")
         print("\n>> PARSING HIGH SCHOOL SAT SCORES:")
         services?.parseHighSchoolSATScores(withXMLData: nycSATXMLData!)
-   }
+    }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

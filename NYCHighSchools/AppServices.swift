@@ -24,8 +24,9 @@ enum AppServiceJSONElements: String {
 }
 
 protocol AppServicesDelegate {
-    func didDownloadNYCHighSchoolsData(_ highSchoolsData: [HighSchoolData])
-    func errorDownloadNYCHighSchoolsData(_ error: Error)
+    func didParseNYCHighSchoolsNamesData(_ highSchoolsData: [HighSchoolData])
+    func didParseNYCHighSchoolsSATScoresData(_ highSchoolsData: [HighSchoolData])
+    func errorParsingNYCHighSchoolsData(_ error: Error)
 }
 
 class AppServices : NSObject, XMLParserDelegate {
@@ -33,6 +34,8 @@ class AppServices : NSObject, XMLParserDelegate {
     var nycHighSchoolsDataDict: [String:HighSchoolData]?             // dictionary data for each high school in NYC where key = hotl name
     var currentElementName: String?                                 // the name of xml element being parsed
     var parsingHighSchoolNames = false                              // flag = true if parsing high school names
+    var delegate: AppServicesDelegate?                              // app services delegate
+    var currentHighSchoolData: HighSchoolData?                      // current NYC high school data, else nil
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
@@ -50,36 +53,16 @@ class AppServices : NSObject, XMLParserDelegate {
     }
     
     // MARK: XML Parsing
-    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        
         currentElementName = elementName
-
-        if elementName == AppServiceJSONElements.schoolName.rawValue {
-            if parsingHighSchoolNames {
-            }
-            else {
-                // found the name of a high school while parsing SAT data.
-                // see if the high school's data exists.
-                
-                print("FOUND school_name parsing SAT scores")
-            }
-        }
-        else {
-            if !parsingHighSchoolNames {
-                print("Started elemet named: \(elementName) attributes: \(attributeDict)")
-            }
-            currentElementName = nil
-        }
-    }
+   }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if currentElementName == elementName {
-            currentElementName = nil
-        }
+        currentElementName = nil
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        delegate?.errorParsingNYCHighSchoolsData(parseError)
         print("Error parsing: \(parseError)")
     }
     
@@ -87,20 +70,35 @@ class AppServices : NSObject, XMLParserDelegate {
         guard let currentElementName = self.currentElementName else {
             return
         }
-        if parsingHighSchoolNames && (currentElementName == AppServiceJSONElements.schoolName.rawValue) {
-            addHighSchoolDataForHighSchoolWithName(string)
-        }
-        else {
-            print("Parser found: \(string) Element: \(currentElementName)")
+        if currentElementName == AppServiceJSONElements.schoolName.rawValue {
+            if parsingHighSchoolNames {
+                addHighSchoolDataForHighSchoolWithName(string)
+            }
+            else {
+                // found a high school name while parsing SAT data
+                currentHighSchoolData = nycHighSchoolsDataDict?[string]
+                if currentHighSchoolData != nil {
+                    print("Found High School for SAT data parsing: \(string)")
+                }
+                else {
+                    print("Missing High School for SAT data parsing: \(string)")
+                }
+            }
         }
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        print("Finished parsing XML")
+        if parsingHighSchoolNames {
+            delegate?.didParseNYCHighSchoolsNamesData(nycHighSchoolsDataList!)
+            print("Finished parsing NYC High School Names XML")
+        }
+        else {
+            delegate?.didParseNYCHighSchoolsSATScoresData(nycHighSchoolsDataList!)
+            print("Finished parsing NYC High School SAT Scores XML")
+        }
     }
     
     // MARK: Utility
-    
     func addHighSchoolDataForHighSchoolWithName(_ name: String) {
         // create the high school data class for the high school with the given name
         let highSchoolData = HighSchoolData(name: name)
@@ -114,10 +112,69 @@ class AppServices : NSObject, XMLParserDelegate {
         if nycHighSchoolsDataDict == nil {
             nycHighSchoolsDataDict = [:]
         }
-        nycHighSchoolsDataDict![name] = highSchoolData
+        nycHighSchoolsDataDict![name.uppercased()] = highSchoolData
     }
     
     func replaceAmpersandInXML(_ xml: String) -> String {
         return xml.replacingOccurrences(of: "&", with: "&amp;")
     }
+    
+    // MARK: Offline Storage
+//    func load_Offline_NYC_HighSchools_XML_Data() -> Data? {
+//        guard let path = Bundle.main.path(forResource: "NYC_2017_High_Schools_Names", ofType: "xml") else {
+//            return nil
+//        }
+//        let url = URL(fileURLWithPath: path)
+//        
+//        guard var nycHighSchoolsXMLString = try? String(contentsOf: url, encoding: .utf8) else {
+//            return nil
+//        }
+//        nycHighSchoolsXMLString = replaceAmpersandInXML(nycHighSchoolsXMLString)
+//        
+//        let nycHighSchoolsXMLData = nycHighSchoolsXMLString.data(using: .utf8)
+//        return nycHighSchoolsXMLData
+//    }
+//    
+//   func load_Offline_NYC_HighSchools_SAT_XML_Data() -> Data? {
+//        guard let path = Bundle.main.path(forResource: "NYC_2017_High_Schools_SAT_Data", ofType: "xml") else {
+//            return nil
+//        }
+//        let url = URL(fileURLWithPath: path)
+//        guard var nycHighSchoolsSATDataXMLString = try? String(contentsOf: url, encoding: .utf8) else {
+//            return nil
+//        }
+//        nycHighSchoolsSATDataXMLString = replaceAmpersandInXML(nycHighSchoolsSATDataXMLString)
+//        let nycSATXMLData = nycHighSchoolsSATDataXMLString.data(using: .utf8)
+//        return nycSATXMLData
+//    }
+//    
+    
+    func load_Offline_NYC_HighSchools_XML_Data() -> Data? {
+        guard let path = Bundle.main.path(forResource: "NYC_2017_High_Schools_Names", ofType: "xml") else {
+            return nil
+        }
+        let url = URL(fileURLWithPath: path)
+        
+        guard var nycHighSchoolsXMLString = try? String(contentsOf: url, encoding: .utf8) else {
+            return nil
+        }
+        nycHighSchoolsXMLString = replaceAmpersandInXML(nycHighSchoolsXMLString)
+        
+        let nycHighSchoolsXMLData = nycHighSchoolsXMLString.data(using: .utf8)
+        return nycHighSchoolsXMLData
+    }
+    
+    func load_Offline_NYC_HighSchools_SAT_XML_Data() -> Data? {
+        guard let path = Bundle.main.path(forResource: "NYC_2017_High_Schools_SAT_Data", ofType: "xml") else {
+            return nil
+        }
+        let url = URL(fileURLWithPath: path)
+        guard var nycHighSchoolsSATDataXMLString = try? String(contentsOf: url, encoding: .utf8) else {
+            return nil
+        }
+        nycHighSchoolsSATDataXMLString = replaceAmpersandInXML(nycHighSchoolsSATDataXMLString)
+        let nycSATXMLData = nycHighSchoolsSATDataXMLString.data(using: .utf8)
+        return nycSATXMLData
+    }
+
 }
