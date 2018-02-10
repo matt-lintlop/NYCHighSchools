@@ -9,7 +9,7 @@
 import Foundation
 
 struct HighSchoolData {
-    var name: String                // name of the high school
+    var name: String                // name of the High School
     var satReadingScore: Float      // average SAT Reading score
     var satWritingScore: Float      // average SAT Writing score
     var satMathScore: Float         // average SAT Math score
