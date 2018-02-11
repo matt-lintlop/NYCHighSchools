@@ -1,5 +1,5 @@
 //
-//  HighSchoolSATTestersData.swift
+//  CityHighSchoolSATData.swift
 //  NYCHighSchools
 //
 //  Created by Matthew Lintlop on 2/1/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NYCHighSchoolSATData {
+struct CityHighSchoolSATData {
     var name: String                // name of the High School
     var satReadingScore: Float      // average SAT Reading score
     var satWritingScore: Float      // average SAT Writing score

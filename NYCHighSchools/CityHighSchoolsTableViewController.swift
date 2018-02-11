@@ -1,5 +1,5 @@
 //
-//  NYCHighSchoolsTableViewController.swift
+//  CityHighSchoolsTableViewController.swift
 //  NYCHighSchools
 //
 //  Created by Matt Lintlop on 2/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NYCHighSchoolsTableViewController: UITableViewController {
+class CityHighSchoolsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

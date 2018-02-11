@@ -37,18 +37,18 @@ enum HighSchoolDataJSONItens: String {
 
 protocol AppParsingServicesDelegate {
     func didParseNYCHighSchoolNames(_ highSchoolNames: [String]?)
-    func didParseNYCHighSchoolsSATScoresData(_ highSchoolsData: [NYCHighSchoolSATData]?)
+    func didParseNYCHighSchoolsSATScoresData(_ highSchoolsData: [CityHighSchoolSATData]?)
     func errorParsingNYCHighSchoolsData(_ error: Error)
 }
 
 class AppParsingServices : NSObject, XMLParserDelegate {
-    var nycHighSchoolsSATDataList: [NYCHighSchoolSATData]?   // list of data for each high school in NYC
+    var nycHighSchoolsSATDataList: [CityHighSchoolSATData]?   // list of data for each high school in NYC
     var nycHighSchoolNamesList: [String]?                   // list of NYC high school names
-    var nycHighSchoolsDataDict: [String:NYCHighSchoolSATData]?      // dictionary data for each high school in NYC where key = hotl name
+    var nycHighSchoolsDataDict: [String:CityHighSchoolSATData]?      // dictionary data for each high school in NYC where key = hotl name
     var currentElementName: String?                                 // the name of xml element being parsed
     var parsingHighSchoolNames = false                              // flag = true if parsing high school names
     var delegate: AppParsingServicesDelegate?                              // app services delegate
-    var currentHighSchoolData: NYCHighSchoolSATData?                      // current NYC high school data, else nil
+    var currentHighSchoolData: CityHighSchoolSATData?                      // current NYC high school data, else nil
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
@@ -118,7 +118,7 @@ class AppParsingServices : NSObject, XMLParserDelegate {
     // MARK: Utility
     func addHighSchoolDataForHighSchoolWithName(_ name: String) {
         // create the high school data class for the high school with the given name
-        let highSchoolData = NYCHighSchoolSATData(name: name)
+        let highSchoolData = CityHighSchoolSATData(name: name)
         if nycHighSchoolsSATDataList == nil {
             nycHighSchoolsSATDataList = []
         }
