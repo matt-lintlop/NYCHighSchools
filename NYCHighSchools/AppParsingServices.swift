@@ -16,13 +16,24 @@ import Foundation
 //https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD
 
 // Names of json items from the server.
-enum ServerJSONItens: String {
+enum HighSchoolDataJSONItens: String {
     case schoolName = "school_name"                                 // high school name
     case numberOfTestTakers = "num_of_sat_test_takers"              // # of test takers
     case averageSATReadingScore = "sat_critical_reading_avg_score"  // average SAT reading score
-    case averageSATMathScore = "sat_math_avg_score"                  // average SAT writing score
-    case averageSATWritingScore = "sat_writing_avg_score"            // average SAT writing score
+    case averageSATMathScore = "sat_math_avg_score"                 // average SAT math score
+    case averageSATWritingScore = "sat_writing_avg_score"           // average SAT writing score
+    case overViewParagraph = "overview_paragraph"                   // overview paragraph
+    case phonNumber = "phone_number"                                // phone number
+    case faxNumber = "fax_number"                                   // fax number
+    case schoolEmail = "school_email"                               // school email
+    case numberOfStudents = "total_students"                        // number of students
+    case city = "city"                                              // city
+    case zip = "zip"                                                // zip code
+    case state = "state_code"                                       // state
+    case latitude = "latitude"                                      // latitude
+    case longitude = "longitude"                                    // longitude
 }
+
 
 protocol AppParsingServicesDelegate {
     func didParseNYCHighSchoolNames(_ highSchoolNames: [String]?)
@@ -72,7 +83,7 @@ class AppParsingServices : NSObject, XMLParserDelegate {
         guard let currentElementName = self.currentElementName else {
             return
         }
-        if currentElementName == ServerJSONItens.schoolName.rawValue {
+        if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
             if parsingHighSchoolNames {
                 addHighSchoolDataForHighSchoolWithName(string)
             }
