@@ -11,7 +11,7 @@ import XCTest
 
 class NYCHighSchoolsTests: XCTestCase {
     
-    var services: AppServices?
+    var services: AppParsingServices?
 
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class NYCHighSchoolsTests: XCTestCase {
             return
         }
         services = appDelegate.services
-        XCTAssertNotNil(services, "AppServices should not be nil")
+        XCTAssertNotNil(services, "AppParsingServices should not be nil")
         
         // load the testing NYC High school names
         parse_test_NYC_HighSchools_XML_Data()

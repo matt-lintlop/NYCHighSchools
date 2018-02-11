@@ -10,7 +10,7 @@
 		17C84A4A202FA0A10074EA56 /* NYCHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* NYCHighSchoolsTableViewController.swift */; };
 		340CBF38202533610057710B /* NYC_2017_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */; };
 		340CBF39202533610057710B /* NYC_2017_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */; };
-		348F8E972024091D00762920 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E962024091D00762920 /* AppServices.swift */; };
+		348F8E972024091D00762920 /* AppParsingServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E962024091D00762920 /* AppParsingServices.swift */; };
 		348F8E992024097000762920 /* NYCHighSchoolSATData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E982024097000762920 /* NYCHighSchoolSATData.swift */; };
 		34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B28C462023E58D0025DE07 /* AppDelegate.swift */; };
 		34B28C4C2023E58D0025DE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34B28C4A2023E58D0025DE07 /* Main.storyboard */; };
@@ -33,7 +33,7 @@
 		17C84A49202FA0A10074EA56 /* NYCHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
 		340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_Names.xml; sourceTree = "<group>"; };
 		340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
-		348F8E962024091D00762920 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		348F8E962024091D00762920 /* AppParsingServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppParsingServices.swift; sourceTree = "<group>"; };
 		348F8E982024097000762920 /* NYCHighSchoolSATData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCHighSchoolSATData.swift; sourceTree = "<group>"; };
 		34B28C432023E58D0025DE07 /* NYCHighSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCHighSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B28C462023E58D0025DE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 				17C84A49202FA0A10074EA56 /* NYCHighSchoolsTableViewController.swift */,
 				34B28C462023E58D0025DE07 /* AppDelegate.swift */,
 				34B28C4A2023E58D0025DE07 /* Main.storyboard */,
-				348F8E962024091D00762920 /* AppServices.swift */,
+				348F8E962024091D00762920 /* AppParsingServices.swift */,
 				348F8E982024097000762920 /* NYCHighSchoolSATData.swift */,
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
 				34B28C4F2023E58D0025DE07 /* LaunchScreen.storyboard */,
@@ -222,7 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				348F8E992024097000762920 /* NYCHighSchoolSATData.swift in Sources */,
-				348F8E972024091D00762920 /* AppServices.swift in Sources */,
+				348F8E972024091D00762920 /* AppParsingServices.swift in Sources */,
 				17C84A4A202FA0A10074EA56 /* NYCHighSchoolsTableViewController.swift in Sources */,
 				34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */,
 			);
