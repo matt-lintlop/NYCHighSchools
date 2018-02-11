@@ -24,25 +24,26 @@ enum AppServiceJSONElements: String {
 }
 
 protocol AppServicesDelegate {
-    func didParseNYCHighSchoolsNamesData(_ highSchoolsData: [HighSchoolData])
-    func didParseNYCHighSchoolsSATScoresData(_ highSchoolsData: [HighSchoolData])
+    func didParseNYCHighSchoolNames(_ highSchoolNames: [String]?)
+    func didParseNYCHighSchoolsSATScoresData(_ highSchoolsData: [NYCHighSchoolSATData]?)
     func errorParsingNYCHighSchoolsData(_ error: Error)
 }
 
 class AppServices : NSObject, XMLParserDelegate {
-    var nycHighSchoolsDataList: [HighSchoolData]?                    // list of data for each high school in NYC
-    var nycHighSchoolsDataDict: [String:HighSchoolData]?             // dictionary data for each high school in NYC where key = hotl name
+    var nycHighSchoolsSATDataList: [NYCHighSchoolSATData]?   // list of data for each high school in NYC
+    var nycHighSchoolNamesList: [String]?                   // list of NYC high school names
+    var nycHighSchoolsDataDict: [String:NYCHighSchoolSATData]?      // dictionary data for each high school in NYC where key = hotl name
     var currentElementName: String?                                 // the name of xml element being parsed
     var parsingHighSchoolNames = false                              // flag = true if parsing high school names
     var delegate: AppServicesDelegate?                              // app services delegate
-    var currentHighSchoolData: HighSchoolData?                      // current NYC high school data, else nil
+    var currentHighSchoolData: NYCHighSchoolSATData?                      // current NYC high school data, else nil
     
     func parseHighSchoolNames(withXMLData xmlData: Data) {
         let parser = XMLParser(data: xmlData)
         parser.delegate = self
         parsingHighSchoolNames = true
         parser.parse()
-        print("# of High Schools  Parsed: \(String(describing: nycHighSchoolsDataList?.count))")
+        print("# of High Schools  Parsed: \(String(describing: nycHighSchoolsSATDataList?.count))")
     }
     
     func parseHighSchoolSATScores(withXMLData xmlData: Data) {
@@ -89,11 +90,15 @@ class AppServices : NSObject, XMLParserDelegate {
     
     func parserDidEndDocument(_ parser: XMLParser) {
         if parsingHighSchoolNames {
-            delegate?.didParseNYCHighSchoolsNamesData(nycHighSchoolsDataList!)
+            guard let nycHighSchoolNames = nycHighSchoolNamesList else {
+                delegate?.didParseNYCHighSchoolNames(nil)
+                return
+            }
+            delegate?.didParseNYCHighSchoolNames(nycHighSchoolNames)
             print("Finished parsing NYC High School Names XML")
         }
         else {
-            delegate?.didParseNYCHighSchoolsSATScoresData(nycHighSchoolsDataList!)
+            delegate?.didParseNYCHighSchoolsSATScoresData(nycHighSchoolsSATDataList!)
             print("Finished parsing NYC High School SAT Scores XML")
         }
     }
@@ -101,11 +106,11 @@ class AppServices : NSObject, XMLParserDelegate {
     // MARK: Utility
     func addHighSchoolDataForHighSchoolWithName(_ name: String) {
         // create the high school data class for the high school with the given name
-        let highSchoolData = HighSchoolData(name: name)
-        if nycHighSchoolsDataList == nil {
-            nycHighSchoolsDataList = []
+        let highSchoolData = NYCHighSchoolSATData(name: name)
+        if nycHighSchoolsSATDataList == nil {
+            nycHighSchoolsSATDataList = []
         }
-        nycHighSchoolsDataList!.append(highSchoolData)
+        nycHighSchoolsSATDataList!.append(highSchoolData)
         print("Added high school data for school with name = \(name)")
         
         // add the high school data to the dictionary for fast lookup by high school name
@@ -115,6 +120,8 @@ class AppServices : NSObject, XMLParserDelegate {
         nycHighSchoolsDataDict![name.uppercased()] = highSchoolData
     }
     
+    // To fix an error  in NSXMLParser parsing the xml from the server,
+    // we need to replace all "&" characters with "&amp"
     func replaceAmpersandInXML(_ xml: String) -> String {
         return xml.replacingOccurrences(of: "&", with: "&amp;")
     }
