@@ -42,7 +42,7 @@ class AppServices : NSObject, XMLParserDelegate {
         parser.delegate = self
         parsingHighSchoolNames = true
         parser.parse()
-        print("# of High Schools  Parsed: \(nycHighSchoolsDataList?.count)")
+        print("# of High Schools  Parsed: \(String(describing: nycHighSchoolsDataList?.count))")
     }
     
     func parseHighSchoolSATScores(withXMLData xmlData: Data) {
