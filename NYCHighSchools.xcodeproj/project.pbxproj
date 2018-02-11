@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173DAFA12030F99A001D62B3 /* Test Offline Storage Data in Resources */ = {isa = PBXBuildFile; fileRef = 173DAFA02030F99A001D62B3 /* Test Offline Storage Data */; };
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
 		340CBF38202533610057710B /* NYC_2017_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */; };
 		340CBF39202533610057710B /* NYC_2017_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		173DAFA02030F99A001D62B3 /* Test Offline Storage Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Test Offline Storage Data"; path = "../../../../Desktop/new code/Test Offline Storage Data"; sourceTree = "<group>"; };
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
 		340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_Names.xml; sourceTree = "<group>"; };
 		340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				34B28C5B2023E58E0025DE07 /* NYCHighSchoolsTests.swift */,
 				34B28C5D2023E58E0025DE07 /* Info.plist */,
+				173DAFA02030F99A001D62B3 /* Test Offline Storage Data */,
 			);
 			path = NYCHighSchoolsTests;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173DAFA12030F99A001D62B3 /* Test Offline Storage Data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
