@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		173DAFA12030F99A001D62B3 /* Test Offline Storage Data in Resources */ = {isa = PBXBuildFile; fileRef = 173DAFA02030F99A001D62B3 /* Test Offline Storage Data */; };
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
+		17DBC4D2203206F3009BFB1A /* Test Offline Storage Data in Resources */ = {isa = PBXBuildFile; fileRef = 17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */; };
 		17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */; };
 		17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574C203123C100C4E29F /* SettingsTableViewController.swift */; };
 		17DD574F2031245E00C4E29F /* HighSchoolNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */; };
@@ -33,8 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		173DAFA02030F99A001D62B3 /* Test Offline Storage Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Test Offline Storage Data"; path = "../../../../Desktop/new code/Test Offline Storage Data"; sourceTree = "<group>"; };
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
+		17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Offline Storage Data"; sourceTree = "<group>"; };
 		17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsDataXMLOperation.swift; sourceTree = "<group>"; };
 		17DD574C203123C100C4E29F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolNameCell.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			children = (
 				34B28C5B2023E58E0025DE07 /* NYCHighSchoolsTests.swift */,
 				34B28C5D2023E58E0025DE07 /* Info.plist */,
-				173DAFA02030F99A001D62B3 /* Test Offline Storage Data */,
+				17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */,
 			);
 			path = NYCHighSchoolsTests;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				173DAFA12030F99A001D62B3 /* Test Offline Storage Data in Resources */,
+				17DBC4D2203206F3009BFB1A /* Test Offline Storage Data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
