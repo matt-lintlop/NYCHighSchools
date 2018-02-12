@@ -67,8 +67,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parseXML(withURL url: URL) {
-        print("Parsing XML with URL: \(url.absoluteString)")
-        print("Parsing for JSON Items: \(jsonItemsToParse)")
         loadXMLData(withURL: url)
     }
  
