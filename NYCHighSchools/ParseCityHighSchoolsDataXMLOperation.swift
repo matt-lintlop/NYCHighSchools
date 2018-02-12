@@ -83,10 +83,11 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
+        currentElementName = elementName
+
         guard let jsonItems = jsonItemsToParse, jsonItems.contains(elementName) else {
             return
         }
-        currentElementName = elementName
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
