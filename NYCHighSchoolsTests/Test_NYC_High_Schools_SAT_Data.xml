@@ -1,0 +1,9 @@
+<response>
+<row>
+    <school_name>TOTTENVILLE HIGH SCHOOL</school_name>
+    <num_of_sat_test_takers>807</num_of_sat_test_takers>
+    <sat_critical_reading_avg_score>462</sat_critical_reading_avg_score>
+    <sat_math_avg_score>486</sat_math_avg_score>
+    <sat_writing_avg_score>470</sat_writing_avg_score>
+</row>
+</response>

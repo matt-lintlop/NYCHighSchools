@@ -55,11 +55,52 @@ class NYCHighSchoolsTests: XCTestCase {
         parseXMLOperation.parseXML(withURL: url)
         
         wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testParseHighSchoolSATData() {
+        parseHighSchoolDataExpectation = XCTestExpectation(description: "Parse A High School's SAT Data XML")
+        guard let expectation = parseHighSchoolDataExpectation else {
+            XCTFail("Parse A High School's SAT Data XML Expectation should not be nil")
+            return
+        }
         
+        let bundle = Bundle(for: type(of:self))
+        print("Loading from bundle: \(bundle.bundlePath)")
+        guard let path = bundle.path(forResource: "Test_NYC_High_Schools_SAT_Data", ofType: "xml") else {
+            XCTFail("Error loading Test_NYC_High_Schools_SAT_Data")
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        let jsonItemToParse: [String] = [HighSchoolDataJSONItens.schoolName.rawValue,
+                                         HighSchoolDataJSONItens.averageSATMathScore.rawValue,
+                                         HighSchoolDataJSONItens.averageSATReadingScore.rawValue,
+                                         HighSchoolDataJSONItens.averageSATWritingScore.rawValue,
+                                         HighSchoolDataJSONItens.numberOfTestTakers.rawValue]
+        
+        let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(jsonItemsToParse: jsonItemToParse,
+                                                                     completionHandler: parseHighSchoolSATDataCompletionHandler,
+                                                                     cityHighSchoolsDataDict: nil,
+                                                                     addAllParsedItems: true)
+        parseXMLOperation.parseXML(withURL: url)
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func parseHighSchoolSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
+                                                 error: ParseHighSchoolDataXMLError?) {
+        guard let expectation = parseHighSchoolDataExpectation else {
+            XCTFail("Parse A High School's SAT Data XML Expectation should not be nil")
+            return
+        }
+        
+        if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            print("SUCCESS! Parsed A High School's SAT Data: \(cityHighSchoolsDataDict?.debugDescription)")
+            expectation.fulfill()
+        }
     }
     
     func parseHighSchoolDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
-                                                 error: ParseHighSchoolDataXMLError?) {
+                                              error: ParseHighSchoolDataXMLError?) {
         guard let expectation = parseHighSchoolDataExpectation else {
             XCTFail("Parse A High School's Data XML Expectation should not be nil")
             return
@@ -68,9 +109,9 @@ class NYCHighSchoolsTests: XCTestCase {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsed A High School's Data: \(cityHighSchoolsDataDict?.debugDescription)")
             expectation.fulfill()
-       }
+        }
     }
- 
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
