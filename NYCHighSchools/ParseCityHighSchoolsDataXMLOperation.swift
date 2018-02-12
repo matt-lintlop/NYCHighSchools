@@ -46,6 +46,8 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var currentHighSchoolData: HighSchoolData?                  // current high school data, else nil
     var addAllParsedItems: Bool                                 // flag = true if all parsed data is added or false if ony for schools in dictionary
     
+    static var queue = OperationQueue()                         // parse xml operation qieie
+    
     // Designation initializer: Initialize with xml data, a list of JSON items to parse,
     // and a complation handler
     init(jsonItemsToParse: [String],
@@ -68,7 +70,8 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parseXML(withURL url: URL) {
-        downloadXMLData(withURL: url)
+        self.xmlDataURL = url
+        ParseCityHighSchoolsDataXMLOperation.queue.addOperation(self)
     }
  
     func parseXML(withData data: Data) {
@@ -185,14 +188,11 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     func fixAmpersandInXML(_ xml: String) -> String {
         return xml.replacingOccurrences(of: "&", with: "&amp;")
     }
-    
-    func debug(withString message: String) {
-        print(">> \(message) : cityHighSchoolsDataDict = \(self.cityHighSchoolsDataDict?.values)")
-    }
-
+ 
     // MARK: FILE IO
     
     func downloadXMLData(withURL url: URL) {
+        print("Downloading data from url: \(url.absoluteString)")
         self.xmlDataURL = url
         if url.isFileURL {
             // load the xml data from a file
@@ -249,6 +249,15 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         nycHighSchoolsXMLString = fixAmpersandInXML(nycHighSchoolsXMLString)
         let nycHighSchoolsXMLData = nycHighSchoolsXMLString.data(using: .utf8)
         return nycHighSchoolsXMLData
+    }
+    
+    override func main() {
+        print("Running operation")
+        guard let xmlDataURL = xmlDataURL else {
+            return
+        }
+        downloadXMLData(withURL: xmlDataURL)
+        print("Done with operation")
     }
 
 }
