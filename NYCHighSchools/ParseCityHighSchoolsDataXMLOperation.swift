@@ -1,5 +1,5 @@
 //
-//  ParseHighSchoolDataXMLOperation.swift
+//  ParseCityHighSchoolsDataXMLOperation
 //  NYCHighSchools
 //
 //  Created by Matt Lintlop on 2/11/18.
@@ -34,7 +34,7 @@ enum HighSchoolDataJSONItens: String {
 
 typealias ParseXMLDataCompletionHandler = ([String: HighSchoolData]?, ParseHighSchoolDataXMLError?) -> Void
 
-class ParseHighSchoolDataXMLOperation: Operation, XMLParserDelegate {
+class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var xmlData: Data?                                          // XML data
     var parseCompletionHandler: ParseXMLDataCompletionHandler   // parse completion handler
     var jsonItemsToParse: [String]                              // list of json items to parse

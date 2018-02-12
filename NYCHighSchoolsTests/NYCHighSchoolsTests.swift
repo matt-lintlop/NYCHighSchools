@@ -27,7 +27,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         let url = URL(fileURLWithPath: path)
         let jsonItemToParse: [String] = []
-        let parseXMLOperation = ParseHighSchoolDataXMLOperation(xmlDataURL: url,
+        let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(xmlDataURL: url,
                                                                 jsonItemsToParse: jsonItemToParse,
                                                                 completionHandler: parseHighSchoolXMLDataCompletionHandler,
                                                                 cityHighSchoolsDataDict: nil,
