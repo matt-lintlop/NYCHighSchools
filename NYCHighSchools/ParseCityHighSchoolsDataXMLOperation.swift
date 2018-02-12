@@ -35,6 +35,7 @@ enum HighSchoolDataJSONItens: String {
 typealias ParseXMLDataCompletionHandler = ([String: HighSchoolData]?, ParseHighSchoolDataXMLError?) -> Void
 
 class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
+    var downloadXMLDataTask: URLSessionDataTask?                // Download XML Data task
     var xmlData: Data?                                          // XML data
     var xmlDataURL: URL?                                        // XML data URL
     var currentHighSchoolName: String?                          // Current High School Name
@@ -67,7 +68,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parseXML(withURL url: URL) {
-        loadXMLData(withURL: url)
+        downloadXMLData(withURL: url)
     }
  
     func parseXML(withData data: Data) {
@@ -191,7 +192,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
 
     // MARK: FILE IO
     
-    func loadXMLData(withURL url: URL) {
+    func downloadXMLData(withURL url: URL) {
         self.xmlDataURL = url
         if url.isFileURL {
             // load the xml data from a file
@@ -199,6 +200,26 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         }
         else {
             // load the xml data from the network
+            downloadXMLDataTask = URLSession.shared.dataTask(with: url,
+                                                             completionHandler:downloadXMLDataCompletionHandler)
+            downloadXMLDataTask?.resume()
+        }
+    }
+    
+    func downloadXMLDataCompletionHandler(data: Data?, response: URLResponse?, error: Error?) {
+        
+        downloadXMLDataTask = nil
+
+        if let _ = error {
+            completionHandler(nil, .missingXMLDataError)
+        }
+        else {
+            if let data = data {
+                parseXML(withData: data)
+            }
+            else {
+                completionHandler(nil, .missingXMLDataError)
+            }
         }
     }
     
