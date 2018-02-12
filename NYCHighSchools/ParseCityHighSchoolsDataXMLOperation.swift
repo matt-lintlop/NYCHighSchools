@@ -38,23 +38,24 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var xmlData: Data?                                          // XML data
     var xmlDataURL: URL?                                        // XML data URL
     var completionHandler: ParseXMLDataCompletionHandler        // parse xml data completion handler
-    var jsonItemsToParse: [String]                              // list of json items to parse
+    var jsonItemsToParse: [String]?                             // list of json items to parse
     var cityHighSchoolsDataDict: [String:HighSchoolData]?       // dictionary data for each high school in the city where key = hotl name
     var currentElementName: String?                             // the name of xml element being parsed
     var currentHighSchoolData: HighSchoolData?                  // current high school data, else nil
-    var onlyParseDataForSchoolsInDict: Bool                     // flag = true true if only parsing data for schools in the cityHighSchoolsDataDict
+    var addAllParsedItems: Bool                                 // flag = true if all parsed data is added or false if ony for schools in dictionary
     
     // Designation initializer: Initialize with xml data, a list of JSON items to parse,
     // and a complation handler
     init(jsonItemsToParse: [String],
          completionHandler:  @escaping ParseXMLDataCompletionHandler,
          cityHighSchoolsDataDict: [String: HighSchoolData]? = nil,
-         onlyParseDataForSchoolsInDict: Bool = false) {
+         addAllParsedItems: Bool = true) {
         
         self.jsonItemsToParse = jsonItemsToParse
         self.completionHandler = completionHandler
         self.cityHighSchoolsDataDict = cityHighSchoolsDataDict
-        self.onlyParseDataForSchoolsInDict = onlyParseDataForSchoolsInDict
+        self.currentHighSchoolData = nil
+        self.addAllParsedItems = addAllParsedItems
         if self.cityHighSchoolsDataDict == nil {
             self.cityHighSchoolsDataDict = [:]
         }
@@ -64,27 +65,36 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: XML Parsing
     
     func parseXML(withURL url: URL) {
+        print("Parsing XML with URL: \(url.absoluteString)")
+        print("Parsing for JSON Items: \(jsonItemsToParse)")
         loadXMLData(withURL: url)
     }
  
     func parseXML(withData data: Data) {
         self.xmlData = data
+        self.currentHighSchoolData = nil
         let parser = XMLParser(data: data)
         parser.delegate = self
         parser.parse()
-        print("# of High Schools  Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
+        print("# of High Schools Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
     }
 
     // MAR: XMLParserDelegate
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        
+        guard let jsonItems = jsonItemsToParse, jsonItems.contains(elementName) else {
+            return
+        }
         currentElementName = elementName
-        print(">> Parser didStartElement: \(elementName)")
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        guard let elementName = currentElementName else {
+            return
+        }
         currentElementName = nil
-        print(">> Parser didStartElement: \(elementName)")
+        self.currentHighSchoolData = nil
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
@@ -93,14 +103,55 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        print(">> Parser foundCharacters: \(string)")
         guard let currentElementName = self.currentElementName else {
             return
         }
         if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
             // A high school's name was found
             self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
-                                                                addIfNotFound: self.onlyParseDataForSchoolsInDict)
+                                                                addIfNotFound: self.addAllParsedItems)
+            guard self.currentHighSchoolData != nil else {
+                self.completionHandler(nil, .parseXMLDataError)
+                return
+            }
+        }
+        else {
+            guard var highSchoolData = self.currentHighSchoolData else {
+                self.completionHandler(nil, .parseXMLDataError)
+                return
+            }
+            switch currentElementName {
+                case HighSchoolDataJSONItens.city.rawValue:
+                    highSchoolData.city = string
+                case HighSchoolDataJSONItens.zip.rawValue:
+                    highSchoolData.zip = string
+                case HighSchoolDataJSONItens.state.rawValue:
+                    highSchoolData.state = string
+                case HighSchoolDataJSONItens.latitude.rawValue:
+                    highSchoolData.latitude = Float(string)
+                case HighSchoolDataJSONItens.longitude.rawValue:
+                    highSchoolData.longitude = Float(string)
+                case HighSchoolDataJSONItens.numberOfTestTakers.rawValue:
+                    highSchoolData.numberOfSATTestTakers = Int(string)
+                case HighSchoolDataJSONItens.averageSATReadingScore.rawValue:
+                    highSchoolData.averageSATReadingScore = Float(string)
+                case HighSchoolDataJSONItens.averageSATMathScore.rawValue:
+                    highSchoolData.averageSATMathScore = Float(string)
+                case HighSchoolDataJSONItens.averageSATWritingScore.rawValue:
+                    highSchoolData.averageSATWritingScore = Float(string)
+                case HighSchoolDataJSONItens.overViewParagraph.rawValue:
+                    highSchoolData.overViewParagraph = string
+                case HighSchoolDataJSONItens.phonNumber.rawValue:
+                    highSchoolData.phonNumber = string
+                case HighSchoolDataJSONItens.faxNumber.rawValue:
+                    highSchoolData.faxNumber = string
+                case HighSchoolDataJSONItens.schoolEmail.rawValue:
+                    highSchoolData.schoolEmail = string
+                case HighSchoolDataJSONItens.numberOfStudents.rawValue:
+                    highSchoolData.numberOfStudents = Int(string)
+                default:
+                    print("Skipped parsing element named: \(currentElementName)")
+            }
         }
     }
     

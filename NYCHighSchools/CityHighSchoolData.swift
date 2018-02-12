@@ -22,8 +22,8 @@ struct HighSchoolData {
     var city: String?                   // city
     var zip: String?                    // zip code
     var state: String?                  // state
-    var latitude: Int?                  // latitude
-    var longitude: Int?                 // longitude
+    var latitude: Float?                  // latitude
+    var longitude: Float?                 // longitude
 
     init(schoolName: String) {
         self.schoolName = schoolName

@@ -51,7 +51,7 @@ class NYCHighSchoolsTests: XCTestCase {
         let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(jsonItemsToParse: jsonItemToParse,
                                                                      completionHandler: parseHighSchoolDataCompletionHandler,
                                                                      cityHighSchoolsDataDict: nil,
-                                                                     onlyParseDataForSchoolsInDict: false)
+                                                                     addAllParsedItems: true)
         parseXMLOperation.parseXML(withURL: url)
         
         wait(for: [expectation], timeout: 10.0)
