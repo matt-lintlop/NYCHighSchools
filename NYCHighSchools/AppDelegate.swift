@@ -8,16 +8,19 @@
 
 import UIKit
 
-// NYC High Schools Names XML
+// URL of NYC High Schools Names XML
 let newYorkCitySchoolDataXMLPath = "https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD"
+
+// Offline NYC High Schools Names XML Filename
 let offlineNewYorkCitySchoolDataXMLFile = "NYC_2017_High_Schools_Names"
 
-//NYC High Schools SAT Data:
+// URL of NYC High Schools SAT Data XML
 let newYorkCitySchoolSATDataXMLPath = "https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD"
+
+// Offline NYC High Schools SAT Data XML Filename
 let offlineNewYorkCitySchoolSATDataXMLFile = "NYC_2017_High_Schools_SAT_Data"
 
 let cityName = "NYC"
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

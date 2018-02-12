@@ -23,7 +23,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
       }
     
-    func testParseHighSchoolData() {
+    func testParseOfflineHighSchoolData() {
         parseHighSchoolDataExpectation = XCTestExpectation(description: "Parse A High School's Data XML")
         guard let expectation = parseHighSchoolDataExpectation else {
             XCTFail("Parse A High School's Data XML Expectation should not be nil")
@@ -57,7 +57,20 @@ class NYCHighSchoolsTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
-    func testParseHighSchoolSATData() {
+    func parseHighSchoolDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
+                                              error: ParseHighSchoolDataXMLError?) {
+        guard let expectation = parseHighSchoolDataExpectation else {
+            XCTFail("Parse A High School's Data XML Expectation should not be nil")
+            return
+        }
+        
+        if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            print("SUCCESS! Parsed A High School's Data: \(cityHighSchoolsDataDict?.debugDescription)")
+            expectation.fulfill()
+        }
+    }
+
+    func testParseOfflineHighSchoolSATData() {
         parseHighSchoolDataExpectation = XCTestExpectation(description: "Parse A High School's SAT Data XML")
         guard let expectation = parseHighSchoolDataExpectation else {
             XCTFail("Parse A High School's SAT Data XML Expectation should not be nil")
@@ -95,19 +108,6 @@ class NYCHighSchoolsTests: XCTestCase {
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsed A High School's SAT Data: \(cityHighSchoolsDataDict?.debugDescription)")
-            expectation.fulfill()
-        }
-    }
-    
-    func parseHighSchoolDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
-                                              error: ParseHighSchoolDataXMLError?) {
-        guard let expectation = parseHighSchoolDataExpectation else {
-            XCTFail("Parse A High School's Data XML Expectation should not be nil")
-            return
-        }
-        
-        if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed A High School's Data: \(cityHighSchoolsDataDict?.debugDescription)")
             expectation.fulfill()
         }
     }
