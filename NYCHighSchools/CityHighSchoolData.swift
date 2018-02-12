@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct HighSchoolData {
+class HighSchoolData {
     var schoolName: String              // high school name
     var numberOfSATTestTakers: Int?     // # of test takers
     var averageSATReadingScore: Float?  // average SAT reading score

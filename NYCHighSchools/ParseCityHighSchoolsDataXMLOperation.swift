@@ -37,6 +37,7 @@ typealias ParseXMLDataCompletionHandler = ([String: HighSchoolData]?, ParseHighS
 class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var xmlData: Data?                                          // XML data
     var xmlDataURL: URL?                                        // XML data URL
+    var currentHighSchoolName: String?                          // Current High School Name
     var completionHandler: ParseXMLDataCompletionHandler        // parse xml data completion handler
     var jsonItemsToParse: [String]?                             // list of json items to parse
     var cityHighSchoolsDataDict: [String:HighSchoolData]?       // dictionary data for each high school in the city where key = hotl name
@@ -55,6 +56,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         self.completionHandler = completionHandler
         self.cityHighSchoolsDataDict = cityHighSchoolsDataDict
         self.currentHighSchoolData = nil
+        self.currentHighSchoolName = nil
         self.addAllParsedItems = addAllParsedItems
         if self.cityHighSchoolsDataDict == nil {
             self.cityHighSchoolsDataDict = [:]
@@ -105,6 +107,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         }
         if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
             // A high school's name was found
+            self.currentHighSchoolName = string
             self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
                                                                 addIfNotFound: self.addAllParsedItems)
             guard self.currentHighSchoolData != nil else {
@@ -113,7 +116,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             }
         }
         else {
-            guard var highSchoolData = self.currentHighSchoolData else {
+            guard let highSchoolData = self.currentHighSchoolData else {
                 self.completionHandler(nil, .parseXMLDataError)
                 return
             }
@@ -162,13 +165,13 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
         let uppercasedSchoolName = schoolName.uppercased()
-        if self.cityHighSchoolsDataDict == nil {
-            self.cityHighSchoolsDataDict = [:]
-        }
-        if let highSchoolData = self.cityHighSchoolsDataDict![uppercasedSchoolName] {
+        if let highSchoolData = self.cityHighSchoolsDataDict?[uppercasedSchoolName] {
             return highSchoolData
         }
         else if addIfNotFound {
+            if self.cityHighSchoolsDataDict == nil {
+                self.cityHighSchoolsDataDict = [:]
+            }
             let highSchoolData = HighSchoolData(schoolName: schoolName)
             self.cityHighSchoolsDataDict![uppercasedSchoolName] = highSchoolData
             return highSchoolData
@@ -182,6 +185,10 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // we need to replace all "&" characters with "&amp"
     func fixAmpersandInXML(_ xml: String) -> String {
         return xml.replacingOccurrences(of: "&", with: "&amp;")
+    }
+    
+    func debug(withString message: String) {
+        print(">> \(message) : cityHighSchoolsDataDict = \(self.cityHighSchoolsDataDict?.values)")
     }
 
     // MARK: FILE IO
