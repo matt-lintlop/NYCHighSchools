@@ -61,17 +61,94 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         super.init()
     }
     
+    // MARK: XML Parsing
+    
+    func parseXML(withURL url: URL) {
+        loadXMLData(withURL: url)
+    }
+ 
+    func parseXML(withData data: Data) {
+        self.xmlData = data
+        let parser = XMLParser(data: data)
+        parser.delegate = self
+        parser.parse()
+        print("# of High Schools  Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
+    }
+
+    // MAR: XMLParserDelegate
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        currentElementName = elementName
+        print(">> Parser didStartElement: \(elementName)")
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        currentElementName = nil
+        print(">> Parser didStartElement: \(elementName)")
+    }
+    
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        self.completionHandler(nil, .parseXMLDataError)
+        print(">> Parser Error: \(parseError)")
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        print(">> Parser foundCharacters: \(string)")
+        guard let currentElementName = self.currentElementName else {
+            return
+        }
+        if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
+            // A high school's name was found
+            self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
+                                                                addIfNotFound: self.onlyParseDataForSchoolsInDict)
+        }
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print(">> Parser parserDidEndDocument")
+        self.completionHandler(self.cityHighSchoolsDataDict, nil)
+        parser.delegate = nil
+    }
+    
+    // MARK: Utility
+    
+    func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
+        let uppercasedSchoolName = schoolName.uppercased()
+        if self.cityHighSchoolsDataDict == nil {
+            self.cityHighSchoolsDataDict = [:]
+        }
+        if let highSchoolData = self.cityHighSchoolsDataDict![uppercasedSchoolName] {
+            return highSchoolData
+        }
+        else if addIfNotFound {
+            let highSchoolData = HighSchoolData(schoolName: schoolName)
+            self.cityHighSchoolsDataDict![uppercasedSchoolName] = highSchoolData
+            return highSchoolData
+        }
+        else {
+            return nil
+        }
+    }
+
+    // To fix an error  in NSXMLParser parsing the xml from the server,
+    // we need to replace all "&" characters with "&amp"
+    func fixAmpersandInXML(_ xml: String) -> String {
+        return xml.replacingOccurrences(of: "&", with: "&amp;")
+    }
+
+    // MARK: FILE IO
+    
     func loadXMLData(withURL url: URL) {
         self.xmlDataURL = url
         if url.isFileURL {
-           // load the xml data from a file
+            // load the xml data from a file
             loadXMLData(withFileURL: url)
         }
         else {
             // load the xml data from the network
         }
     }
-  
+    
     func loadXMLData(withFileURL url: URL) {
         guard url.isFileURL else {
             completionHandler(nil, .missingXMLDataError)
@@ -91,76 +168,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         }
     }
 
-    func parseXML(withURL url: URL) {
-        loadXMLData(withURL: url)
-    }
- 
-    func parseXML(withData data: Data) {
-        self.xmlData = data
-        let parser = XMLParser(data: data)
-        parser.delegate = self
-        parser.parse()
-        print("# of High Schools  Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
-    }
-
-    // MARK: XML Parsing
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
-        currentElementName = elementName
-    }
-    
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        currentElementName = nil
-    }
-    
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        self.completionHandler(nil, .parseXMLDataError)
-        print("Error parsing: \(parseError)")
-    }
-    
-    func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
-        let uppercasedSchoolName = schoolName.uppercased()
-        if self.cityHighSchoolsDataDict == nil {
-            self.cityHighSchoolsDataDict = [:]
-        }
-        if let highSchoolData = self.cityHighSchoolsDataDict![uppercasedSchoolName] {
-            return highSchoolData
-        }
-        else if addIfNotFound {
-            let highSchoolData = HighSchoolData(schoolName: schoolName)
-            self.cityHighSchoolsDataDict![uppercasedSchoolName] = highSchoolData
-            return highSchoolData
-        }
-        else {
-            return nil
-        }
-    }
-    
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        guard let currentElementName = self.currentElementName else {
-            return
-        }
-        if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
-            // A high school's name was found
-            self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
-                                                                addIfNotFound: self.onlyParseDataForSchoolsInDict)
-        }
-    }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {
-        self.completionHandler(self.cityHighSchoolsDataDict, nil)
-        parser.delegate = nil
-    }
-    
-    // MARK: Utility
-    
-    // To fix an error  in NSXMLParser parsing the xml from the server,
-    // we need to replace all "&" characters with "&amp"
-    func fixAmpersandInXML(_ xml: String) -> String {
-        return xml.replacingOccurrences(of: "&", with: "&amp;")
-    }
-
-    // MARK: FILE IO
-    
     func getXMLData(withFileURL url: URL) -> Data? {
         guard var nycHighSchoolsXMLString = try? String(contentsOf: url, encoding: .utf8) else {
             return nil
