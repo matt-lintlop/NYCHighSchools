@@ -29,34 +29,13 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail("Parse A High School's Data XML Expectation should not be nil")
             return
         }
-        
-        let bundle = Bundle(for: NYCHighSchoolsTests.self)
-        guard let path = bundle.path(forResource: "Test Offline Storage Data/Test_NYC_2017_High_Schools_Names", ofType: "xml") else {
+        let bundle = Bundle(for: type(of:self))
+        print("Loading from bundle: \(bundle.bundlePath)")
+        guard let path = bundle.path(forResource: "Test_NYC_High_Schools_Names", ofType: "xml") else {
             XCTFail("Error loading Test_NYC_2017_High_Schools_Names.xml")
            return
         }
         let url = URL(fileURLWithPath: path)
-        
-        
-//        enum HighSchoolDataJSONItens: String {
-//            case schoolName = "school_name"                                 // high school name
-//            case numberOfTestTakers = "num_of_sat_test_takers"              // # of test takers
-//            case averageSATReadingScore = "sat_critical_reading_avg_score"  // average SAT reading score
-//            case averageSATMathScore = "sat_math_avg_score"                 // average SAT math score
-//            case averageSATWritingScore = "sat_writing_avg_score"           // average SAT writing score
-//            case overViewParagraph = "overview_paragraph"                   // overview paragraph
-//            case phonNumber = "phone_number"                                // phone number
-//            case faxNumber = "fax_number"                                   // fax number
-//            case schoolEmail = "school_email"                               // school email
-//            case numberOfStudents = "total_students"                        // number of students
-//            case city = "city"                                              // city
-//            case zip = "zip"                                                // zip code
-//            case state = "state_code"                                       // state
-//            case latitude = "latitude"                                      // latitude
-//            case longitude = "longitude"                                    // longitude
-//        }
-
-        
         let jsonItemToParse: [String] = [HighSchoolDataJSONItens.schoolName.rawValue,
                                          HighSchoolDataJSONItens.overViewParagraph.rawValue,
                                          HighSchoolDataJSONItens.phonNumber.rawValue,

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17A8204820321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */; };
+		17A8204920321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data..xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data..xml */; };
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
-		17DBC4D2203206F3009BFB1A /* Test Offline Storage Data in Resources */ = {isa = PBXBuildFile; fileRef = 17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */; };
 		17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */; };
 		17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574C203123C100C4E29F /* SettingsTableViewController.swift */; };
 		17DD574F2031245E00C4E29F /* HighSchoolNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */; };
@@ -33,8 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_Names.xml; sourceTree = "<group>"; };
+		17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data..xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_SAT_Data..xml; sourceTree = "<group>"; };
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
-		17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Offline Storage Data"; sourceTree = "<group>"; };
 		17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsDataXMLOperation.swift; sourceTree = "<group>"; };
 		17DD574C203123C100C4E29F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolNameCell.swift; sourceTree = "<group>"; };
@@ -70,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17A8204520321D5B00A72AE5 /* Testing Storage */ = {
+			isa = PBXGroup;
+			children = (
+				17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */,
+				17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data..xml */,
+			);
+			name = "Testing Storage";
+			sourceTree = "<group>";
+		};
 		340CBF3A202533680057710B /* Offline Storage Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +131,7 @@
 			children = (
 				34B28C5B2023E58E0025DE07 /* NYCHighSchoolsTests.swift */,
 				34B28C5D2023E58E0025DE07 /* Info.plist */,
-				17DBC4D1203206F3009BFB1A /* Test Offline Storage Data */,
+				17A8204520321D5B00A72AE5 /* Testing Storage */,
 			);
 			path = NYCHighSchoolsTests;
 			sourceTree = "<group>";
@@ -220,7 +231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17DBC4D2203206F3009BFB1A /* Test Offline Storage Data in Resources */,
+				17A8204920321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data..xml in Resources */,
+				17A8204820321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
