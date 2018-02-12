@@ -32,7 +32,8 @@ class NYCHighSchoolsTests: XCTestCase {
         
         let bundle = Bundle(for: NYCHighSchoolsTests.self)
         guard let path = bundle.path(forResource: "Test_NYC_2017_High_Schools_Names", ofType: "xml") else {
-            return
+            XCTFail("Error loading Test_NYC_2017_High_Schools_Names.xml")
+           return
         }
         let url = URL(fileURLWithPath: path)
         
@@ -85,6 +86,10 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail("Parse A High School's Data XML Expectation should not be nil")
             return
         }
+        
+        if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            print("SUCCESS! Parsed A High School's Data: \(cityHighSchoolsDataDict?.debugDescription)")
+        }
         expectation.fulfill()
     }
  
@@ -93,16 +98,11 @@ class NYCHighSchoolsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
