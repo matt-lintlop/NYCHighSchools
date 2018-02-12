@@ -9,8 +9,8 @@
 import UIKit
 
 enum ParseHighSchoolDataXMLError: Error {
-    case missingXMLDataError                                // no xml data
-    case parseXMLDataError                                  // error parsing xml data
+    case noXMLDataError                     // no xml data error
+    case parseXMLDataError                  // error parsing xml data
 }
 
 // Names of json items from the server.
@@ -215,31 +215,31 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         downloadXMLDataTask = nil
 
         if let _ = error {
-            completionHandler?(nil, .missingXMLDataError)
+            completionHandler?(nil, .noXMLDataError)
         }
         else {
             if let data = data {
                 parseXML(withData: data)
             }
             else {
-                completionHandler?(nil, .missingXMLDataError)
+                completionHandler?(nil, .noXMLDataError)
             }
         }
     }
     
     func loadXMLData(withFileURL url: URL) {
         guard url.isFileURL else {
-            completionHandler?(nil, .missingXMLDataError)
+            completionHandler?(nil, .noXMLDataError)
             return
         }
         guard var xmlString = try? String(contentsOf: url, encoding: .utf8) else {
-            completionHandler?(nil, .missingXMLDataError)
+            completionHandler?(nil, .noXMLDataError)
             return
         }
         xmlString = fixAmpersandInXML(xmlString)
         let data = xmlString.data(using: .utf8)
         if data == nil {
-            completionHandler?(nil, .missingXMLDataError)
+            completionHandler?(nil, .noXMLDataError)
         }
         else {
             parseXML(withData: data!)
@@ -265,7 +265,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             print("Done with operation")
         }
         else {
-            completionHandler?(nil, .missingXMLDataError)
+            completionHandler?(nil, .noXMLDataError)
         }
      }
 
