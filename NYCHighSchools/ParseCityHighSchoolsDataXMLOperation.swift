@@ -251,5 +251,4 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         return nycHighSchoolsXMLData
     }
 
-  
 }
