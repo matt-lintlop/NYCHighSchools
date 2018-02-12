@@ -11,6 +11,7 @@
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
 		17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */; };
 		17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574C203123C100C4E29F /* SettingsTableViewController.swift */; };
+		17DD574F2031245E00C4E29F /* HighSchoolNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */; };
 		340CBF38202533610057710B /* NYC_2017_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */; };
 		340CBF39202533610057710B /* NYC_2017_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */; };
 		348F8E992024097000762920 /* CityHighSchoolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F8E982024097000762920 /* CityHighSchoolData.swift */; };
@@ -36,6 +37,7 @@
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
 		17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsDataXMLOperation.swift; sourceTree = "<group>"; };
 		17DD574C203123C100C4E29F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolNameCell.swift; sourceTree = "<group>"; };
 		340CBF362025335D0057710B /* NYC_2017_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_Names.xml; sourceTree = "<group>"; };
 		340CBF37202533600057710B /* NYC_2017_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NYC_2017_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
 		348F8E982024097000762920 /* CityHighSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolData.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */,
 				34B28C462023E58D0025DE07 /* AppDelegate.swift */,
 				34B28C4A2023E58D0025DE07 /* Main.storyboard */,
+				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
 				34B28C4F2023E58D0025DE07 /* LaunchScreen.storyboard */,
 				340CBF3A202533680057710B /* Offline Storage Data */,
@@ -232,6 +235,7 @@
 				17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */,
 				17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */,
 				17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */,
+				17DD574F2031245E00C4E29F /* HighSchoolNameCell.swift in Sources */,
 				34B28C472023E58D0025DE07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
