@@ -11,6 +11,8 @@ import XCTest
 
 class NYCHighSchoolsTests: XCTestCase {
     
+    var parseHighSchoolDataExpectation: XCTestExpectation?
+    
     override func setUp() {
         super.setUp()
         
@@ -21,24 +23,69 @@ class NYCHighSchoolsTests: XCTestCase {
         }
       }
     
-    func parse_Offline_NYC_HighSchool_Names_XML_Data() {
-        guard let path = Bundle.main.path(forResource: "NYC_2017_High_Schools_Names", ofType: "xml") else {
+    func testParseHighSchoolData() {
+        parseHighSchoolDataExpectation = XCTestExpectation(description: "Parse A High School's Data XML")
+        guard let expectation = parseHighSchoolDataExpectation else {
+            XCTFail("Parse A High School's Data XML Expectation should not be nil")
+            return
+        }
+        
+        let bundle = Bundle(for: NYCHighSchoolsTests.self)
+        guard let path = bundle.path(forResource: "Test_NYC_2017_High_Schools_Names", ofType: "xml") else {
             return
         }
         let url = URL(fileURLWithPath: path)
-        let jsonItemToParse: [String] = []
+        
+        
+//        enum HighSchoolDataJSONItens: String {
+//            case schoolName = "school_name"                                 // high school name
+//            case numberOfTestTakers = "num_of_sat_test_takers"              // # of test takers
+//            case averageSATReadingScore = "sat_critical_reading_avg_score"  // average SAT reading score
+//            case averageSATMathScore = "sat_math_avg_score"                 // average SAT math score
+//            case averageSATWritingScore = "sat_writing_avg_score"           // average SAT writing score
+//            case overViewParagraph = "overview_paragraph"                   // overview paragraph
+//            case phonNumber = "phone_number"                                // phone number
+//            case faxNumber = "fax_number"                                   // fax number
+//            case schoolEmail = "school_email"                               // school email
+//            case numberOfStudents = "total_students"                        // number of students
+//            case city = "city"                                              // city
+//            case zip = "zip"                                                // zip code
+//            case state = "state_code"                                       // state
+//            case latitude = "latitude"                                      // latitude
+//            case longitude = "longitude"                                    // longitude
+//        }
+
+        
+        let jsonItemToParse: [String] = [HighSchoolDataJSONItens.schoolName.rawValue,
+                                         HighSchoolDataJSONItens.overViewParagraph.rawValue,
+                                         HighSchoolDataJSONItens.phonNumber.rawValue,
+                                         HighSchoolDataJSONItens.faxNumber.rawValue,
+                                         HighSchoolDataJSONItens.schoolEmail.rawValue,
+                                         HighSchoolDataJSONItens.numberOfStudents.rawValue,
+                                         HighSchoolDataJSONItens.city.rawValue,
+                                         HighSchoolDataJSONItens.zip.rawValue,
+                                         HighSchoolDataJSONItens.state.rawValue,
+                                         HighSchoolDataJSONItens.latitude.rawValue,
+                                         HighSchoolDataJSONItens.longitude.rawValue]
+        
         let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(xmlDataURL: url,
-                                                                jsonItemsToParse: jsonItemToParse,
-                                                                completionHandler: parseHighSchoolXMLDataCompletionHandler,
-                                                                cityHighSchoolsDataDict: nil,
-                                                                onlyParseDataForSchoolsInDict: false)
+                                                                     jsonItemsToParse: jsonItemToParse,
+                                                                     completionHandler: parseHighSchoolDataCompletionHandler,
+                                                                     cityHighSchoolsDataDict: nil,
+                                                                     onlyParseDataForSchoolsInDict: false)
         parseXMLOperation.parse()
+        
+        wait(for: [expectation], timeout: 10.0)
         
     }
     
-    func parseHighSchoolXMLDataCompletionHandler(highSchoolsDataDict: [String:HighSchoolData]?,
+    func parseHighSchoolDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
                                                  error: ParseHighSchoolDataXMLError?) {
-        
+        guard let expectation = parseHighSchoolDataExpectation else {
+            XCTFail("Parse A High School's Data XML Expectation should not be nil")
+            return
+        }
+        expectation.fulfill()
     }
  
     override func tearDown() {
