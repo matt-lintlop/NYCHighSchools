@@ -8,16 +8,23 @@
 
 import UIKit
 
+// NYC High Schools Names XML
+let newYorkCitySchoolDataXMLPath = "https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD"
+let offlineNewYorkCitySchoolDataXMLFile = "NYC_2017_High_Schools_Names"
+
+//NYC High Schools SAT Data:
+let newYorkCitySchoolSATDataXMLPath = "https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD"
+let offlineNewYorkCitySchoolSATDataXMLFile = "NYC_2017_High_Schools_SAT_Data"
+
+let cityName = "NYC"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var services: AppParsingServices?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        // create the app services
-        services = AppParsingServices()
 
         return true
     }
@@ -44,6 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func offlineCityHighSchoolDataURL() -> URL? {
+        return URL(fileURLWithPath: offlineNewYorkCitySchoolDataXMLFile)
+    }
+
+    func offlineCityHighSchoolSATDataURL() -> URL? {
+        return URL(fileURLWithPath: offlineNewYorkCitySchoolSATDataXMLFile)
+    }
 
 }
 
