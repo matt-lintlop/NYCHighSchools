@@ -69,12 +69,11 @@ class NYCHighSchoolsTests: XCTestCase {
                                          HighSchoolDataJSONItens.latitude.rawValue,
                                          HighSchoolDataJSONItens.longitude.rawValue]
         
-        let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(xmlDataURL: url,
-                                                                     jsonItemsToParse: jsonItemToParse,
+        let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(jsonItemsToParse: jsonItemToParse,
                                                                      completionHandler: parseHighSchoolDataCompletionHandler,
                                                                      cityHighSchoolsDataDict: nil,
                                                                      onlyParseDataForSchoolsInDict: false)
-        parseXMLOperation.parse()
+        parseXMLOperation.parseXML(withURL: url)
         
         wait(for: [expectation], timeout: 10.0)
         

@@ -37,7 +37,7 @@ typealias ParseXMLDataCompletionHandler = ([String: HighSchoolData]?, ParseHighS
 class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var xmlData: Data?                                          // XML data
     var xmlDataURL: URL?                                        // XML data URL
-    var parseCompletionHandler: ParseXMLDataCompletionHandler   // parse completion handler
+    var completionHandler: ParseXMLDataCompletionHandler        // parse xml data completion handler
     var jsonItemsToParse: [String]                              // list of json items to parse
     var cityHighSchoolsDataDict: [String:HighSchoolData]?       // dictionary data for each high school in the city where key = hotl name
     var currentElementName: String?                             // the name of xml element being parsed
@@ -46,39 +46,63 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     // Designation initializer: Initialize with xml data, a list of JSON items to parse,
     // and a complation handler
-    init(xmlDataURL: URL,
-         jsonItemsToParse: [String],
+    init(jsonItemsToParse: [String],
          completionHandler:  @escaping ParseXMLDataCompletionHandler,
          cityHighSchoolsDataDict: [String: HighSchoolData]? = nil,
          onlyParseDataForSchoolsInDict: Bool = false) {
         
-        self.xmlDataURL = xmlDataURL
         self.jsonItemsToParse = jsonItemsToParse
-        self.parseCompletionHandler = completionHandler
+        self.completionHandler = completionHandler
         self.cityHighSchoolsDataDict = cityHighSchoolsDataDict
         self.onlyParseDataForSchoolsInDict = onlyParseDataForSchoolsInDict
         if self.cityHighSchoolsDataDict == nil {
             self.cityHighSchoolsDataDict = [:]
         }
         super.init()
-        self.loadXMLData(withURL: xmlDataURL)
     }
     
-    func loadXMLData(withURL: URL) {
-        
+    func loadXMLData(withURL url: URL) {
+        self.xmlDataURL = url
+        if url.isFileURL {
+           // load the xml data from a file
+            loadXMLData(withFileURL: url)
+        }
+        else {
+            // load the xml data from the network
+        }
     }
-         
-    func parse() {
-        guard let xmlData = self.xmlData else {
-            parseCompletionHandler(nil, .missingXMLDataError)
+  
+    func loadXMLData(withFileURL url: URL) {
+        guard url.isFileURL else {
+            completionHandler(nil, .missingXMLDataError)
             return
         }
-        let parser = XMLParser(data: xmlData)
+        guard var xmlString = try? String(contentsOf: url, encoding: .utf8) else {
+            completionHandler(nil, .missingXMLDataError)
+            return
+        }
+        xmlString = fixAmpersandInXML(xmlString)
+        let data = xmlString.data(using: .utf8)
+        if data == nil {
+            completionHandler(nil, .missingXMLDataError)
+        }
+        else {
+            parseXML(withData: data!)
+        }
+    }
+
+    func parseXML(withURL url: URL) {
+        loadXMLData(withURL: url)
+    }
+ 
+    func parseXML(withData data: Data) {
+        self.xmlData = data
+        let parser = XMLParser(data: data)
         parser.delegate = self
         parser.parse()
         print("# of High Schools  Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
     }
-    
+
     // MARK: XML Parsing
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentElementName = elementName
@@ -89,7 +113,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        self.parseCompletionHandler(nil, .parseXMLDataError)
+        self.completionHandler(nil, .parseXMLDataError)
         print("Error parsing: \(parseError)")
     }
     
@@ -123,7 +147,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        self.parseCompletionHandler(self.cityHighSchoolsDataDict, nil)
+        self.completionHandler(self.cityHighSchoolsDataDict, nil)
         parser.delegate = nil
     }
     
