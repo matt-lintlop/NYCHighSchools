@@ -36,6 +36,7 @@ typealias ParseXMLDataCompletionHandler = ([String: HighSchoolData]?, ParseHighS
 
 class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     var xmlData: Data?                                          // XML data
+    var xmlDataURL: URL?                                        // XML data URL
     var parseCompletionHandler: ParseXMLDataCompletionHandler   // parse completion handler
     var jsonItemsToParse: [String]                              // list of json items to parse
     var cityHighSchoolsDataDict: [String:HighSchoolData]?       // dictionary data for each high school in the city where key = hotl name
@@ -50,7 +51,8 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
          completionHandler:  @escaping ParseXMLDataCompletionHandler,
          cityHighSchoolsDataDict: [String: HighSchoolData]? = nil,
          onlyParseDataForSchoolsInDict: Bool = false) {
-
+        
+        self.xmlDataURL = xmlDataURL
         self.jsonItemsToParse = jsonItemsToParse
         self.parseCompletionHandler = completionHandler
         self.cityHighSchoolsDataDict = cityHighSchoolsDataDict

@@ -31,7 +31,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         let bundle = Bundle(for: NYCHighSchoolsTests.self)
-        guard let path = bundle.path(forResource: "Test_NYC_2017_High_Schools_Names", ofType: "xml") else {
+        guard let path = bundle.path(forResource: "Test Offline Storage Data/Test_NYC_2017_High_Schools_Names", ofType: "xml") else {
             XCTFail("Error loading Test_NYC_2017_High_Schools_Names.xml")
            return
         }
@@ -89,8 +89,8 @@ class NYCHighSchoolsTests: XCTestCase {
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsed A High School's Data: \(cityHighSchoolsDataDict?.debugDescription)")
-        }
-        expectation.fulfill()
+            expectation.fulfill()
+       }
     }
  
     override func tearDown() {
