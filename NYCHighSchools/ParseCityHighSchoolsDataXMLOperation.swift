@@ -84,7 +84,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         let parser = XMLParser(data: data)
         parser.delegate = self
         parser.parse()
-        print("# of High Schools Parsed: \(String(describing: cityHighSchoolsDataDict?.keys.count))")
     }
 
     // MAR: XMLParserDelegate
@@ -276,12 +275,10 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     override func main() {
         if !isCancelled {
-            print("Running operation")
             guard let xmlDataURL = xmlDataURL else {
                 return
             }
             downloadXMLData(withURL: xmlDataURL)
-            print("Done with operation")
         }
         else {
             completionHandler?(nil, .noXMLDataError)
