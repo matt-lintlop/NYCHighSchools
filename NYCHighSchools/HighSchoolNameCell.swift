@@ -10,7 +10,7 @@ import UIKit
 
 class HighSchoolNameCell: UITableViewCell {
 
-    @IBOutlet weak var highSchoolName: UILabel!
+    @IBOutlet weak var highSchoolNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
