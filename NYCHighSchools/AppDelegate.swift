@@ -11,10 +11,40 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // URL of NYC High Schools Names XML
+    let newYorkCitySchoolDataXMLPath = "https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD"
+    
+    // Offline NYC High Schools Names XML Filename
+    let offlineNewYorkCitySchoolDataXMLFile = "NYC_2017_High_Schools_Names"
+    
+    // URL of NYC High Schools SAT Data XML
+    let newYorkCitySchoolSATDataXMLPath = "https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD"
+    
+    // Offline NYC High Schools SAT Data XML Filename
+    let offlineNewYorkCitySchoolSATDataXMLFile = "NYC_2017_High_Schools_SAT_Data"
+    
+    let cityName = "NYC"
+
     var window: UIWindow?
+    var cityHighSchoolsSATDataInfo: CityHighSchoolsSATDataInfo?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        // initialize the URLS to the city's data & SAT data
+        var offlineCityHighSchoolDataXMLURL: URL?
+        var offlineCityHighSchoolSATDataXMLURL: URL?
+        if let path = Bundle.main.path(forResource: offlineNewYorkCitySchoolDataXMLFile, ofType: "xml") {
+            offlineCityHighSchoolDataXMLURL = URL(fileURLWithPath: path)
+        }
+        if let path = Bundle.main.path(forResource: offlineNewYorkCitySchoolSATDataXMLFile, ofType: "xml") {
+            offlineCityHighSchoolSATDataXMLURL = URL(fileURLWithPath: path)
+        }
+        cityHighSchoolsSATDataInfo = CityHighSchoolsSATDataInfo(city: cityName,
+                                                                cityOfflineHighSchoolDataURL: offlineCityHighSchoolDataXMLURL,
+                                                                cityOfflineHighSchoolSATDataURL: offlineCityHighSchoolSATDataXMLURL,
+                                                                cityHighSchoolDataURL: URL(string: newYorkCitySchoolDataXMLPath),
+                                                                cityHighSchoolSATDataURL: URL(string: newYorkCitySchoolSATDataXMLPath))
+        
         return true
     }
 
