@@ -225,13 +225,13 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: citySATInfo)
-        operation.parse(completionHandler: parseCityHighSchoolSATDataCompletionHandler)
+        operation.parse(completionHandler: parseCityHighSchoolsSATDataCompletionHandler)
 
         wait(for: [expectation], timeout: 10.0)
     }
     
-    func parseCityHighSchoolSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
-                                                     error: ParseHighSchoolDataXMLError?) {
+    func parseCityHighSchoolsSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
+                                                      error: ParseHighSchoolDataXMLError?) {
         guard let expectation = parseHighSchoolDataExpectation else {
             XCTFail("Parse City High School's SAT Data from Network XML Expectation should not be nil")
             return
@@ -245,6 +245,12 @@ class NYCHighSchoolsTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+    }
+    
+    // MARK: Debugging
+    
+    func debug(cityHighSchoolsDataDict: [String:HighSchoolData]?) {
+        
     }
     
 //    func testPerformanceExample() {

@@ -28,4 +28,24 @@ class HighSchoolData {
     init(schoolName: String) {
         self.schoolName = schoolName
     }
+    
+    // MARK: Debugging
+    
+    func debug() {
+        print("\nHighSchoolData for school name: \(schoolName)")
+        print("numberOfSATTestTakers: \(String(describing: numberOfSATTestTakers))")
+        print("averageSATReadingScore: \(String(describing: averageSATReadingScore))")
+        print("averageSATMathScore: \(String(describing: averageSATMathScore))")
+        print("averageSATWritingScore: \(String(describing: averageSATWritingScore))")
+        print("overViewParagraph: \(String(describing: overViewParagraph))")
+        print("phonNumber: \(String(describing: phonNumber))")
+        print("faxNumber: \(String(describing: faxNumber))")
+        print("schoolEmail: \(String(describing: schoolEmail))")
+        print("numberOfStudents: \(String(describing: numberOfStudents))")
+        print("city: \(String(describing: city))")
+        print("zip: \(String(describing: zip))")
+        print("state: \(state)")
+        print("latitude: \(String(describing: latitude))")
+        print("longitude: \(String(describing: longitude))")
+    }
 }
