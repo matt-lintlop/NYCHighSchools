@@ -137,7 +137,7 @@ class ParseCityHighSchoolsSATDataXMLTask {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsing City High School Data")
             self.cityHighSchoolsDataDict = cityHighSchoolsDataDict
-            completionHandler?(cityHighSchoolsDataDict, error)
+            parseCityHighSchoolsSATData()
         }
         else {
             print("Error Parsing City High School Data")
