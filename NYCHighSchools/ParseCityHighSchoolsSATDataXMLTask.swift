@@ -38,14 +38,38 @@ class ParseCityHighSchoolsSATDataXMLTask {
     
     func parseCityHighSchoolsData() {
         if let url = citySATDataInfo.cityHighSchoolDataURL {
+            parseCityHighSchoolsData(with: url)
             
         }
         else if let url = citySATDataInfo.cityOfflineHighSchoolDataURL {
-            
+            parseCityHighSchoolsData(with: url)
         }
         else {
             completionHandler?(nil, .noXMLDataError)
         }
+    }
+    
+    func parseCityHighSchoolsData(with url: URL) {
+        let jsonItemToParse: [String] = [HighSchoolDataJSONItens.schoolName.rawValue,
+        HighSchoolDataJSONItens.overViewParagraph.rawValue,
+        HighSchoolDataJSONItens.phonNumber.rawValue,
+        HighSchoolDataJSONItens.faxNumber.rawValue,
+        HighSchoolDataJSONItens.schoolEmail.rawValue,
+        HighSchoolDataJSONItens.numberOfStudents.rawValue,
+        HighSchoolDataJSONItens.city.rawValue,
+        HighSchoolDataJSONItens.zip.rawValue,
+        HighSchoolDataJSONItens.state.rawValue,
+        HighSchoolDataJSONItens.latitude.rawValue,
+        HighSchoolDataJSONItens.longitude.rawValue]
+    
+        let parseXMLOperation = ParseCityHighSchoolsDataXMLOperation(jsonItemsToParse: jsonItemToParse,
+        completionHandler: parseCityHighSchoolsDataCompletionHandler,
+        cityHighSchoolsDataDict: nil,
+        addAllParsedItems: true)
+        guard let url = URL(string: newYorkCitySchoolDataXMLPath) else {
+            return
+        }
+        parseXMLOperation.parseXML(withURL: url)
     }
     
     func parseCityHighSchoolsSATData() {
@@ -61,5 +85,4 @@ class ParseCityHighSchoolsSATDataXMLTask {
                                                       error: ParseHighSchoolDataXMLError?) {
         //
     }
-
 }

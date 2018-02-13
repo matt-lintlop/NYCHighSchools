@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		179A9CAD2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */; };
+		179A9CB42032641500C4E980 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A9CB22032641500C4E980 /* Reachability.m */; };
 		17A8204820321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */; };
 		17A8204920321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml */; };
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
@@ -36,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsSATDataXMLTask.swift; sourceTree = "<group>"; };
+		179A9CAE203263E400C4E980 /* NYCHighSchools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCHighSchools-Bridging-Header.h"; sourceTree = "<group>"; };
+		179A9CB22032641500C4E980 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		179A9CB32032641500C4E980 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_Names.xml; sourceTree = "<group>"; };
 		17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
@@ -119,12 +123,15 @@
 				17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */,
 				179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */,
 				34B28C462023E58D0025DE07 /* AppDelegate.swift */,
+				179A9CB32032641500C4E980 /* Reachability.h */,
+				179A9CB22032641500C4E980 /* Reachability.m */,
 				34B28C4A2023E58D0025DE07 /* Main.storyboard */,
 				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
 				34B28C4F2023E58D0025DE07 /* LaunchScreen.storyboard */,
 				340CBF3A202533680057710B /* Offline Storage Data */,
 				34B28C522023E58D0025DE07 /* Info.plist */,
+				179A9CAE203263E400C4E980 /* NYCHighSchools-Bridging-Header.h */,
 			);
 			path = NYCHighSchools;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 				TargetAttributes = {
 					34B28C422023E58D0025DE07 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					34B28C562023E58D0025DE07 = {
@@ -248,6 +256,7 @@
 			files = (
 				348F8E992024097000762920 /* CityHighSchoolData.swift in Sources */,
 				17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */,
+				179A9CB42032641500C4E980 /* Reachability.m in Sources */,
 				17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */,
 				17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */,
 				179A9CAD2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift in Sources */,
@@ -407,12 +416,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = US5DTPYQ6L;
 				INFOPLIST_FILE = NYCHighSchools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.lintlop.NYCHighSchools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCHighSchools/NYCHighSchools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,12 +434,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = US5DTPYQ6L;
 				INFOPLIST_FILE = NYCHighSchools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matt.lintlop.NYCHighSchools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NYCHighSchools/NYCHighSchools-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
