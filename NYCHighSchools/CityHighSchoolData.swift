@@ -2,6 +2,7 @@
 //  HighSchoolData.swift
 //  NYCHighSchools
 //
+//  This class has information about a single city high school.
 //  Created by Matthew Lintlop on 2/1/18.
 //  Copyright © 2018 Matthew Lintlop. All rights reserved.
 //
