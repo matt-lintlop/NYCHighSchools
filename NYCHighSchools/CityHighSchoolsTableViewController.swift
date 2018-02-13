@@ -8,10 +8,19 @@
 
 import UIKit
 
+enum HighSchoolDataSortType {
+    case highSchoolName                       // sort by high school name alphabetically
+    case bestAvgMathSATScore                  // sort by best average math SAT score
+    case bestAvgReadingSATScore               // sort by best average reading SAT score
+    case bestAvgWritingSATScore               // sort by best average writing SAT score
+    case numberOfSATTestTakers                // sort by maximum number of SAT test takers
+}
+
 class CityHighSchoolsTableViewController: UITableViewController {
 
     var downloadAndParseXMLOperation: ParseCityHighSchoolsSATDataXMLTask?     // parse a city's high schools SAT data & school data
-    var cityHighSchoolsSATData: [HighSchoolData]?           // list of city high schools data including SAT data
+    var cityHighSchoolsSATData: [HighSchoolData]?                             // list of city high schools data including SAT data
+    var dataSortType: HighSchoolDataSortType = .highSchoolName                // current high school data sort type
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,5 +148,9 @@ class CityHighSchoolsTableViewController: UITableViewController {
         else {
             print("PARSE ERROR! Could not parse City High School's SAT Data")
         }
+    }
+    
+    func sortAndReloadCityHighSchoolsData() {
+        
     }
 }
