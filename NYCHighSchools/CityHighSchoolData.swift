@@ -26,7 +26,7 @@ class HighSchoolData {
     var longitude: Float?                 // longitude
 
     init(schoolName: String) {
-        self.schoolName = schoolName
+         self.schoolName = schoolName
     }
     
     // MARK: Debugging
@@ -44,7 +44,7 @@ class HighSchoolData {
         print("numberOfStudents: \(String(describing: numberOfStudents))")
         print("city: \(String(describing: city))")
         print("zip: \(String(describing: zip))")
-        print("state: \(state)")
+        print("state: \(String(describing: state))")
         print("latitude: \(String(describing: latitude))")
         print("longitude: \(String(describing: longitude))")
     }
