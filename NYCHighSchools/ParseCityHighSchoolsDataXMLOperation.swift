@@ -192,6 +192,13 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             return highSchoolData
         }
         else if addIfNotFound {
+            guard schoolName.count > 0 else {
+                return nil
+            }
+            if schoolName.starts(with:"\n") {
+                // skip invalid high school names
+                return nil
+            }
             if self.cityHighSchoolsDataDict == nil {
                 self.cityHighSchoolsDataDict = [:]
             }

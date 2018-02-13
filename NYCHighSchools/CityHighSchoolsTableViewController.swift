@@ -61,6 +61,9 @@ class CityHighSchoolsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighSchoolNameCell", for: indexPath) as! HighSchoolNameCell
 
+        if indexPath.row == 0 {
+            print("whats up?")
+        }
         if let highSchoolData = self.sortedCityHighSchoolsSATData?[indexPath.row] {
             cell.highSchoolNameLabel.text = highSchoolData.schoolName
         }
