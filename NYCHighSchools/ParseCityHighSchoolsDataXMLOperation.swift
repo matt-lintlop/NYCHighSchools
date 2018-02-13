@@ -228,6 +228,15 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         }
     }
     
+    override func cancel() {
+        super.cancel()
+        
+        if let dataTask = downloadXMLDataTask {
+            dataTask.cancel()
+            print("Canceled Download of URL: \(String(describing: xmlDataURL?.absoluteString))")
+        }
+    }
+    
     func downloadXMLDataCompletionHandler(data: Data?, response: URLResponse?, error: Error?) {
         
         downloadXMLDataTask = nil

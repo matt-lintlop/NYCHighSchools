@@ -102,6 +102,11 @@ class ParseCityHighSchoolsSATDataXMLTask {
         }
     }
     
+    func cancel() {
+        parseCityHighSchoolDataOperation?.cancel()
+        parseCityHighSchoolSATDataOperation?.cancel()
+    }
+    
     func parseCityHighSchoolsSATData() {
         if hasNetwork {
             if let url = citySATDataInfo.cityHighSchoolSATDataURL {
