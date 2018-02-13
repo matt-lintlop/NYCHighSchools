@@ -115,8 +115,8 @@ class CityHighSchoolsTableViewController: UITableViewController {
     
     func downloadAndParseCityHighSchoolsSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
                                                       error: ParseHighSchoolDataXMLError?) {
-        if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed City High School's SAT Data")
+ if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            print("SUCCESS! Parsed City High Schoo       l's SAT Data")
             debug(cityHighSchoolsDataDict)
         }
         else {
