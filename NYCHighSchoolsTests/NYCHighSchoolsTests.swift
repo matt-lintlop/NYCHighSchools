@@ -102,7 +102,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed A High School's SAT Data: \(cityHighSchoolsDataDict?.debugDescription)")
+            print("SUCCESS! Parsed A High School's SAT Data")
             expectation.fulfill()
         }
     }
@@ -155,7 +155,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed A High School's Data from Network: \(String(describing: cityHighSchoolsDataDict?.debugDescription))")
+            print("SUCCESS! Parsed A High School's Data from Network")
             expectation.fulfill()
         }
     }
@@ -203,7 +203,7 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed A High School's SAT Data from Network: \(cityHighSchoolsDataDict?.debugDescription)")
+            print("SUCCESS! Parsed A High School's SAT Data from Network")
             expectation.fulfill()
         }
     }
@@ -238,7 +238,8 @@ class NYCHighSchoolsTests: XCTestCase {
         }
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed City High School's SAT Data from Network: \(cityHighSchoolsDataDict?.debugDescription)")
+            print("SUCCESS! Parsed City High School's SAT Data")
+            debug(cityHighSchoolsDataDict)
             expectation.fulfill()
         }
     }
@@ -249,8 +250,18 @@ class NYCHighSchoolsTests: XCTestCase {
     
     // MARK: Debugging
     
-    func debug(cityHighSchoolsDataDict: [String:HighSchoolData]?) {
-        
+    func debug(_ cityHighSchoolsDataDict: [String:HighSchoolData]?) {
+        print("\n________________________________________________________________")
+        if cityHighSchoolsDataDict != nil {
+            print("PARSED HIGH SCHOOLS DATA: \(cityHighSchoolsDataDict!.keys.count) schools")
+            let allValues = cityHighSchoolsDataDict!.values
+            for highSchoolData in allValues {
+                highSchoolData.debug()
+            }
+      }
+        else {
+            print("No schools data parsed")
+        }
     }
     
 //    func testPerformanceExample() {
