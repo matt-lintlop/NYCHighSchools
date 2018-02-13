@@ -11,6 +11,7 @@ import UIKit
 class CityHighSchoolsTableViewController: UITableViewController {
 
     var downloadAndParseXMLOperation: ParseCityHighSchoolsSATDataXMLTask?     // parse a city's high schools SAT data & school data
+    var cityHighSchoolsSATData: [HighSchoolData]?           // list of city high schools data including SAT data
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +117,15 @@ class CityHighSchoolsTableViewController: UITableViewController {
     func downloadAndParseCityHighSchoolsSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
                                                       error: ParseHighSchoolDataXMLError?) {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
-            print("SUCCESS! Parsed \(cityHighSchoolsDataDict!.count) High School's SAT Data")
+            
+            for highSchoolData in cityHighSchoolsDataDict!.values {
+                highSchoolData.debug()
+            }
+            
+            // save the lis of parsed city high school data including SAT data
+            cityHighSchoolsSATData = Array(cityHighSchoolsDataDict!.values) as [HighSchoolData]
+            
+            print("SUCCESS! Parsed \(cityHighSchoolsSATData!.count) High School's SAT Data")
  //           debug(cityHighSchoolsDataDict)
         }
         else {
