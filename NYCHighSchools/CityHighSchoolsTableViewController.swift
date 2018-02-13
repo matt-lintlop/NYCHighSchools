@@ -62,10 +62,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighSchoolNameCell", for: indexPath) as! HighSchoolNameCell
 
         if let highSchoolData = self.sortedCityHighSchoolsSATData?[indexPath.row] {
-            let name = highSchoolData.schoolName
- //           highSchoolData.schoolName = "Digital Arts and Cinema Technology High School (Brooklyn School for Global Studies)"
-            cell.highSchoolNameLabel.text = name
-            print("Added cell with name = \(cell.highSchoolNameLabel.text!)")
+            cell.highSchoolNameLabel.text = highSchoolData.schoolName
         }
         cell.layoutIfNeeded()
         return cell
