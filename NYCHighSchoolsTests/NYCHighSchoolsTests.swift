@@ -17,11 +17,7 @@ class NYCHighSchoolsTests: XCTestCase {
         super.setUp()
         
         // get the app services
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            XCTFail("App delegate should not be nil")
-            return
-        }
-      }
+    }
     
     func testParseOfflineHighSchoolData() {
         parseHighSchoolDataExpectation = XCTestExpectation(description: "Parse A High School's Data XML")
@@ -133,7 +129,16 @@ class NYCHighSchoolsTests: XCTestCase {
                                                                      completionHandler: parseNetworkHighSchoolDataCompletionHandler,
                                                                      cityHighSchoolsDataDict: nil,
                                                                      addAllParsedItems: true)
-        guard let url = URL(string: newYorkCitySchoolDataXMLPath) else {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            XCTFail("App delegate should not be nil")
+            return
+        }
+        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+            XCTFail("City SAT infoi should not be nil")
+            return
+        }
+        guard let url = citySATInfo.cityHighSchoolDataURL else {
             XCTFail("Bad URL for High School's Data XML")
             return
         }
@@ -172,7 +177,16 @@ class NYCHighSchoolsTests: XCTestCase {
                                                                      completionHandler: parseHighSchoolSATDataFromNetworkCompletionHandler,
                                                                      cityHighSchoolsDataDict: nil,
                                                                      addAllParsedItems: true)
-        guard let url = URL(string: newYorkCitySchoolSATDataXMLPath) else {
+   
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            XCTFail("App delegate should not be nil")
+            return
+        }
+        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+            XCTFail("City SAT infoi should not be nil")
+            return
+        }
+        guard let url = citySATInfo.cityHighSchoolSATDataURL else {
             XCTFail("Bad URL for High School's SAT Data XML")
             return
         }
