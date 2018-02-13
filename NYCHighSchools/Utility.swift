@@ -24,3 +24,10 @@ func debug(_ cityHighSchoolsDataDict: [String:HighSchoolData]?) {
     }
 }
 
+func removeSpecialCharsFromString(text: String) -> String {
+    let okayChars : Set<Character> =
+        Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+-*=(),.:!_")
+    return String(text.filter {okayChars.contains($0) })
+}
+
+

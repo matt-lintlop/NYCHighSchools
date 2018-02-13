@@ -27,7 +27,11 @@ class HighSchoolData {
     var longitude: Float?                 // longitude
 
     init(schoolName: String) {
-         self.schoolName = schoolName
+        self.schoolName = schoolName
+        
+        if schoolName == "Design" {
+            print("hi")
+        }
     }
     
     // MARK: Debugging

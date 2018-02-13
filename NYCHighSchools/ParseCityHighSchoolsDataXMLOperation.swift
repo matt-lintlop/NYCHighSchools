@@ -187,22 +187,19 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: Utility
     
     func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
-        let uppercasedSchoolName = schoolName.uppercased()
+        let realSchoolName = removeSpecialCharsFromString(text: schoolName)
+        guard realSchoolName.count >= 2 else {
+            return nil
+        }
+        let uppercasedSchoolName = realSchoolName.uppercased()
         if let highSchoolData = self.cityHighSchoolsDataDict?[uppercasedSchoolName] {
             return highSchoolData
         }
         else if addIfNotFound {
-            guard schoolName.count > 0 else {
-                return nil
-            }
-            if schoolName.starts(with:"\n") {
-                // skip invalid high school names
-                return nil
-            }
-            if self.cityHighSchoolsDataDict == nil {
+           if self.cityHighSchoolsDataDict == nil {
                 self.cityHighSchoolsDataDict = [:]
             }
-            let highSchoolData = HighSchoolData(schoolName: schoolName)
+            let highSchoolData = HighSchoolData(schoolName: realSchoolName)
             self.cityHighSchoolsDataDict![uppercasedSchoolName] = highSchoolData
             return highSchoolData
         }
