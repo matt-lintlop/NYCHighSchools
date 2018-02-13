@@ -17,6 +17,8 @@ class CityHighSchoolsTableViewController: UITableViewController {
 
         self.title = "NYC High Schools"
         
+        downloadAndParseCityHighSchoolsSATData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -116,6 +118,9 @@ class CityHighSchoolsTableViewController: UITableViewController {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsed City High School's SAT Data")
             debug(cityHighSchoolsDataDict)
+        }
+        else {
+            print("Error! Couldn;'t ot parse City High School's SAT Data")
         }
     }
 }
