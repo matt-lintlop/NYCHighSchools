@@ -12,6 +12,7 @@
 		179A9CB42032641500C4E980 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A9CB22032641500C4E980 /* Reachability.m */; };
 		17A8204820321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */; };
 		17A8204920321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml */; };
+		17C0BE44203371B500BFEB38 /* HighSchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C0BE43203371B500BFEB38 /* HighSchoolDetailViewController.swift */; };
 		17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */; };
 		17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */; };
 		17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DD574C203123C100C4E29F /* SettingsTableViewController.swift */; };
@@ -44,6 +45,7 @@
 		179A9CB32032641500C4E980 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		17A8204620321D7700A72AE5 /* Test_NYC_High_Schools_Names.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_Names.xml; sourceTree = "<group>"; };
 		17A8204720321D7700A72AE5 /* Test_NYC_High_Schools_SAT_Data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test_NYC_High_Schools_SAT_Data.xml; sourceTree = "<group>"; };
+		17C0BE43203371B500BFEB38 /* HighSchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolDetailViewController.swift; sourceTree = "<group>"; };
 		17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityHighSchoolsTableViewController.swift; sourceTree = "<group>"; };
 		17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsDataXMLOperation.swift; sourceTree = "<group>"; };
 		17DD574C203123C100C4E29F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -120,14 +122,15 @@
 			isa = PBXGroup;
 			children = (
 				17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */,
-				1790701920335E3800ACA5EE /* Utility.swift */,
 				17DD574C203123C100C4E29F /* SettingsTableViewController.swift */,
+				17C0BE43203371B500BFEB38 /* HighSchoolDetailViewController.swift */,
 				348F8E982024097000762920 /* CityHighSchoolData.swift */,
 				17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */,
 				179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */,
 				34B28C462023E58D0025DE07 /* AppDelegate.swift */,
 				179A9CB32032641500C4E980 /* Reachability.h */,
 				179A9CB22032641500C4E980 /* Reachability.m */,
+				1790701920335E3800ACA5EE /* Utility.swift */,
 				34B28C4A2023E58D0025DE07 /* Main.storyboard */,
 				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
 				34B28C4D2023E58D0025DE07 /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 				348F8E992024097000762920 /* CityHighSchoolData.swift in Sources */,
 				17DD574D203123C100C4E29F /* SettingsTableViewController.swift in Sources */,
 				1790701A20335E3800ACA5EE /* Utility.swift in Sources */,
+				17C0BE44203371B500BFEB38 /* HighSchoolDetailViewController.swift in Sources */,
 				179A9CB42032641500C4E980 /* Reachability.m in Sources */,
 				17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */,
 				17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */,
