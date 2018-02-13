@@ -134,11 +134,11 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail("App delegate should not be nil")
             return
         }
-        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+        guard let cityXMLDataInfo = appDelegate.cityHighSchoolsSATDataInfo else {
             XCTFail("City SAT infoi should not be nil")
             return
         }
-        guard let url = citySATInfo.cityHighSchoolDataURL else {
+        guard let url = cityXMLDataInfo.cityHighSchoolDataURL else {
             XCTFail("Bad URL for High School's Data XML")
             return
         }
@@ -182,11 +182,11 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail("App delegate should not be nil")
             return
         }
-        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+        guard let cityXMLDataInfo = appDelegate.cityHighSchoolsSATDataInfo else {
             XCTFail("City SAT infoi should not be nil")
             return
         }
-        guard let url = citySATInfo.cityHighSchoolSATDataURL else {
+        guard let url = cityXMLDataInfo.cityHighSchoolSATDataURL else {
             XCTFail("Bad URL for High School's SAT Data XML")
             return
         }
@@ -219,12 +219,12 @@ class NYCHighSchoolsTests: XCTestCase {
             XCTFail("App delegate should not be nil")
             return
         }
-        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+        guard let cityXMLDataInfo = appDelegate.cityHighSchoolsSATDataInfo else {
             XCTFail("City SAT info should not be nil")
             return
         }
         
-        let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: citySATInfo)
+        let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: cityXMLDataInfo)
         operation.parse(completionHandler: parseCityHighSchoolsSATDataCompletionHandler)
 
         wait(for: [expectation], timeout: 10.0)

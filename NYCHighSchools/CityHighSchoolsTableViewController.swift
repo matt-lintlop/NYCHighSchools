@@ -99,23 +99,31 @@ class CityHighSchoolsTableViewController: UITableViewController {
     }
     */
 
+    // get the general information about the city SAT data
+    // including the url's to the xml data online & offline
+    func cityHighSchoolsXMLDataInfo() -> CityHighSchoolsSATDataInfo? {
+        guard downloadAndParseXMLOperation == nil else {
+            return nil
+        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        return appDelegate.cityHighSchoolsSATDataInfo
+    }
+    
     func downloadAndParseCityHighSchoolsSATData() {
         guard downloadAndParseXMLOperation == nil else {
             return
         }
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        guard let cityXMLDataInfo = cityHighSchoolsXMLDataInfo() else {
             return
         }
-        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
-            return
-        }
-        
-        let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: citySATInfo)
-        operation.parse(completionHandler: downloadAndParseCityHighSchoolsSATDataCompletionHandler)
+        let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: cityXMLDataInfo)
+        operation.parse(completionHandler: downloadAndParseCityHighSchoolsDataCompletionHandler)
      }
     
-    func downloadAndParseCityHighSchoolsSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
-                                                      error: ParseHighSchoolDataXMLError?) {
+    func downloadAndParseCityHighSchoolsDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
+                                                              error: ParseHighSchoolDataXMLError?) {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             
             for highSchoolData in cityHighSchoolsDataDict!.values {
