@@ -10,6 +10,8 @@ import UIKit
 
 class CityHighSchoolsTableViewController: UITableViewController {
 
+    var downloadAndParseXMLOperation: ParseCityHighSchoolsSATDataXMLTask?     // parse a city's high schools SAT data & school data
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -94,4 +96,26 @@ class CityHighSchoolsTableViewController: UITableViewController {
     }
     */
 
+    func downloadAndParseCityHighSchoolsSATData() {
+        guard downloadAndParseXMLOperation == nil else {
+            return
+        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        guard let citySATInfo = appDelegate.cityHighSchoolsSATDataInfo else {
+            return
+        }
+        
+        let operation = ParseCityHighSchoolsSATDataXMLTask(withCitySATDataInfo: citySATInfo)
+        operation.parse(completionHandler: downloadAndParseCityHighSchoolsSATDataCompletionHandler)
+     }
+    
+    func downloadAndParseCityHighSchoolsSATDataCompletionHandler(cityHighSchoolsDataDict: [String:HighSchoolData]?,
+                                                      error: ParseHighSchoolDataXMLError?) {
+        if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            print("SUCCESS! Parsed City High School's SAT Data")
+            debug(cityHighSchoolsDataDict)
+        }
+    }
 }

@@ -243,27 +243,12 @@ class NYCHighSchoolsTests: XCTestCase {
             expectation.fulfill()
         }
     }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    // MARK: Debugging
-    
-    func debug(_ cityHighSchoolsDataDict: [String:HighSchoolData]?) {
-        print("\n________________________________________________________________")
-        if cityHighSchoolsDataDict != nil {
-            print("PARSED HIGH SCHOOLS DATA: \(cityHighSchoolsDataDict!.keys.count) schools")
-            let allValues = cityHighSchoolsDataDict!.values
-            for highSchoolData in allValues {
-                highSchoolData.debug()
-            }
-      }
-        else {
-            print("No schools data parsed")
-        }
-    }
-    
+        
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {
