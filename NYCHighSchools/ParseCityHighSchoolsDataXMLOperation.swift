@@ -176,7 +176,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     }
     
     func parserDidEndDocument(_ parser: XMLParser) {
-        print(">> Parser parserDidEndDocument")
         guard let cityHighSchoolsDataDict = self.cityHighSchoolsDataDict else {
             self.completionHandler?(nil, .parseXMLDataError)
             return

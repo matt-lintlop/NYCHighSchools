@@ -26,7 +26,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.rowHeight = 44;
         self.title = "NYC High Schools"
         
         downloadAndParseCityHighSchoolsSATData()
@@ -53,15 +53,21 @@ class CityHighSchoolsTableViewController: UITableViewController {
         guard let sortedCityHighSchoolsSATData = sortedCityHighSchoolsSATData else {
             return 0
         }
-        return sortedCityHighSchoolsSATData.count
+        let rowCount = sortedCityHighSchoolsSATData.count
+        print("There are \(rowCount) rows in the table view.")
+        return rowCount
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighSchoolNameCell", for: indexPath) as! HighSchoolNameCell
 
         if let highSchoolData = self.sortedCityHighSchoolsSATData?[indexPath.row] {
-            cell.highSchoolNameLabel.text = highSchoolData.schoolName
+            let name = highSchoolData.schoolName
+ //           highSchoolData.schoolName = "Digital Arts and Cinema Technology High School (Brooklyn School for Global Studies)"
+            cell.highSchoolNameLabel.text = name
+            print("Added cell with name = \(cell.highSchoolNameLabel.text!)")
         }
+        cell.layoutIfNeeded()
         return cell
     }
 

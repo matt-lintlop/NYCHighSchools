@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14081.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +20,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HighSchoolNameCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VG-4o-Kfc" id="JP0-gb-hCk">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
-                                            <rect key="frame" x="16" y="12" width="343" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
+                                            <rect key="frame" x="13" y="3" width="355" height="37"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="lqs-s2-kgO" firstAttribute="leading" secondItem="JP0-gb-hCk" secondAttribute="leading" constant="16" id="HHz-YZ-CJR"/>
-                                        <constraint firstAttribute="trailing" secondItem="lqs-s2-kgO" secondAttribute="trailing" constant="16" id="WGx-QH-4wP"/>
-                                        <constraint firstItem="lqs-s2-kgO" firstAttribute="centerY" secondItem="JP0-gb-hCk" secondAttribute="centerY" id="jKm-gQ-Q5z"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="lqs-s2-kgO" secondAttribute="trailing" constant="-9" id="0cS-ei-fm5"/>
+                                        <constraint firstItem="lqs-s2-kgO" firstAttribute="leading" secondItem="JP0-gb-hCk" secondAttribute="leadingMargin" constant="-3" id="2KS-OQ-QY7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lqs-s2-kgO" secondAttribute="bottom" constant="-7" id="rux-ep-rbW"/>
+                                        <constraint firstItem="lqs-s2-kgO" firstAttribute="centerY" secondItem="JP0-gb-hCk" secondAttribute="centerY" id="z9s-i7-uQK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
