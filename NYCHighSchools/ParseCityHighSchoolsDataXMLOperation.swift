@@ -116,12 +116,27 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             self.currentHighSchoolName = string
             self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
                                                                 addIfNotFound: self.addAllParsedItems)
-            guard self.currentHighSchoolData != nil else {
+            if self.addAllParsedItems && (self.currentHighSchoolData == nil) {
                 self.completionHandler?(nil, .parseXMLDataError)
                 return
             }
         }
         else {
+            if self.addAllParsedItems {
+                // add data for every high school parsed
+                guard currentHighSchoolData != nil else {
+                    self.completionHandler?(nil, .parseXMLDataError)
+                    return
+                }
+            }
+            else {
+                // don't add data for high schools not found in
+                // the dictionary that was passed to this operation's init.
+                if currentHighSchoolData == nil {
+                    return
+                }
+            }
+                
             guard let highSchoolData = self.currentHighSchoolData else {
                 self.completionHandler?(nil, .parseXMLDataError)
                 return
@@ -163,7 +178,11 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     func parserDidEndDocument(_ parser: XMLParser) {
         print(">> Parser parserDidEndDocument")
-        self.completionHandler?(self.cityHighSchoolsDataDict, nil)
+        guard let cityHighSchoolsDataDict = self.cityHighSchoolsDataDict else {
+            self.completionHandler?(nil, .parseXMLDataError)
+            return
+        }
+        self.completionHandler?(cityHighSchoolsDataDict, nil)
         parser.delegate = nil
     }
     
