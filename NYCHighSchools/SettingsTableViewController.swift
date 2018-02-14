@@ -16,6 +16,7 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         self.tableView.rowHeight = 44;
+        self.clearsSelectionOnViewWillAppear = false
 
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
         navigationItem.leftBarButtonItem = backButton
