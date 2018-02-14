@@ -19,7 +19,7 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var faxLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewParagrapTextView: UITextView!
     @IBOutlet weak var numberOfStudentsLabel: UILabel!
     @IBOutlet weak var avgMathSATLabel: UILabel!
     @IBOutlet weak var avgReadingSATLabel: UILabel!
@@ -117,11 +117,11 @@ class HighSchoolDetailViewController: UIViewController {
             emailLabel.text = ""
         }
         
-        if let overViewParagraph = highSchoolData.overViewParagraph {
-            overviewLabel.text = overViewParagraph
+        if let overview = highSchoolData.overViewParagraph {
+            overviewParagrapTextView.text = overview
         }
         else {
-            overviewLabel.text = ""
+            overviewParagrapTextView.text = ""
         }
         
         if let phonNumber = highSchoolData.phonNumber {
