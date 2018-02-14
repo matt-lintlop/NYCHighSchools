@@ -77,10 +77,6 @@ class CityHighSchoolsTableViewController: UITableViewController {
     }
   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let highSchoolData = self.sortedCityHighSchoolsSATData?[indexPath.row] else {
-            return
-        }
-        highSchoolData.debug()
     }
     
     // MARK: - Navigation
@@ -92,8 +88,8 @@ class CityHighSchoolsTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let selectedRow = indexPath.row
                 let detailVC = segue.destination as! HighSchoolDetailViewController
-                let selectedRowHighSchoolData = self.cityHighSchoolsSATData![selectedRow]
-                detailVC.highSchoolsData = selectedRowHighSchoolData
+                let selectedRowHighSchoolData = self.sortedCityHighSchoolsSATData![selectedRow]
+                detailVC.setHighSchoolData(selectedRowHighSchoolData)
             }
         }
     }

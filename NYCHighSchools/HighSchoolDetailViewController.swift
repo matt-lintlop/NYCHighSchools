@@ -10,7 +10,7 @@ import UIKit
 
 class HighSchoolDetailViewController: UIViewController {
 
-    var highSchoolsData: HighSchoolData?    // high school's data including average SAT scores
+    var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,12 @@ class HighSchoolDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func setHighSchoolData(_ highSchoolData: HighSchoolData) {
+        self.highSchoolData = highSchoolData
+        self.title = highSchoolData.schoolName
+        highSchoolData.debug()
+    }
+    
     /*
     // MARK: - Navigation
 
