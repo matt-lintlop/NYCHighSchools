@@ -95,7 +95,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                 let selectedRow = indexPath.row
                 let detailVC = segue.destination as! HighSchoolDetailViewController
                 let selectedRowHighSchoolData = self.sortedCityHighSchoolsSATData![selectedRow]
-                detailVC.setHighSchoolData(selectedRowHighSchoolData)
+                detailVC.highSchoolData = selectedRowHighSchoolData
             }
         }
     }

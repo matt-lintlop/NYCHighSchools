@@ -28,7 +28,11 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
     
-    var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
+    var highSchoolData: HighSchoolData? {              // high school's data including average SAT scores
+        didSet {
+            updateMapWithSchoolLocation()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,7 @@ class HighSchoolDetailViewController: UIViewController {
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
         showLabelsWithData()
+        updateMapWithSchoolLocation()
     }
 
     @objc func settingsTapped() {
@@ -48,10 +53,6 @@ class HighSchoolDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func setHighSchoolData(_ highSchoolData: HighSchoolData) {
-        self.highSchoolData = highSchoolData
     }
     
     func showLabelsWithData() {
@@ -147,6 +148,22 @@ class HighSchoolDetailViewController: UIViewController {
 
         highSchoolData.debug()
     }
+    
+    func updateMapWithSchoolLocation() {
+        guard let mapView = mapView else {
+            return
+        }
+        guard let latitude = highSchoolData?.latitude, let longitude = highSchoolData?.longitude else {
+            mapView.isHidden = true
+            return
+        }
+        var region = MKCoordinateRegion()
+        region.center.latitude = CLLocationDegrees(latitude);
+        region.center.longitude = CLLocationDegrees(longitude);
+        region.span.latitudeDelta = 0.001;
+        region.span.longitudeDelta = 0.001;
+        mapView.region = region
+}
     
     /*
     // MARK: - Navigation
