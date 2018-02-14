@@ -24,6 +24,7 @@ enum HighSchoolDataJSONItens: String {
     case phonNumber = "phone_number"                                // phone number
     case faxNumber = "fax_number"                                   // fax number
     case schoolEmail = "school_email"                               // school email
+    case primaryAddress = "primary_address_line_1"                  // school primary address
     case numberOfStudents = "total_students"                        // number of students
     case city = "city"                                              // city
     case zip = "zip"                                                // zip code
@@ -175,6 +176,8 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
                     highSchoolData.schoolEmail = string
                 case HighSchoolDataJSONItens.numberOfStudents.rawValue:
                     highSchoolData.numberOfStudents = Int(string)
+                case HighSchoolDataJSONItens.primaryAddress.rawValue:
+                    highSchoolData.primaryAddress = string
                 default:
                     print("Skipped parsing element named: \(currentElementName)")
             }

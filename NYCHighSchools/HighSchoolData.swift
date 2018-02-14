@@ -18,13 +18,14 @@ class HighSchoolData {
     var overViewParagraph: String?      // overview paragraph
     var phonNumber: String?             // phone number
     var faxNumber: String?              // fax number
+    var primaryAddress: String?         // primary address
     var schoolEmail: String?            // school email
     var numberOfStudents: Int?          // number of students
     var city: String?                   // city
     var zip: String?                    // zip code
     var state: String?                  // state
-    var latitude: Float?                  // latitude
-    var longitude: Float?                 // longitude
+    var latitude: Float?                // latitude
+    var longitude: Float?               // longitude
 
     init(schoolName: String) {
         self.schoolName = schoolName
@@ -45,6 +46,7 @@ class HighSchoolData {
         print("overViewParagraph: \(String(describing: overViewParagraph))")
         print("phonNumber: \(String(describing: phonNumber))")
         print("faxNumber: \(String(describing: faxNumber))")
+        print("primaryAddress: \(String(describing: primaryAddress))")
         print("schoolEmail: \(String(describing: schoolEmail))")
         print("numberOfStudents: \(String(describing: numberOfStudents))")
         print("city: \(String(describing: city))")

@@ -9,7 +9,9 @@
 import UIKit
 
 class HighSchoolDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var highSchoolNameLabel: UILabel!
+    
     var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
     
     override func viewDidLoad() {

@@ -61,6 +61,7 @@ class ParseCityHighSchoolsSATDataXMLTask {
         HighSchoolDataJSONItens.phonNumber.rawValue,
         HighSchoolDataJSONItens.faxNumber.rawValue,
         HighSchoolDataJSONItens.schoolEmail.rawValue,
+        HighSchoolDataJSONItens.primaryAddress.rawValue,
         HighSchoolDataJSONItens.numberOfStudents.rawValue,
         HighSchoolDataJSONItens.city.rawValue,
         HighSchoolDataJSONItens.zip.rawValue,
