@@ -10,7 +10,7 @@ import UIKit
 
 // Notifictions
 // Did Set High School Data Sort Type notification key
-let didSetSetHighSchoolDataSortTypeNotificationKey = "com.mattlintlop.didSetHighSchoolDataSortType"
+let didSetSetHighSchoolDataSortTypeNotification: Notification.Name = Notification.Name(rawValue: "com.mattlintlop.didSetHighSchoolDataSortType")
 
 class SettingsTableViewController: UITableViewController {
 
@@ -29,6 +29,11 @@ class SettingsTableViewController: UITableViewController {
             let sortDataByType = appDelegate.getHighSchoolDataSortType()
             checkCell(withIndexPath: getIndexPath(withDataSortType: sortDataByType))
         }
+        
+     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     override func didReceiveMemoryWarning() {

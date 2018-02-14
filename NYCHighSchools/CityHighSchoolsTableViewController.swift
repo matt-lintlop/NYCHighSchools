@@ -35,11 +35,10 @@ class CityHighSchoolsTableViewController: UITableViewController {
         
         downloadAndParseCityHighSchoolsSATData()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        NotificationCenter.default.addObserver(forName: didSetSetHighSchoolDataSortTypeNotification, object: nil, queue: nil) { [weak self] (notification) in
+            
+            self?.sortAndReloadTableviewData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
