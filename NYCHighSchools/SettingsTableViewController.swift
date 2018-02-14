@@ -19,6 +19,11 @@ class SettingsTableViewController: UITableViewController {
 
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
         navigationItem.leftBarButtonItem = backButton
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let sortDataByType = appDelegate.getHighSchoolDataSortType()
+            checkCell(withIndexPath: getIndexPath(withDataSortType: sortDataByType))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +44,15 @@ class SettingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Sort Data By"
+        }
+        else {
+            return nil
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,10 +89,9 @@ class SettingsTableViewController: UITableViewController {
         return cell
     }
 
-    // MARK: Table View Delegate
+    // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        super.tableView(tableView, didSelectRowAt: indexPath)
         checkCell(withIndexPath: indexPath)
     }
     
