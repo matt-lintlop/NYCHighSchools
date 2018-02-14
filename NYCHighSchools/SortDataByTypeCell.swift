@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SortDataByTypeCell: UITableViewCell {
+class SortDataTypeCell: UITableViewCell {
     
     @IBOutlet weak var sortTypeLabel: UILabel!
     

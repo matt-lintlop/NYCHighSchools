@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1766BBF6203495A900F4228C /* SortDataByCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766BBF5203495A900F4228C /* SortDataByCell.swift */; };
+		1766BBF6203495A900F4228C /* SortDataTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766BBF5203495A900F4228C /* SortDataTypeCell.swift */; };
 		1790701A20335E3800ACA5EE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790701920335E3800ACA5EE /* Utility.swift */; };
 		179A9CAD2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */; };
 		179A9CB42032641500C4E980 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 179A9CB22032641500C4E980 /* Reachability.m */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1766BBF5203495A900F4228C /* SortDataByCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDataByCell.swift; sourceTree = "<group>"; };
+		1766BBF5203495A900F4228C /* SortDataTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDataTypeCell.swift; sourceTree = "<group>"; };
 		1790701920335E3800ACA5EE /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCityHighSchoolsSATDataXMLTask.swift; sourceTree = "<group>"; };
 		179A9CAE203263E400C4E980 /* NYCHighSchools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCHighSchools-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 		34B28C452023E58D0025DE07 /* NYCHighSchools */ = {
 			isa = PBXGroup;
 			children = (
-				1766BBF5203495A900F4228C /* SortDataByCell.swift */,
+				1766BBF5203495A900F4228C /* SortDataTypeCell.swift */,
 				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
 				17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */,
 				17DD574C203123C100C4E29F /* SettingsTableViewController.swift */,
@@ -268,7 +268,7 @@
 				1790701A20335E3800ACA5EE /* Utility.swift in Sources */,
 				17C0BE44203371B500BFEB38 /* HighSchoolDetailViewController.swift in Sources */,
 				179A9CB42032641500C4E980 /* Reachability.m in Sources */,
-				1766BBF6203495A900F4228C /* SortDataByCell.swift in Sources */,
+				1766BBF6203495A900F4228C /* SortDataTypeCell.swift in Sources */,
 				17DD574B203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift in Sources */,
 				17C84A4A202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift in Sources */,
 				179A9CAD2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift in Sources */,

@@ -78,6 +78,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func offlineCityHighSchoolSATDataURL() -> URL? {
         return URL(fileURLWithPath: offlineNewYorkCitySchoolSATDataXMLFile)
     }
+    
+    // MARK: Settings
+    
+    func getHighSchoolDataSortType() -> HighSchoolDataSortType
+    
 
 }
 
