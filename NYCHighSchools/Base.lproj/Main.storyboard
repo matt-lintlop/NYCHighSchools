@@ -453,7 +453,6 @@
                         <outlet property="mapView" destination="FNs-oN-lAN" id="RRx-JR-T9l"/>
                         <outlet property="numberOfStudentsLabel" destination="0hs-Gh-3Aq" id="xjl-8X-Z5e"/>
                         <outlet property="numberOfTestTakersLabel" destination="sKH-qz-T8k" id="5mc-W1-7I2"/>
-                        <outlet property="overviewLabel" destination="Z4l-51-5N1" id="Kog-pe-j4V"/>
                         <outlet property="overviewParagrapTextView" destination="G34-KN-3aY" id="xy0-mE-WqV"/>
                         <outlet property="phoneLabel" destination="VvV-zM-I8h" id="O3U-Me-nyY"/>
                         <outlet property="stateLabel" destination="imX-Pb-3eL" id="ZJr-hc-OhB"/>
