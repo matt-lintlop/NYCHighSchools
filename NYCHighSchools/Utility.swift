@@ -30,4 +30,12 @@ func removeSpecialCharsFromString(text: String) -> String {
     return String(text.filter {okayChars.contains($0) })
 }
 
+func removeSpecialCharsFromSchoolName(_ schoolName: String) -> String? {
+    var realSchoolName = schoolName.trimmingCharacters(in: .whitespacesAndNewlines)
+    realSchoolName = removeSpecialCharsFromString(text: realSchoolName)
+    guard realSchoolName.count >= 2 else {
+        return nil
+    }
+    return realSchoolName
+}
 

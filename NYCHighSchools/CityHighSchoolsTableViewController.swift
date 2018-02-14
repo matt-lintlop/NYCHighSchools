@@ -118,10 +118,6 @@ class CityHighSchoolsTableViewController: UITableViewController {
                                                               error: ParseHighSchoolDataXMLError?) {
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             
-            for highSchoolData in cityHighSchoolsDataDict!.values {
-                highSchoolData.debug()
-            }
-            
             // save the lis of parsed city high school data including SAT data
             cityHighSchoolsSATData = Array(cityHighSchoolsDataDict!.values) as [HighSchoolData]
             cityHighSchoolsSATData = cityHighSchoolsSATData?.filter({ (highSchoolData) -> Bool in
@@ -147,67 +143,65 @@ class CityHighSchoolsTableViewController: UITableViewController {
         guard let cityHighSchoolsSATData = cityHighSchoolsSATData else {
             return
         }
-        DispatchQueue.main.async {
-//            self.sortedCityHighSchoolsSATData = cityHighSchoolsSATData.sorted(by: ({ (highSchoolData1, highSchoolData2) -> Bool in
-//                switch self.dataSortType {
-//                case .highSchoolName:
-//                    // sort by high school name alphabetically
-//                    return highSchoolData1.schoolName < highSchoolData2.schoolName
-//
-//                case .bestAvgMathSATScore:
-//                    // sort by Best Average Math SAT Score
-//                    if highSchoolData1.averageSATMathScore == nil {
-//                        return false
-//                    }
-//                    if highSchoolData2.averageSATMathScore == nil {
-//                        return true
-//                    }
-//                    return highSchoolData1.averageSATMathScore! < highSchoolData2.averageSATMathScore!
-//
-//                case .bestAvgReadingSATScore:
-//                    // sort by Best Average Reading SAT Score
-//                    if highSchoolData1.averageSATReadingScore == nil {
-//                        return false
-//                    }
-//                    if highSchoolData2.averageSATReadingScore == nil {
-//                        return true
-//                    }
-//                    return highSchoolData1.averageSATReadingScore! < highSchoolData2.averageSATReadingScore!
-//
-//                case .bestAvgWritingSATScore:
-//                    // sort by Best Average Writing SAT Score
-//                    if highSchoolData1.averageSATWritingScore == nil {
-//                        return false
-//                    }
-//                    if highSchoolData2.averageSATWritingScore == nil {
-//                        return true
-//                    }
-//                    return highSchoolData1.averageSATWritingScore! < highSchoolData2.averageSATWritingScore!
-//
-//                case .maxNumberOfSATTestTakers:
-//                    // sort by Maximum Number of SAT Test Takers
-//                    if highSchoolData1.numberOfSATTestTakers == nil {
-//                        return false
-//                    }
-//                    if highSchoolData2.numberOfSATTestTakers == nil {
-//                        return true
-//                    }
-//                    return highSchoolData1.numberOfSATTestTakers! < highSchoolData2.numberOfSATTestTakers!
-//
-//                case .maxNumberOfStudents:
-//                    // sort by Maximum Number of SAT Test Takers
-//                    if highSchoolData1.numberOfStudents == nil {
-//                        return false
-//                    }
-//                    if highSchoolData2.numberOfStudents == nil {
-//                        return true
-//                    }
-//                    return highSchoolData1.numberOfStudents! < highSchoolData2.numberOfStudents!
-//                }
-//            }))
-            
-            self.sortedCityHighSchoolsSATData = cityHighSchoolsSATData
-            
+        DispatchQueue.main.sync {
+            self.sortedCityHighSchoolsSATData = cityHighSchoolsSATData.sorted(by: ({ (highSchoolData1, highSchoolData2) -> Bool in
+                switch self.dataSortType {
+                case .highSchoolName:
+                    // sort by high school name alphabetically
+                    return highSchoolData1.schoolName < highSchoolData2.schoolName
+
+                case .bestAvgMathSATScore:
+                    // sort by Best Average Math SAT Score
+                    if highSchoolData1.averageSATMathScore == nil {
+                        return false
+                    }
+                    if highSchoolData2.averageSATMathScore == nil {
+                        return true
+                    }
+                    return highSchoolData1.averageSATMathScore! < highSchoolData2.averageSATMathScore!
+
+                case .bestAvgReadingSATScore:
+                    // sort by Best Average Reading SAT Score
+                    if highSchoolData1.averageSATReadingScore == nil {
+                        return false
+                    }
+                    if highSchoolData2.averageSATReadingScore == nil {
+                        return true
+                    }
+                    return highSchoolData1.averageSATReadingScore! < highSchoolData2.averageSATReadingScore!
+
+                case .bestAvgWritingSATScore:
+                    // sort by Best Average Writing SAT Score
+                    if highSchoolData1.averageSATWritingScore == nil {
+                        return false
+                    }
+                    if highSchoolData2.averageSATWritingScore == nil {
+                        return true
+                    }
+                    return highSchoolData1.averageSATWritingScore! < highSchoolData2.averageSATWritingScore!
+
+                case .maxNumberOfSATTestTakers:
+                    // sort by Maximum Number of SAT Test Takers
+                    if highSchoolData1.numberOfSATTestTakers == nil {
+                        return false
+                    }
+                    if highSchoolData2.numberOfSATTestTakers == nil {
+                        return true
+                    }
+                    return highSchoolData1.numberOfSATTestTakers! < highSchoolData2.numberOfSATTestTakers!
+
+                case .maxNumberOfStudents:
+                    // sort by Maximum Number of SAT Test Takers
+                    if highSchoolData1.numberOfStudents == nil {
+                        return false
+                    }
+                    if highSchoolData2.numberOfStudents == nil {
+                        return true
+                    }
+                    return highSchoolData1.numberOfStudents! < highSchoolData2.numberOfStudents!
+                }
+            }))
+                        
             self.tableView.reloadData()
        }
     }

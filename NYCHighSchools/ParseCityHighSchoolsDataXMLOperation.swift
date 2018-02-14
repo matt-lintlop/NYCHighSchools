@@ -111,9 +111,15 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             return
         }
         if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
+            
+            // validate the school name
+            guard let schoolName = removeSpecialCharsFromSchoolName(string) else {
+                return
+            }
+        
             // A high school's name was found
-            self.currentHighSchoolName = string
-            self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: string,
+            self.currentHighSchoolName = schoolName
+            self.currentHighSchoolData = self.getHighSchoolData(forSchoolNamed: schoolName,
                                                                 addIfNotFound: self.addAllParsedItems)
             if self.addAllParsedItems && (self.currentHighSchoolData == nil) {
                 self.completionHandler?(nil, .parseXMLDataError)
@@ -187,11 +193,10 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: Utility
     
     func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
-        let realSchoolName = removeSpecialCharsFromString(text: schoolName)
-        guard realSchoolName.count >= 2 else {
+        guard let schoolName = removeSpecialCharsFromSchoolName(schoolName) else {
             return nil
         }
-        let uppercasedSchoolName = realSchoolName.uppercased()
+        let uppercasedSchoolName = schoolName.uppercased()
         if let highSchoolData = self.cityHighSchoolsDataDict?[uppercasedSchoolName] {
             return highSchoolData
         }
@@ -199,7 +204,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
            if self.cityHighSchoolsDataDict == nil {
                 self.cityHighSchoolsDataDict = [:]
             }
-            let highSchoolData = HighSchoolData(schoolName: realSchoolName)
+            let highSchoolData = HighSchoolData(schoolName: schoolName)
             self.cityHighSchoolsDataDict![uppercasedSchoolName] = highSchoolData
             return highSchoolData
         }

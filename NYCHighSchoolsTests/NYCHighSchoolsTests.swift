@@ -239,7 +239,7 @@ class NYCHighSchoolsTests: XCTestCase {
         
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
             print("SUCCESS! Parsed City High School's SAT Data")
-            debug(cityHighSchoolsDataDict)
+//            debug(cityHighSchoolsDataDict)
             expectation.fulfill()
         }
     }
