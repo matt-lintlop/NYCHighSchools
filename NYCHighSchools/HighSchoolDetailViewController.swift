@@ -71,30 +71,72 @@ class HighSchoolDetailViewController: UIViewController {
         if let state = highSchoolData.state {
             stateLabel.text = state
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        else {
+            stateLabel.text = ""
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        if let numberOfSATTestTakers = highSchoolData.numberOfSATTestTakers {
+            numberOfTestTakersLabel.text = String(numberOfSATTestTakers)
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        else {
+            numberOfTestTakersLabel.text = ""
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        
+        if let averageSATReadingScore = highSchoolData.averageSATReadingScore {
+            avgReadingSATLabel.text = String(averageSATReadingScore)
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        else {
+            avgReadingSATLabel.text = ""
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        
+        if let averageSATMathScore = highSchoolData.averageSATMathScore {
+            avgMathSATLabel.text = String(averageSATMathScore)
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        else {
+            avgMathSATLabel.text = ""
         }
-        if let primaryAddress = highSchoolData.primaryAddress {
-            addressLabel.text = primaryAddress
+        
+        if let averageSATWritingScore = highSchoolData.averageSATWritingScore {
+            avgWritingSAT.text = String(averageSATWritingScore)
         }
+        else {
+            avgWritingSAT.text = ""
+        }
+        
+        if let schoolEmail = highSchoolData.schoolEmail {
+            emailLabel.text = schoolEmail
+        }
+        else {
+            emailLabel.text = ""
+        }
+        
+        if let overViewParagraph = highSchoolData.overViewParagraph {
+            overviewLabel.text = overViewParagraph
+        }
+        else {
+            overviewLabel.text = ""
+        }
+        
+        if let phonNumber = highSchoolData.phonNumber {
+            phoneLabel.text = phonNumber
+        }
+        else {
+            phoneLabel.text = ""
+        }
+        
+        if let faxNumber = highSchoolData.faxNumber {
+            faxLabel.text = faxNumber
+        }
+        else {
+            faxLabel.text = ""
+        }
+        
+        if let numberOfStudents = highSchoolData.numberOfStudents {
+            numberOfStudentsLabel.text = String(numberOfStudents)
+        }
+        else {
+            numberOfStudentsLabel.text = ""
+        }
+
         highSchoolData.debug()
     }
     
