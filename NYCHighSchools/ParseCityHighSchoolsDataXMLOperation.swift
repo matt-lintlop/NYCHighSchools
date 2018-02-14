@@ -229,6 +229,8 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
             loadXMLData(withFileURL: url)
         }
         else {
+            showNetworkActivityIndicator()
+            
             // load the xml data from the network
             downloadXMLDataTask = URLSession.shared.dataTask(with: url,
                                                              completionHandler:downloadXMLDataCompletionHandler)
@@ -238,7 +240,9 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     override func cancel() {
         super.cancel()
-        
+  
+        hideNetworkActivityIndicator()
+
         if let dataTask = downloadXMLDataTask {
             dataTask.cancel()
             print("Canceled Download of URL: \(String(describing: xmlDataURL?.absoluteString))")
@@ -248,6 +252,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     func downloadXMLDataCompletionHandler(data: Data?, response: URLResponse?, error: Error?) {
         
         downloadXMLDataTask = nil
+        hideNetworkActivityIndicator()
 
         if let _ = error {
             completionHandler?(nil, .noXMLDataError)

@@ -146,7 +146,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
         guard let cityHighSchoolsSATData = cityHighSchoolsSATData else {
             return
         }
-        DispatchQueue.main.sync {
+        DispatchQueue.main.async {
             self.sortedCityHighSchoolsSATData = cityHighSchoolsSATData.sorted(by: ({ (highSchoolData1, highSchoolData2) -> Bool in
                 switch self.dataSortType {
                 case .highSchoolName:

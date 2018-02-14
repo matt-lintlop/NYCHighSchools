@@ -32,3 +32,15 @@ func removeWhitespaceFromSchoolName(_ schoolName: String) -> String? {
     return realSchoolName
 }
 
+func showNetworkActivityIndicator() {
+    DispatchQueue.main.async {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true;
+    }
+}
+
+func hideNetworkActivityIndicator() {
+    DispatchQueue.main.async {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false;
+    }
+}
+
