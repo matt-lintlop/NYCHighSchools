@@ -28,11 +28,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 44;
         self.title = "NYC High Schools"
-        
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            self.dataSortType = appDelegate.getHighSchoolDataSortType()
-        }
-        
+    
         downloadAndParseCityHighSchoolsSATData()
         
         NotificationCenter.default.addObserver(forName: didSetSetHighSchoolDataSortTypeNotification, object: nil, queue: nil) { [weak self] (notification) in
@@ -159,6 +155,10 @@ class CityHighSchoolsTableViewController: UITableViewController {
             return
         }
         DispatchQueue.main.async {
+            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+                self.dataSortType = appDelegate.getHighSchoolDataSortType()
+            }
+            
             self.sortedCityHighSchoolsSATData = cityHighSchoolsSATData.sorted(by: ({ (highSchoolData1, highSchoolData2) -> Bool in
                 switch self.dataSortType {
                 case .highSchoolName:
