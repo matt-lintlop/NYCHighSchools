@@ -105,5 +105,46 @@ class SettingsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getIndexPath(withDataSortType dataSortType: HighSchoolDataSortType) -> IndexPath {
+        switch dataSortType {
+        case .highSchoolName:
+            return IndexPath(row: 0, section: 0)
+            
+        case .bestAvgMathSATScore:
+            return IndexPath(row: 1, section: 0)
+            
+        case .bestAvgReadingSATScore:
+            return IndexPath(row: 2, section: 0)
+            
+        case .bestAvgWritingSATScore:
+            return IndexPath(row: 3, section: 0)
+            
+        case .maxNumberOfSATTestTakers:
+            return IndexPath(row: 4, section: 0)
+            
+        case .maxNumberOfStudents:
+            return IndexPath(row: 5, section: 0)
+        }
+    }
+    
+    func getDataSortType(withIndexPath indexPath: IndexPath) -> HighSchoolDataSortType {
+        switch indexPath.row {
+        case 0:
+            return .highSchoolName
+        case 1:
+            return .bestAvgMathSATScore
+        case 2:
+            return .bestAvgReadingSATScore
+        case 3:
+            return .bestAvgWritingSATScore
+        case 4:
+            return .maxNumberOfSATTestTakers
+        case 5:
+            return .maxNumberOfStudents
+        default:
+            return .highSchoolName
+        }
+    }
 
 }
