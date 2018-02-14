@@ -353,13 +353,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rwp-qs-Cpx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortDataByTypeCell" id="rwp-qs-Cpx" customClass="SortDataByTypeCell" customModule="NYCHighSchools" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwp-qs-Cpx" id="rBg-Qm-jVG">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Average  SAT Math Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-PC-rtN">
+                                            <rect key="frame" x="16" y="12" width="350" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="OyC-PC-rtN" firstAttribute="leading" secondItem="rBg-Qm-jVG" secondAttribute="leading" constant="16" id="2ul-5Y-vST"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="OyC-PC-rtN" secondAttribute="trailing" constant="-7" id="Gab-nF-n9A"/>
+                                        <constraint firstItem="OyC-PC-rtN" firstAttribute="bottom" secondItem="rBg-Qm-jVG" secondAttribute="bottomMargin" id="Qfi-c7-9Fa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sortTypeLabel" destination="OyC-PC-rtN" id="Zm8-4x-4cU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -370,7 +386,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haG-UY-HuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="-260"/>
+            <point key="canvasLocation" x="1909.5999999999999" y="-260.09852216748772"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3xU-hv-KgI">
