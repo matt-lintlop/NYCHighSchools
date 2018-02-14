@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
+    var selectedCellIndexPath: IndexPath?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,9 +60,28 @@ class SettingsTableViewController: UITableViewController {
         default:
             cell.sortTypeLabel.text = HighSchoolDataSortType.highSchoolName.rawValue
         }
+        
+        if let selectedCellIndexPath = self.selectedCellIndexPath {
+            if selectedCellIndexPath.row == indexPath.row {
+                cell.accessoryType = .checkmark
+            }
+            else {
+                cell.accessoryType = .none
+            }
+        }
+        else {
+            cell.accessoryType = .none
+        }
         return cell
     }
 
+    // MARK: Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        checkCell(withIndexPath: indexPath)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -146,5 +167,16 @@ class SettingsTableViewController: UITableViewController {
             return .highSchoolName
         }
     }
-
+    
+    func checkCell(withIndexPath indexPath: IndexPath) {
+        if let currentSelectedCellIndexPath = self.selectedCellIndexPath {
+            self.selectedCellIndexPath = indexPath
+            self.tableView.reloadRows(at: [currentSelectedCellIndexPath, indexPath], with: .none)
+        }
+        else {
+            self.selectedCellIndexPath = indexPath
+            self.tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
+ 
 }
