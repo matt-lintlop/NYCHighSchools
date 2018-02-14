@@ -40,10 +40,24 @@ class SettingsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SortDataTypeCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SortDataTypeCell", for: indexPath) as! SortDataTypeCell
 
-        // Configure the cell...
-
+        switch indexPath.row {
+         case 0:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.highSchoolName.rawValue
+        case 1:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.bestAvgMathSATScore.rawValue
+        case 2:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.bestAvgReadingSATScore.rawValue
+        case 3:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.bestAvgWritingSATScore.rawValue
+        case 4:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.maxNumberOfSATTestTakers.rawValue
+        case 5:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.maxNumberOfStudents.rawValue
+        default:
+            cell.sortTypeLabel.text = HighSchoolDataSortType.highSchoolName.rawValue
+        }
         return cell
     }
 
