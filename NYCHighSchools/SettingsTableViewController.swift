@@ -8,6 +8,10 @@
 
 import UIKit
 
+// Notifictions
+// Did Set High School Data Sort Type notification key
+let didSetSetHighSchoolDataSortTypeNotificationKey = "com.mattlintlop.didSetHighSchoolDataSortType"
+
 class SettingsTableViewController: UITableViewController {
 
     var selectedCellIndexPath: IndexPath?
@@ -91,8 +95,6 @@ class SettingsTableViewController: UITableViewController {
         }
         return cell
     }
-
-    // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

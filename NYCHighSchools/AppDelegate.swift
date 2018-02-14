@@ -126,6 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setHighSchoolDataSortType(_ dataSortType: HighSchoolDataSortType) {
         UserDefaults().setValue(dataSortType.rawValue, forKeyPath: AppUserDefaultKeys.highSchoolDataSortKey.rawValue)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: didSetSetHighSchoolDataSortTypeNotificationKey), object: dataSortType)
     }
  
 }
