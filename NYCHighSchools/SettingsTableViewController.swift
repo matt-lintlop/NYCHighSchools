@@ -79,9 +79,11 @@ class SettingsTableViewController: UITableViewController {
         if let selectedCellIndexPath = self.selectedCellIndexPath {
             if selectedCellIndexPath.row == indexPath.row {
                 cell.accessoryType = .checkmark
+                cell.backgroundColor = UIColor.lightGray
             }
             else {
                 cell.accessoryType = .none
+                cell.backgroundColor = UIColor.white
             }
         }
         else {
