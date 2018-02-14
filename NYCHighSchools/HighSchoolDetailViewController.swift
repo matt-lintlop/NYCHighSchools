@@ -10,6 +10,8 @@ import UIKit
 
 class HighSchoolDetailViewController: UIViewController {
 
+    var highSchoolsData: HighSchoolData?    // high school's data including average SAT scores
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

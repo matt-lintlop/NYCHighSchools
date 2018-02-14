@@ -43,6 +43,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="highSchoolNameLabel" destination="lqs-s2-kgO" id="aOV-u8-Snh"/>
+                                    <segue destination="wy3-84-R8z" kind="show" identifier="ShowHighSchoolDetails" id="gzS-rz-yGu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGQ-29-0J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="-189"/>
+            <point key="canvasLocation" x="1050" y="-200"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="pGT-vq-6KP">

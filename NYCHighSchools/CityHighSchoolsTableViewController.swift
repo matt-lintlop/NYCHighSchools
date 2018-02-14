@@ -87,8 +87,15 @@ class CityHighSchoolsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ShowHighSchoolDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let selectedRow = indexPath.row
+                let detailVC = segue.destination as! HighSchoolDetailViewController
+                let selectedRowHighSchoolData = self.cityHighSchoolsSATData![selectedRow]
+                detailVC.highSchoolsData = selectedRowHighSchoolData
+            }
+        }
     }
 
     // get the general information about the city SAT data
