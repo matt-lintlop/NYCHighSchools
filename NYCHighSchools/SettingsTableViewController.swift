@@ -79,7 +79,7 @@ class SettingsTableViewController: UITableViewController {
         if let selectedCellIndexPath = self.selectedCellIndexPath {
             if selectedCellIndexPath.row == indexPath.row {
                 cell.accessoryType = .checkmark
-                cell.backgroundColor = UIColor.lightGray
+                cell.backgroundColor = UIColor(red: 0.152941176470588, green: 0.866666666666667, blue: 0.870588235294118, alpha: 1.0)
             }
             else {
                 cell.accessoryType = .none
