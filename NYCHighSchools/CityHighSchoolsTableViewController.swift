@@ -9,12 +9,12 @@
 import UIKit
 
 enum HighSchoolDataSortType: String {
-    case highSchoolName                       // sort by high school name alphabetically
-    case bestAvgMathSATScore                  // sort by best average math SAT score
-    case bestAvgReadingSATScore               // sort by best average reading SAT score
-    case bestAvgWritingSATScore               // sort by best average writing SAT score
-    case maxNumberOfSATTestTakers             // sort by maximum number of SAT test takers
-    case maxNumberOfStudents                  // sort by maximum number of students
+    case highSchoolName = "High School Name"                    // sort by high school name alphabetically
+    case bestAvgMathSATScore = "Best Math SAT Score"            // sort by best average math SAT score
+    case bestAvgReadingSATScore = "Best Reading SAT Score"      // sort by best average reading SAT score
+    case bestAvgWritingSATScore  = "Best Writing SAT Score"     // sort by best average writing SAT score
+    case maxNumberOfSATTestTakers = "Number Of SAT Test Takers" // sort by maximum number of SAT test takers
+    case maxNumberOfStudents = "Number Of Students"             // sort by maximum number of students
 }
 
 class CityHighSchoolsTableViewController: UITableViewController {
