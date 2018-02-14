@@ -73,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WQ-dp-9DL">
-                                <rect key="frame" x="16" y="88" width="343" height="62"/>
+                                <rect key="frame" x="16" y="88" width="343" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -258,10 +258,16 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="Qjq-xy-bXh" id="BwJ-bS-9Tz"/>
+                        <outlet property="avgMathSATLabel" destination="x6T-Km-RbZ" id="rnX-5e-S44"/>
+                        <outlet property="avgReadingSATLabel" destination="fnm-66-4FX" id="v4o-Q9-QMK"/>
+                        <outlet property="avgWritingSAT" destination="i38-45-igW" id="a8o-TJ-I4i"/>
                         <outlet property="cityLabel" destination="DKr-8s-AaX" id="vF5-vg-Mwi"/>
                         <outlet property="emailLabel" destination="YiU-5c-V9M" id="use-Gs-xjx"/>
                         <outlet property="faxLabel" destination="28q-1z-wIZ" id="xYI-Tg-UZU"/>
                         <outlet property="highSchoolNameLabel" destination="0WQ-dp-9DL" id="qBo-oa-Jg4"/>
+                        <outlet property="mapView" destination="FNs-oN-lAN" id="RRx-JR-T9l"/>
+                        <outlet property="numberOfStudentsLabel" destination="0hs-Gh-3Aq" id="xjl-8X-Z5e"/>
+                        <outlet property="numberOfTestTakersLabel" destination="sKH-qz-T8k" id="5mc-W1-7I2"/>
                         <outlet property="overviewLabel" destination="Z4l-51-5N1" id="Kog-pe-j4V"/>
                         <outlet property="phoneLabel" destination="VvV-zM-I8h" id="O3U-Me-nyY"/>
                         <outlet property="zipCodeLabel" destination="Ixs-jm-ELR" id="v0C-os-FyJ"/>

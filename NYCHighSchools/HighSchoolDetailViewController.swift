@@ -7,26 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
 class HighSchoolDetailViewController: UIViewController {
     
     @IBOutlet weak var highSchoolNameLabel: UILabel!
-    
     @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var cityLabel: UILabel!
-    
     @IBOutlet weak var zipCodeLabel: UILabel!
-    
     @IBOutlet weak var emailLabel: UILabel!
-    
     @IBOutlet weak var phoneLabel: UILabel!
-    
     @IBOutlet weak var faxLabel: UILabel!
-    
     @IBOutlet weak var overviewLabel: UILabel!
-    
-    
+    @IBOutlet weak var numberOfStudentsLabel: UILabel!
+    @IBOutlet weak var avgMathSATLabel: UILabel!
+    @IBOutlet weak var avgReadingSATLabel: UILabel!
+    @IBOutlet weak var avgWritingSAT: UILabel!
+    @IBOutlet weak var numberOfTestTakersLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+     
     var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
     
     override func viewDidLoad() {
