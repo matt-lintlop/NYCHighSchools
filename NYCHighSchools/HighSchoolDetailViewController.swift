@@ -25,7 +25,8 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var avgWritingSAT: UILabel!
     @IBOutlet weak var numberOfTestTakersLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-     
+    @IBOutlet weak var stateLabel: UILabel!
+    
     var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
     
     override func viewDidLoad() {
@@ -50,6 +51,50 @@ class HighSchoolDetailViewController: UIViewController {
     func setHighSchoolData(_ highSchoolData: HighSchoolData) {
         self.highSchoolData = highSchoolData
         self.title = highSchoolData.schoolName
+        self.highSchoolNameLabel.text = highSchoolData.schoolName
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+
+        if let city = highSchoolData.city {
+            cityLabel.text = city
+        }
+        else {
+            cityLabel.text = ""
+        }
+        if let zip = highSchoolData.zip {
+            zipCodeLabel.text = zip
+        }
+        else {
+            zipCodeLabel.text = ""
+        }
+        if let state = highSchoolData.state {
+            stateLabel.text = state
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
+        if let primaryAddress = highSchoolData.primaryAddress {
+            addressLabel.text = primaryAddress
+        }
         highSchoolData.debug()
     }
     

@@ -270,6 +270,7 @@
                         <outlet property="numberOfTestTakersLabel" destination="sKH-qz-T8k" id="5mc-W1-7I2"/>
                         <outlet property="overviewLabel" destination="Z4l-51-5N1" id="Kog-pe-j4V"/>
                         <outlet property="phoneLabel" destination="VvV-zM-I8h" id="O3U-Me-nyY"/>
+                        <outlet property="stateLabel" destination="imX-Pb-3eL" id="ZJr-hc-OhB"/>
                         <outlet property="zipCodeLabel" destination="Ixs-jm-ELR" id="v0C-os-FyJ"/>
                     </connections>
                 </viewController>
