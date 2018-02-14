@@ -15,9 +15,17 @@ class HighSchoolDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
+        navigationItem.rightBarButtonItem = settingsButton
     }
 
+    @objc func settingsTapped() {
+        guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(settingViewController, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

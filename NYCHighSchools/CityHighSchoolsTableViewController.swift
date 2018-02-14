@@ -69,7 +69,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-           return "City High Schools"
+           return "NYC City High Schools"
         }
         else {
             return nil
@@ -208,5 +208,12 @@ class CityHighSchoolsTableViewController: UITableViewController {
             self.tableView.reloadData()
        }
     }
+    
+    @IBAction func settingsPressed(_ sender: Any) {
+        guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {
+            return
+        }
+        self.navigationController?.pushViewController(settingViewController, animated: true)
+   }
     
 }

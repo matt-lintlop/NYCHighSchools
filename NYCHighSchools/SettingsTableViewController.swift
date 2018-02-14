@@ -15,16 +15,18 @@ class SettingsTableViewController: UITableViewController {
 
         self.tableView.rowHeight = 44;
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backTapped))
+        navigationItem.leftBarButtonItem = backButton
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+ 
+    @objc func backTapped() {
+        self.navigationController?.popViewController(animated: true)
     }
 
     // MARK: - Table view data source
