@@ -264,7 +264,7 @@
                         <outlet property="cityLabel" destination="DKr-8s-AaX" id="vF5-vg-Mwi"/>
                         <outlet property="emailLabel" destination="YiU-5c-V9M" id="use-Gs-xjx"/>
                         <outlet property="faxLabel" destination="28q-1z-wIZ" id="xYI-Tg-UZU"/>
-                        <outlet property="highSchoolNameLabel" destination="0WQ-dp-9DL" id="qBo-oa-Jg4"/>
+                        <outlet property="highSchoolNameLabel" destination="0WQ-dp-9DL" id="VFp-Ti-fMk"/>
                         <outlet property="mapView" destination="FNs-oN-lAN" id="RRx-JR-T9l"/>
                         <outlet property="numberOfStudentsLabel" destination="0hs-Gh-3Aq" id="xjl-8X-Z5e"/>
                         <outlet property="numberOfTestTakersLabel" destination="sKH-qz-T8k" id="5mc-W1-7I2"/>

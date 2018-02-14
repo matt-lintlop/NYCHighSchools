@@ -11,6 +11,7 @@ import MapKit
 
 class HighSchoolDetailViewController: UIViewController {
     
+   
     @IBOutlet weak var highSchoolNameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -34,6 +35,7 @@ class HighSchoolDetailViewController: UIViewController {
 
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
+        showLabelsWithData()
     }
 
     @objc func settingsTapped() {
@@ -50,6 +52,12 @@ class HighSchoolDetailViewController: UIViewController {
     
     func setHighSchoolData(_ highSchoolData: HighSchoolData) {
         self.highSchoolData = highSchoolData
+    }
+    
+    func showLabelsWithData() {
+        guard let highSchoolData = highSchoolData else {
+            return
+        }
         self.title = highSchoolData.schoolName
         self.highSchoolNameLabel.text = highSchoolData.schoolName
         if let primaryAddress = highSchoolData.primaryAddress {
