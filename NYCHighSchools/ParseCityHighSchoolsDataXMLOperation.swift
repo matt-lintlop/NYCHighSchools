@@ -113,7 +113,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
         if currentElementName == HighSchoolDataJSONItens.schoolName.rawValue {
             
             // validate the school name
-            guard let schoolName = removeSpecialCharsFromSchoolName(string) else {
+            guard let schoolName = removeWhitespaceFromSchoolName(string) else {
                 return
             }
         
@@ -193,7 +193,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: Utility
     
     func getHighSchoolData(forSchoolNamed schoolName: String,addIfNotFound: Bool = false) -> HighSchoolData? {
-        guard let schoolName = removeSpecialCharsFromSchoolName(schoolName) else {
+        guard let schoolName = removeWhitespaceFromSchoolName(schoolName) else {
             return nil
         }
         let uppercasedSchoolName = schoolName.uppercased()

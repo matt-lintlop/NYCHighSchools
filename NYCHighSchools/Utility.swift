@@ -24,15 +24,8 @@ func debug(_ cityHighSchoolsDataDict: [String:HighSchoolData]?) {
     }
 }
 
-func removeSpecialCharsFromString(text: String) -> String {
-    let okayChars : Set<Character> =
-        Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+-*=(),.:!_")
-    return String(text.filter {okayChars.contains($0) })
-}
-
-func removeSpecialCharsFromSchoolName(_ schoolName: String) -> String? {
-    var realSchoolName = schoolName.trimmingCharacters(in: .whitespacesAndNewlines)
-    realSchoolName = removeSpecialCharsFromString(text: realSchoolName)
+func removeWhitespaceFromSchoolName(_ schoolName: String) -> String? {
+    let realSchoolName = schoolName.trimmingCharacters(in: .whitespacesAndNewlines)
     guard realSchoolName.count >= 2 else {
         return nil
     }
