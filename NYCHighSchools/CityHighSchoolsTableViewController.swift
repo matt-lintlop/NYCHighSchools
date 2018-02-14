@@ -19,10 +19,10 @@ enum HighSchoolDataSortType {
 
 class CityHighSchoolsTableViewController: UITableViewController {
 
-    var downloadAndParseXMLOperation: ParseCityHighSchoolsSATDataXMLTask?     // parse a city's high schools SAT data & school data
-    var cityHighSchoolsSATData: [HighSchoolData]?                             // list of city high schools data including SAT data
-    var sortedCityHighSchoolsSATData: [HighSchoolData]?                       // sorted list of city high schools data including SAT data
-    var dataSortType: HighSchoolDataSortType = .highSchoolName                // current high school data sort type
+    var downloadAndParseXMLOperation: ParseCityHighSchoolsSATDataXMLTask?   // parse a city's high schools SAT data & school data
+    var cityHighSchoolsSATData: [HighSchoolData]?                           // list of city high schools data including SAT data
+    var sortedCityHighSchoolsSATData: [HighSchoolData]?                     // sorted list of city high schools data including SAT data
+    var dataSortType: HighSchoolDataSortType = .highSchoolName              // current high school data sort type
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,7 +161,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     if highSchoolData2.averageSATMathScore == nil {
                         return true
                     }
-                    return highSchoolData1.averageSATMathScore! < highSchoolData2.averageSATMathScore!
+                    return highSchoolData1.averageSATMathScore! > highSchoolData2.averageSATMathScore!
 
                 case .bestAvgReadingSATScore:
                     // sort by Best Average Reading SAT Score
@@ -171,7 +171,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     if highSchoolData2.averageSATReadingScore == nil {
                         return true
                     }
-                    return highSchoolData1.averageSATReadingScore! < highSchoolData2.averageSATReadingScore!
+                    return highSchoolData1.averageSATReadingScore! > highSchoolData2.averageSATReadingScore!
 
                 case .bestAvgWritingSATScore:
                     // sort by Best Average Writing SAT Score
@@ -181,7 +181,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     if highSchoolData2.averageSATWritingScore == nil {
                         return true
                     }
-                    return highSchoolData1.averageSATWritingScore! < highSchoolData2.averageSATWritingScore!
+                    return highSchoolData1.averageSATWritingScore! > highSchoolData2.averageSATWritingScore!
 
                 case .maxNumberOfSATTestTakers:
                     // sort by Maximum Number of SAT Test Takers
@@ -191,7 +191,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     if highSchoolData2.numberOfSATTestTakers == nil {
                         return true
                     }
-                    return highSchoolData1.numberOfSATTestTakers! < highSchoolData2.numberOfSATTestTakers!
+                    return highSchoolData1.numberOfSATTestTakers! > highSchoolData2.numberOfSATTestTakers!
 
                 case .maxNumberOfStudents:
                     // sort by Maximum Number of SAT Test Takers
@@ -201,7 +201,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     if highSchoolData2.numberOfStudents == nil {
                         return true
                     }
-                    return highSchoolData1.numberOfStudents! < highSchoolData2.numberOfStudents!
+                    return highSchoolData1.numberOfStudents! > highSchoolData2.numberOfStudents!
                 }
             }))
                         
