@@ -12,6 +12,21 @@ class HighSchoolDetailViewController: UIViewController {
     
     @IBOutlet weak var highSchoolNameLabel: UILabel!
     
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var cityLabel: UILabel!
+    
+    @IBOutlet weak var zipCodeLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    @IBOutlet weak var faxLabel: UILabel!
+    
+    @IBOutlet weak var overviewLabel: UILabel!
+    
+    
     var highSchoolData: HighSchoolData?    // high school's data including average SAT scores
     
     override func viewDidLoad() {
