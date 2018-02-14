@@ -70,8 +70,6 @@ class CityHighSchoolsTableViewController: UITableViewController {
             cell.highSchoolNameLabel.text = highSchoolData.schoolName
         }
         cell.layoutIfNeeded()
-        
-        print("Made Cell for row: \(indexPath.row) : \(cell.highSchoolNameLabel.text)")
         return cell
     }
 
