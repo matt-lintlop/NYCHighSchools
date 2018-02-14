@@ -41,6 +41,11 @@ class CityHighSchoolsTableViewController: UITableViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,6 +74,8 @@ class CityHighSchoolsTableViewController: UITableViewController {
             cell.highSchoolNameLabel.text = highSchoolData.schoolName
         }
         cell.layoutIfNeeded()
+        
+        print("Made Cell for row: \(indexPath.row) : \(cell.highSchoolNameLabel.text)")
         return cell
     }
 
@@ -209,8 +216,10 @@ class CityHighSchoolsTableViewController: UITableViewController {
                     return highSchoolData1.numberOfStudents! > highSchoolData2.numberOfStudents!
                 }
             }))
-                        
-            self.tableView.reloadData()
+            
+            if self.navigationController?.topViewController == self {
+                self.tableView.reloadData()
+            }
        }
     }
     
