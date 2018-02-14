@@ -10,7 +10,11 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    enum AppUserDefaultKeys: String {
+        case highSchoolDataSortKey = "high_school_data_sort_type"
+    }
+    
     // URL of NYC High Schools Names XML
     let newYorkCitySchoolDataXMLPath = "https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD"
     
@@ -30,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        // get the current high school data sort type
+        let dataSortType = getHighSchoolDataSortType()
+        print("Current High School Data Sort Type: \(dataSortType.rawValue)")
+        
         // initialize the URLS to the city's data & SAT data
         var offlineCityHighSchoolDataXMLURL: URL?
         var offlineCityHighSchoolSATDataXMLURL: URL?
@@ -81,8 +89,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Settings
     
-    func getHighSchoolDataSortType() -> HighSchoolDataSortType
-    
+    func getHighSchoolDataSortType() -> HighSchoolDataSortType {
+        if let sortDataType = UserDefaults().string(forKey:AppUserDefaultKeys.highSchoolDataSortKey.rawValue) {
+            
+            switch sortDataType {
+            case HighSchoolDataSortType.highSchoolName.rawValue:
+                return .highSchoolName
 
+            case HighSchoolDataSortType.bestAvgMathSATScore.rawValue:
+                return .bestAvgMathSATScore
+                
+            case HighSchoolDataSortType.bestAvgReadingSATScore.rawValue:
+                return .bestAvgReadingSATScore
+                
+            case HighSchoolDataSortType.bestAvgWritingSATScore.rawValue:
+                return .bestAvgWritingSATScore
+                
+            case HighSchoolDataSortType.maxNumberOfSATTestTakers.rawValue:
+                return .maxNumberOfSATTestTakers
+                
+            case HighSchoolDataSortType.maxNumberOfStudents.rawValue:
+                return .maxNumberOfStudents
+                
+             default:
+                setHighSchoolDataSortType(.highSchoolName)
+                return .highSchoolName
+                
+            }
+        }
+        else {
+            setHighSchoolDataSortType(.highSchoolName)
+            return .highSchoolName
+
+        }
+    }
+    
+    func setHighSchoolDataSortType(_ dataSortType: HighSchoolDataSortType) {
+        UserDefaults().setValue(dataSortType.rawValue, forKeyPath: AppUserDefaultKeys.highSchoolDataSortKey.rawValue)
+    }
+ 
 }
 

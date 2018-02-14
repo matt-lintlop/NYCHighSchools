@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum HighSchoolDataSortType {
+enum HighSchoolDataSortType: String {
     case highSchoolName                       // sort by high school name alphabetically
     case bestAvgMathSATScore                  // sort by best average math SAT score
     case bestAvgReadingSATScore               // sort by best average reading SAT score
@@ -28,6 +28,10 @@ class CityHighSchoolsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.rowHeight = 44;
         self.title = "NYC High Schools"
+        
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            self.dataSortType = appDelegate.getHighSchoolDataSortType()
+        }
         
         downloadAndParseCityHighSchoolsSATData()
         
