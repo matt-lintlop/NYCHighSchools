@@ -92,6 +92,11 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let dataSortType = getDataSortType(withIndexPath: indexPath)
+        appDelegate.setHighSchoolDataSortType(dataSortType)
         checkCell(withIndexPath: indexPath)
     }
     
