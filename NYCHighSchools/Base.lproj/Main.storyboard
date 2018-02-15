@@ -225,7 +225,6 @@
                             <constraint firstItem="JBR-qq-D7T" firstAttribute="leading" secondItem="tqc-TB-D0b" secondAttribute="leading" constant="20" id="SLC-hv-ioJ"/>
                             <constraint firstItem="hj2-g2-Fn7" firstAttribute="leading" secondItem="JBR-qq-D7T" secondAttribute="leading" id="TN3-RO-rpf"/>
                             <constraint firstItem="QKo-Io-MQg" firstAttribute="top" secondItem="tqc-TB-D0b" secondAttribute="top" constant="10" id="bIr-Kz-bQs"/>
-                            <constraint firstItem="l0q-f4-K2a" firstAttribute="leading" secondItem="tqc-TB-D0b" secondAttribute="leading" constant="20" id="bY5-Xc-fzX"/>
                             <constraint firstItem="QKo-Io-MQg" firstAttribute="trailing" secondItem="3yT-U0-Bql" secondAttribute="trailing" id="cdk-JW-x7e"/>
                             <constraint firstItem="QKo-Io-MQg" firstAttribute="top" secondItem="tqc-TB-D0b" secondAttribute="top" constant="10" id="dk7-04-wY9"/>
                             <constraint firstItem="3yT-U0-Bql" firstAttribute="top" secondItem="QKo-Io-MQg" secondAttribute="bottom" constant="23" id="gk8-l6-gDr"/>
