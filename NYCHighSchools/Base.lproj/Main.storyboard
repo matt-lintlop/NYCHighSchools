@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ok-Ne-oUd">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,19 +16,19 @@
             <objects>
                 <tableViewController title="NYC High Schools" id="MLx-8d-qjB" customClass="CityHighSchoolsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GCQ-vs-WwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="834" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VG-4o-Kfc" id="JP0-gb-hCk">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
-                                            <rect key="frame" x="17" y="3.5" width="806" height="36.5"/>
+                                            <rect key="frame" x="17" y="3.5" width="740" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -43,7 +43,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="highSchoolNameLabel" destination="lqs-s2-kgO" id="aOV-u8-Snh"/>
-                                    <segue destination="wy3-84-R8z" kind="show" identifier="ShowHighSchoolDetails" id="gzS-rz-yGu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,436 +64,180 @@
             <point key="canvasLocation" x="240.80000000000001" y="-189.3553223388306"/>
         </scene>
         <!--High School Detail View Controller-->
-        <scene sceneID="oxS-8F-YkL">
+        <scene sceneID="uhf-Y9-UcI">
             <objects>
-                <viewController id="wy3-84-R8z" customClass="HighSchoolDetailViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z7S-hn-Eus">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                <viewController id="bYr-wq-gvn" customClass="HighSchoolDetailViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bUd-sH-7OT">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WQ-dp-9DL">
-                                <rect key="frame" x="20" y="74" width="794" height="47"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yT-U0-Bql">
+                                <rect key="frame" x="20" y="208" width="728" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Address Line 1">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Courier"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <attributedString key="attributedText">
+                                        <fragment content="Address Line 1">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Courier"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKo-Io-MQg">
+                                <rect key="frame" x="20" y="74" width="728" height="126"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="20" name=".SFNSText"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <font key="NSFont" size="16" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imX-Pb-3eL">
-                                <rect key="frame" x="20" y="175.5" width="20.5" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="Rye-G0-Ygy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diF-dB-HfO">
-                                <rect key="frame" x="20" y="243.5" width="46" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="aa4-eu-Y9E"/>
-                                    <constraint firstAttribute="width" constant="46" id="wI2-K4-e1P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
+</string>
+                                            <attributes>
+                                                <font key="NSFont" size="36" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAX:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-3j-L45">
-                                <rect key="frame" x="20" y="220.5" width="36" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="XHz-EG-KTA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBR-qq-D7T">
+                                <rect key="frame" x="20" y="237" width="728" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="City">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Courier"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="City">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Courier"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Reading SAT:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-aL-E7U">
-                                <rect key="frame" x="-6" y="298" width="157" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0q-f4-K2a">
+                                <rect key="frame" x="20" y="295" width="72.5" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="50f-Rf-0gz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="u3h-eb-ET2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Writing SAT:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-wb-Bkc">
-                                <rect key="frame" x="20" y="321" width="131" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="Ftx-Oh-SCD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Test Takers:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i86-y0-idb">
-                                <rect key="frame" x="20" y="344" width="131" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="KZk-UO-Ewn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6T-Km-RbZ">
-                                <rect key="frame" x="165" y="268" width="29" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="T3s-Xz-y0N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnm-66-4FX">
-                                <rect key="frame" x="165" y="291" width="29" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i38-45-igW">
-                                <rect key="frame" x="165" y="314" width="29" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Students:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-Qd-RIi">
-                                <rect key="frame" x="20" y="369" width="131" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hs-Gh-3Aq">
-                                <rect key="frame" x="165" y="367.5" width="145" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Avg. Math SAT:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umt-9t-e6U">
-                                <rect key="frame" x="20" y="269.5" width="131" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-51-5N1">
-                                <rect key="frame" x="16" y="289.5" width="50.5" height="16.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FNs-oN-lAN">
-                                <rect key="frame" x="20" y="505.5" width="794" height="562.5"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKH-qz-T8k">
-                                <rect key="frame" x="165" y="339" width="29" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28q-1z-wIZ">
-                                <rect key="frame" x="82" y="220.5" width="106" height="15"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-vC-fLx">
-                                <rect key="frame" x="20" y="197.5" width="54" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="7uK-St-DKU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="12"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-5c-V9M">
-                                <rect key="frame" x="75" y="243.5" width="799" height="16"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-zM-I8h">
-                                <rect key="frame" x="82" y="197.5" width="106" height="15"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                </variation>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xk-wy-cl0">
-                                <rect key="frame" x="20" y="396.5" width="794" height="94"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="jOE-Mw-XVj"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixs-jm-ELR">
-                                <rect key="frame" x="82" y="175.5" width="202" height="10"/>
                                 <attributedString key="attributedText">
                                     <fragment content="94113">
                                         <attributes>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="14" name="Courier"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="94113">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Courier"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjq-xy-bXh">
-                                <rect key="frame" x="20" y="129.5" width="151.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj2-g2-Fn7">
+                                <rect key="frame" x="20" y="266" width="29" height="24"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Address Line 1">
+                                    <fragment content="CA">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="Courier"/>
+                                            <font key="NSFont" size="14" name="Courier"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKr-8s-AaX">
-                                <rect key="frame" x="20" y="155" width="390" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="rW1-x2-Ocy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <attributedString key="attributedText">
+                                        <fragment content="CA">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Courier"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Umt-9t-e6U" firstAttribute="top" secondItem="YiU-5c-V9M" secondAttribute="bottom" constant="10.5" id="0Ig-Ly-HGv"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="FNs-oN-lAN" secondAttribute="trailing" constant="20" id="1BJ-F8-7FZ">
-                                <variation key="widthClass=compact" constant="291.33333333333337"/>
-                            </constraint>
-                            <constraint firstItem="7nd-wb-Bkc" firstAttribute="leading" secondItem="i86-y0-idb" secondAttribute="leading" id="2dB-4B-iB2"/>
-                            <constraint firstItem="Umt-9t-e6U" firstAttribute="top" secondItem="YiU-5c-V9M" secondAttribute="bottom" constant="10.5" id="3PS-Jd-jhX"/>
-                            <constraint firstItem="0WQ-dp-9DL" firstAttribute="leading" secondItem="Z7S-hn-Eus" secondAttribute="leading" constant="10" id="3Wv-Wi-fNF"/>
-                            <constraint firstItem="2xk-wy-cl0" firstAttribute="leading" secondItem="qNY-JS-LtN" secondAttribute="leading" constant="20" id="5yi-TX-xBM"/>
-                            <constraint firstItem="VvV-zM-I8h" firstAttribute="leading" secondItem="Ixs-jm-ELR" secondAttribute="leading" id="63V-f7-AOI"/>
-                            <constraint firstItem="diF-dB-HfO" firstAttribute="top" secondItem="2f2-3j-L45" secondAttribute="bottom" constant="8" id="6Xx-lN-2Jk"/>
-                            <constraint firstItem="2f2-3j-L45" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="6ks-rr-aTf"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="0hs-Gh-3Aq" secondAttribute="trailing" constant="524" id="7zJ-qV-0Nf"/>
-                            <constraint firstItem="i86-y0-idb" firstAttribute="centerX" secondItem="WBc-Qd-RIi" secondAttribute="centerX" id="8G6-IF-rvu"/>
-                            <constraint firstItem="fNa-aL-E7U" firstAttribute="trailing" secondItem="Umt-9t-e6U" secondAttribute="trailing" id="8Gt-eF-Q3K"/>
-                            <constraint firstItem="x6T-Km-RbZ" firstAttribute="baseline" secondItem="Umt-9t-e6U" secondAttribute="baseline" id="B6l-CF-bAV"/>
-                            <constraint firstItem="FNs-oN-lAN" firstAttribute="leading" secondItem="qNY-JS-LtN" secondAttribute="leading" constant="20" id="B7R-sb-M5A"/>
-                            <constraint firstItem="sKH-qz-T8k" firstAttribute="baseline" secondItem="i86-y0-idb" secondAttribute="baseline" id="C4M-bx-7lp"/>
-                            <constraint firstItem="pKg-vC-fLx" firstAttribute="top" secondItem="imX-Pb-3eL" secondAttribute="bottom" constant="10" id="CBR-4g-KeF"/>
-                            <constraint firstItem="FNs-oN-lAN" firstAttribute="top" secondItem="2xk-wy-cl0" secondAttribute="bottom" constant="15" id="CcE-WU-y1H"/>
-                            <constraint firstItem="0hs-Gh-3Aq" firstAttribute="leading" secondItem="x6T-Km-RbZ" secondAttribute="leading" id="Fm7-cl-i4w"/>
-                            <constraint firstItem="WBc-Qd-RIi" firstAttribute="trailing" secondItem="Umt-9t-e6U" secondAttribute="trailing" id="G99-JI-z0M"/>
-                            <constraint firstItem="imX-Pb-3eL" firstAttribute="top" secondItem="DKr-8s-AaX" secondAttribute="bottom" constant="8" id="Gga-wp-dou"/>
-                            <constraint firstItem="fnm-66-4FX" firstAttribute="baseline" secondItem="fNa-aL-E7U" secondAttribute="baseline" id="HC6-Xz-dUi"/>
-                            <constraint firstItem="28q-1z-wIZ" firstAttribute="top" secondItem="2f2-3j-L45" secondAttribute="top" id="Hkl-z1-eNz"/>
-                            <constraint firstItem="2xk-wy-cl0" firstAttribute="top" secondItem="0hs-Gh-3Aq" secondAttribute="bottom" constant="5" id="HrM-MK-0kh"/>
-                            <constraint firstItem="0WQ-dp-9DL" firstAttribute="leading" secondItem="qNY-JS-LtN" secondAttribute="leading" constant="20" id="Iuu-TK-Vdz"/>
-                            <constraint firstItem="diF-dB-HfO" firstAttribute="centerY" secondItem="YiU-5c-V9M" secondAttribute="centerY" id="JHU-FY-djd"/>
-                            <constraint firstItem="i86-y0-idb" firstAttribute="top" secondItem="7nd-wb-Bkc" secondAttribute="bottom" constant="8" id="JOc-72-bEh"/>
-                            <constraint firstItem="FNs-oN-lAN" firstAttribute="bottom" secondItem="qNY-JS-LtN" secondAttribute="bottom" id="JST-kE-hBl"/>
-                            <constraint firstItem="YiU-5c-V9M" firstAttribute="leading" secondItem="diF-dB-HfO" secondAttribute="trailing" constant="9" id="JaR-6x-wcp"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="0WQ-dp-9DL" secondAttribute="trailing" constant="10" id="LiK-iF-fya"/>
-                            <constraint firstItem="0WQ-dp-9DL" firstAttribute="top" secondItem="qNY-JS-LtN" secondAttribute="top" constant="10" id="Nea-Hb-A8c"/>
-                            <constraint firstItem="fNa-aL-E7U" firstAttribute="top" secondItem="Umt-9t-e6U" secondAttribute="bottom" constant="8" id="Npk-lH-Exk"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="2xk-wy-cl0" secondAttribute="trailing" constant="20" id="OuL-Fv-x09"/>
-                            <constraint firstItem="i86-y0-idb" firstAttribute="trailing" secondItem="Umt-9t-e6U" secondAttribute="trailing" id="Ozz-yU-Wth"/>
-                            <constraint firstItem="pKg-vC-fLx" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="P0t-9g-cNW"/>
-                            <constraint firstItem="2f2-3j-L45" firstAttribute="top" secondItem="pKg-vC-fLx" secondAttribute="bottom" constant="8" id="R22-Ga-NQl"/>
-                            <constraint firstItem="diF-dB-HfO" firstAttribute="leading" secondItem="Umt-9t-e6U" secondAttribute="leading" id="Rky-JS-bFm"/>
-                            <constraint firstItem="28q-1z-wIZ" firstAttribute="leading" secondItem="2f2-3j-L45" secondAttribute="trailing" constant="26" id="S78-DK-C3F"/>
-                            <constraint firstItem="VvV-zM-I8h" firstAttribute="leading" secondItem="pKg-vC-fLx" secondAttribute="trailing" constant="8" symbolic="YES" id="T8l-v4-X0W"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="0WQ-dp-9DL" secondAttribute="trailing" constant="20" id="TU4-Cj-zzY"/>
-                            <constraint firstItem="YiU-5c-V9M" firstAttribute="top" secondItem="28q-1z-wIZ" secondAttribute="bottom" constant="8" id="UX1-GM-qPf"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="DKr-8s-AaX" secondAttribute="trailing" constant="424" id="VNf-IK-8XK">
-                                <variation key="widthClass=compact" constant="656"/>
-                            </constraint>
-                            <constraint firstItem="28q-1z-wIZ" firstAttribute="top" secondItem="VvV-zM-I8h" secondAttribute="bottom" constant="8" id="VtI-5x-CVs"/>
-                            <constraint firstItem="fNa-aL-E7U" firstAttribute="top" secondItem="Umt-9t-e6U" secondAttribute="bottom" constant="8" id="Wh3-LL-mUT"/>
-                            <constraint firstItem="DKr-8s-AaX" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="YPd-a1-r5b"/>
-                            <constraint firstItem="YiU-5c-V9M" firstAttribute="top" secondItem="diF-dB-HfO" secondAttribute="top" id="YQr-kr-Lwq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YiU-5c-V9M" secondAttribute="trailing" constant="-60" id="Za8-7R-VPA"/>
-                            <constraint firstItem="fNa-aL-E7U" firstAttribute="leading" secondItem="Z7S-hn-Eus" secondAttribute="leadingMargin" constant="-26" id="ZwB-I2-Cqg"/>
-                            <constraint firstItem="7nd-wb-Bkc" firstAttribute="trailing" secondItem="Umt-9t-e6U" secondAttribute="trailing" id="bh2-6q-2XM"/>
-                            <constraint firstItem="diF-dB-HfO" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="cOr-Nf-H3E"/>
-                            <constraint firstItem="VvV-zM-I8h" firstAttribute="top" secondItem="Ixs-jm-ELR" secondAttribute="bottom" constant="12" id="dep-nF-N3l"/>
-                            <constraint firstItem="i38-45-igW" firstAttribute="baseline" secondItem="7nd-wb-Bkc" secondAttribute="baseline" id="dig-lm-phY"/>
-                            <constraint firstItem="0hs-Gh-3Aq" firstAttribute="baseline" secondItem="WBc-Qd-RIi" secondAttribute="baseline" id="ePa-aK-w1L"/>
-                            <constraint firstItem="0hs-Gh-3Aq" firstAttribute="leading" secondItem="WBc-Qd-RIi" secondAttribute="trailing" constant="14" id="fLV-z2-ptB"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="Ixs-jm-ELR" secondAttribute="trailing" constant="550" id="h1d-RL-CmX"/>
-                            <constraint firstItem="diF-dB-HfO" firstAttribute="leading" secondItem="2f2-3j-L45" secondAttribute="leading" id="hJk-CO-5LB"/>
-                            <constraint firstItem="Qjq-xy-bXh" firstAttribute="top" secondItem="0WQ-dp-9DL" secondAttribute="bottom" constant="8" id="hUM-eI-cty"/>
-                            <constraint firstItem="imX-Pb-3eL" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="jbL-XA-p1u"/>
-                            <constraint firstItem="VvV-zM-I8h" firstAttribute="top" secondItem="pKg-vC-fLx" secondAttribute="top" id="kaX-rU-saP"/>
-                            <constraint firstItem="i38-45-igW" firstAttribute="leading" secondItem="x6T-Km-RbZ" secondAttribute="leading" id="lZn-JP-7t0"/>
-                            <constraint firstItem="Qjq-xy-bXh" firstAttribute="leading" secondItem="0WQ-dp-9DL" secondAttribute="leading" id="mUY-df-OZw"/>
-                            <constraint firstItem="7nd-wb-Bkc" firstAttribute="top" secondItem="fNa-aL-E7U" secondAttribute="bottom" constant="8" id="mx1-Xq-z8O"/>
-                            <constraint firstItem="7nd-wb-Bkc" firstAttribute="top" secondItem="fNa-aL-E7U" secondAttribute="bottom" constant="8" id="nlH-Xs-Te7"/>
-                            <constraint firstItem="sKH-qz-T8k" firstAttribute="leading" secondItem="x6T-Km-RbZ" secondAttribute="leading" id="nlx-r5-b3C"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="2xk-wy-cl0" secondAttribute="trailing" constant="20" id="oVK-rg-lhn">
-                                <variation key="widthClass=compact" constant="291.33333333333337"/>
-                            </constraint>
-                            <constraint firstItem="0WQ-dp-9DL" firstAttribute="top" secondItem="qNY-JS-LtN" secondAttribute="top" constant="10" id="ogL-cV-v2F"/>
-                            <constraint firstItem="28q-1z-wIZ" firstAttribute="leading" secondItem="VvV-zM-I8h" secondAttribute="leading" id="rpI-zg-Fgw"/>
-                            <constraint firstItem="fnm-66-4FX" firstAttribute="leading" secondItem="x6T-Km-RbZ" secondAttribute="leading" id="sBB-Jt-TeI"/>
-                            <constraint firstItem="Ixs-jm-ELR" firstAttribute="top" secondItem="imX-Pb-3eL" secondAttribute="top" id="tAd-yT-KWe"/>
-                            <constraint firstItem="WBc-Qd-RIi" firstAttribute="top" secondItem="i86-y0-idb" secondAttribute="bottom" constant="8" id="xrs-Kj-Do6"/>
-                            <constraint firstItem="DKr-8s-AaX" firstAttribute="top" secondItem="Qjq-xy-bXh" secondAttribute="bottom" constant="8" id="y3Q-0T-Hxh"/>
-                            <constraint firstItem="qNY-JS-LtN" firstAttribute="trailing" secondItem="0WQ-dp-9DL" secondAttribute="trailing" constant="292" id="yYw-VO-0KH"/>
-                            <constraint firstItem="Umt-9t-e6U" firstAttribute="leading" secondItem="7nd-wb-Bkc" secondAttribute="leading" id="ysf-Yh-Mql"/>
+                            <constraint firstItem="JBR-qq-D7T" firstAttribute="top" secondItem="3yT-U0-Bql" secondAttribute="bottom" constant="5" id="5Bi-Jm-SMZ"/>
+                            <constraint firstItem="3yT-U0-Bql" firstAttribute="leading" secondItem="QKo-Io-MQg" secondAttribute="leading" id="A83-NO-Yo8"/>
+                            <constraint firstItem="tqc-TB-D0b" firstAttribute="trailing" secondItem="JBR-qq-D7T" secondAttribute="trailing" constant="20" id="B1w-RG-0tK"/>
+                            <constraint firstItem="tqc-TB-D0b" firstAttribute="trailing" secondItem="QKo-Io-MQg" secondAttribute="trailing" constant="20" id="Fyn-Fc-wOW"/>
+                            <constraint firstItem="3yT-U0-Bql" firstAttribute="top" secondItem="QKo-Io-MQg" secondAttribute="bottom" constant="8" id="IIz-cp-N5o"/>
+                            <constraint firstItem="hj2-g2-Fn7" firstAttribute="top" secondItem="JBR-qq-D7T" secondAttribute="bottom" constant="5" id="ILK-ib-hh0"/>
+                            <constraint firstItem="QKo-Io-MQg" firstAttribute="leading" secondItem="tqc-TB-D0b" secondAttribute="leading" constant="20" id="JIU-Rj-6rf"/>
+                            <constraint firstItem="JBR-qq-D7T" firstAttribute="leading" secondItem="tqc-TB-D0b" secondAttribute="leading" constant="20" id="SLC-hv-ioJ"/>
+                            <constraint firstItem="l0q-f4-K2a" firstAttribute="top" secondItem="hj2-g2-Fn7" secondAttribute="bottom" constant="5" id="V1W-dh-yB3"/>
+                            <constraint firstItem="l0q-f4-K2a" firstAttribute="leading" secondItem="tqc-TB-D0b" secondAttribute="leading" constant="20" id="bY5-Xc-fzX"/>
+                            <constraint firstItem="hj2-g2-Fn7" firstAttribute="leading" secondItem="JBR-qq-D7T" secondAttribute="leading" id="d5H-Qb-qrw"/>
+                            <constraint firstItem="QKo-Io-MQg" firstAttribute="top" secondItem="tqc-TB-D0b" secondAttribute="top" constant="10" id="dk7-04-wY9"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l0q-f4-K2a" secondAttribute="trailing" constant="20" symbolic="YES" id="s95-Gu-wDk"/>
+                            <constraint firstItem="tqc-TB-D0b" firstAttribute="trailing" secondItem="3yT-U0-Bql" secondAttribute="trailing" constant="20" id="sf5-ZC-l3j"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qNY-JS-LtN"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="LiK-iF-fya"/>
-                                <exclude reference="OuL-Fv-x09"/>
-                                <exclude reference="oVK-rg-lhn"/>
-                                <exclude reference="yYw-VO-0KH"/>
-                                <exclude reference="3Wv-Wi-fNF"/>
-                                <exclude reference="ogL-cV-v2F"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <exclude reference="Z4l-51-5N1"/>
-                                <include reference="FNs-oN-lAN"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="LiK-iF-fya"/>
-                                <include reference="oVK-rg-lhn"/>
-                                <exclude reference="yYw-VO-0KH"/>
-                                <include reference="3Wv-Wi-fNF"/>
-                                <include reference="ogL-cV-v2F"/>
-                                <exclude reference="hUM-eI-cty"/>
-                                <exclude reference="YPd-a1-r5b"/>
-                                <exclude reference="jbL-XA-p1u"/>
-                                <exclude reference="P0t-9g-cNW"/>
-                                <exclude reference="6ks-rr-aTf"/>
-                                <exclude reference="cOr-Nf-H3E"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <exclude reference="Z4l-51-5N1"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="OuL-Fv-x09"/>
-                            </mask>
-                        </variation>
+                        <viewLayoutGuide key="safeArea" id="tqc-TB-D0b"/>
                     </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="addressLabel" destination="Qjq-xy-bXh" id="BwJ-bS-9Tz"/>
-                        <outlet property="avgMathSATLabel" destination="x6T-Km-RbZ" id="rnX-5e-S44"/>
-                        <outlet property="avgReadingSATLabel" destination="fnm-66-4FX" id="v4o-Q9-QMK"/>
-                        <outlet property="avgWritingSAT" destination="i38-45-igW" id="a8o-TJ-I4i"/>
-                        <outlet property="cityLabel" destination="DKr-8s-AaX" id="vF5-vg-Mwi"/>
-                        <outlet property="emailLabel" destination="YiU-5c-V9M" id="use-Gs-xjx"/>
-                        <outlet property="faxLabel" destination="28q-1z-wIZ" id="xYI-Tg-UZU"/>
-                        <outlet property="highSchoolNameLabel" destination="0WQ-dp-9DL" id="VFp-Ti-fMk"/>
-                        <outlet property="mapView" destination="FNs-oN-lAN" id="RRx-JR-T9l"/>
-                        <outlet property="numberOfStudentsLabel" destination="0hs-Gh-3Aq" id="xjl-8X-Z5e"/>
-                        <outlet property="numberOfTestTakersLabel" destination="sKH-qz-T8k" id="5mc-W1-7I2"/>
-                        <outlet property="overviewParagrapTextView" destination="2xk-wy-cl0" id="yN9-3M-b5U"/>
-                        <outlet property="phoneLabel" destination="VvV-zM-I8h" id="O3U-Me-nyY"/>
-                        <outlet property="stateLabel" destination="imX-Pb-3eL" id="ZJr-hc-OhB"/>
-                        <outlet property="zipCodeLabel" destination="Ixs-jm-ELR" id="v0C-os-FyJ"/>
+                        <outlet property="addressLabel" destination="3yT-U0-Bql" id="zsw-D0-krb"/>
+                        <outlet property="cityLabel" destination="JBR-qq-D7T" id="D0q-f6-5yj"/>
+                        <outlet property="highSchoolNameLabel" destination="QKo-Io-MQg" id="YXz-A3-gEZ"/>
+                        <outlet property="zipCodeLabel" destination="l0q-f4-K2a" id="Int-An-JUl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QGQ-29-0J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bb6-RQ-lAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-208.24587706146929"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="-191.57608695652175"/>
         </scene>
         <!--Settings-->
         <scene sceneID="egR-WX-UXe">
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" title="Settings" id="GmE-z0-PyB" customClass="SettingsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r2b-MJ-BdH">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortDataTypeCell" id="rwp-qs-Cpx" customClass="SortDataTypeCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="834" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwp-qs-Cpx" id="rBg-Qm-jVG">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Average  SAT Math Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-PC-rtN">
-                                            <rect key="frame" x="16" y="12" width="805" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="739" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -519,7 +262,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haG-UY-HuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909.5999999999999" y="-260.09852216748772"/>
+            <point key="canvasLocation" x="1903" y="-189"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3xU-hv-KgI">
@@ -527,7 +270,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ok-Ne-oUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih9-5g-60g">
-                        <rect key="frame" x="0.0" y="20" width="834" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
