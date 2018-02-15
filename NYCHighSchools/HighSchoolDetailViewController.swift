@@ -160,8 +160,8 @@ class HighSchoolDetailViewController: UIViewController {
         var region = MKCoordinateRegion()
         region.center.latitude = CLLocationDegrees(latitude);
         region.center.longitude = CLLocationDegrees(longitude);
-        region.span.latitudeDelta = 0.001;
-        region.span.longitudeDelta = 0.001;
+        region.span.latitudeDelta = 0.014285714285714       // 1 mile
+        region.span.longitudeDelta = 0.014285714285714      // 1 mile
         mapView.region = region
 }
     
