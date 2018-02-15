@@ -41,6 +41,11 @@ class HighSchoolDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = settingsButton
         showLabelsWithData()
         updateMapWithSchoolLocation()
+        
+        // TESTING
+        var frame = self.overviewParagrapTextView.frame
+        frame.size.height = self.overviewParagrapTextView.contentSize.height
+        self.overviewParagrapTextView.frame = frame
     }
 
     @objc func settingsTapped() {
