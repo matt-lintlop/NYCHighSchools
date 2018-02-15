@@ -135,12 +135,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-5c-V9M">
-                                <rect key="frame" x="90" y="210" width="37" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvV-zM-I8h">
                                 <rect key="frame" x="90" y="243" width="94" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
@@ -256,15 +250,21 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiU-5c-V9M">
+                                <rect key="frame" x="90" y="214" width="37" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YiU-5c-V9M" firstAttribute="baseline" secondItem="i38-45-igW" secondAttribute="baseline" id="0og-Cg-3Ei"/>
+                            <constraint firstItem="YiU-5c-V9M" firstAttribute="baseline" secondItem="i38-45-igW" secondAttribute="baseline" constant="4" id="0og-Cg-3Ei"/>
                             <constraint firstItem="0WQ-dp-9DL" firstAttribute="leading" secondItem="Qjq-xy-bXh" secondAttribute="leading" id="3Zy-G8-yko"/>
                             <constraint firstItem="0hs-Gh-3Aq" firstAttribute="leading" secondItem="x6T-Km-RbZ" secondAttribute="leading" id="6Mw-P2-1cg"/>
                             <constraint firstItem="WBc-Qd-RIi" firstAttribute="top" secondItem="0hs-Gh-3Aq" secondAttribute="top" id="6Vr-wo-8Cp"/>
                             <constraint firstItem="i86-y0-idb" firstAttribute="top" secondItem="7nd-wb-Bkc" secondAttribute="bottom" constant="6" id="A7P-ra-HJM"/>
-                            <constraint firstItem="YiU-5c-V9M" firstAttribute="top" secondItem="Ixs-jm-ELR" secondAttribute="bottom" constant="8" symbolic="YES" id="ATm-Fb-dsW"/>
+                            <constraint firstItem="YiU-5c-V9M" firstAttribute="top" secondItem="Ixs-jm-ELR" secondAttribute="bottom" constant="12" id="ATm-Fb-dsW"/>
                             <constraint firstItem="imX-Pb-3eL" firstAttribute="firstBaseline" secondItem="Ixs-jm-ELR" secondAttribute="firstBaseline" id="AhH-wy-hhj"/>
                             <constraint firstItem="FNs-oN-lAN" firstAttribute="top" secondItem="Z4l-51-5N1" secondAttribute="bottom" constant="20" id="AwT-9f-dTK"/>
                             <constraint firstItem="x6T-Km-RbZ" firstAttribute="leading" secondItem="Umt-9t-e6U" secondAttribute="trailing" constant="8" symbolic="YES" id="CDn-pe-SAN"/>
