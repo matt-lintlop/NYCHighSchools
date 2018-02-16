@@ -11,7 +11,6 @@ import MapKit
 
 class HighSchoolDetailViewController: UIViewController {
     
-   
     @IBOutlet weak var highSchoolNameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -27,7 +26,7 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var numberOfTestTakersLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
-        
+    
     var highSchoolData: HighSchoolData? {              // high school's data including average SAT scores
         didSet {
             updateMapWithSchoolLocation()
