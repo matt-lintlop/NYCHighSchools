@@ -27,9 +27,7 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var numberOfTestTakersLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
-    
-    @IBOutlet weak var schoolNameLabelVerticalConstraint: NSLayoutConstraint!
-    
+        
     var highSchoolData: HighSchoolData? {              // high school's data including average SAT scores
         didSet {
             updateMapWithSchoolLocation()
