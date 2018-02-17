@@ -151,91 +151,13 @@
                                         <fragment content="This is a School Name">
                                             <attributes>
                                                 <font key="NSFont" size="18" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content="   ">
                                             <attributes>
                                                 <font key="NSFont" size="36" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -854,11 +776,11 @@
                                 <exclude reference="nKj-Aq-FC4"/>
                                 <exclude reference="Fgo-Ae-rTv"/>
                                 <exclude reference="Rtz-oY-cBw"/>
-                                <exclude reference="xCT-hX-rDt"/>
-                                <exclude reference="y55-TI-RBB"/>
                                 <exclude reference="DEG-mL-NpY"/>
                                 <exclude reference="pma-fW-Q7E"/>
                                 <exclude reference="uAZ-QR-grb"/>
+                                <exclude reference="xCT-hX-rDt"/>
+                                <exclude reference="y55-TI-RBB"/>
                                 <exclude reference="g1a-Na-Qc8"/>
                                 <exclude reference="kSt-mB-zCX"/>
                                 <exclude reference="JWG-3T-KmP"/>
@@ -956,15 +878,15 @@
                                 <include reference="Rtz-oY-cBw"/>
                                 <exclude reference="dbq-WW-H2a"/>
                                 <exclude reference="so0-Fc-cmN"/>
-                                <exclude reference="T5K-Vk-5LE"/>
-                                <include reference="xCT-hX-rDt"/>
-                                <include reference="y55-TI-RBB"/>
                                 <include reference="DEG-mL-NpY"/>
                                 <exclude reference="Sj3-8g-E09"/>
                                 <exclude reference="UiP-sM-PPI"/>
                                 <exclude reference="fdR-gO-2lh"/>
                                 <exclude reference="pma-fW-Q7E"/>
                                 <include reference="uAZ-QR-grb"/>
+                                <exclude reference="T5K-Vk-5LE"/>
+                                <include reference="xCT-hX-rDt"/>
+                                <include reference="y55-TI-RBB"/>
                                 <include reference="g1a-Na-Qc8"/>
                                 <include reference="kSt-mB-zCX"/>
                                 <exclude reference="qMy-gM-BoE"/>
