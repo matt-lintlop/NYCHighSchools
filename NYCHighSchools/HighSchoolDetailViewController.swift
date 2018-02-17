@@ -46,10 +46,13 @@ class HighSchoolDetailViewController: UIViewController {
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
         
-        // TESTING
+        // show all of the overview paragraph text
         var frame = self.overviewParagrapTextView.frame
         frame.size.height = self.overviewParagrapTextView.contentSize.height
         self.overviewParagrapTextView.frame = frame
+        
+        // show all of the high school data in labels
+        showLabelsWithData()
     }
 
     @objc func settingsTapped() {
