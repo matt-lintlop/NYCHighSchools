@@ -27,10 +27,17 @@ class HighSchoolDetailViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
     
-    var highSchoolData: HighSchoolData? {              // high school's data including average SAT scores
-        didSet {
-            updateMapWithSchoolLocation()
-        }
+    var highSchoolData: HighSchoolData?         // high school's data including average SAT scores
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showLabelsWithData()
+        updateMapWithSchoolLocation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func viewDidLoad() {
@@ -38,8 +45,6 @@ class HighSchoolDetailViewController: UIViewController {
 
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
-        showLabelsWithData()
-        updateMapWithSchoolLocation()
         
         // TESTING
         var frame = self.overviewParagrapTextView.frame
@@ -63,7 +68,6 @@ class HighSchoolDetailViewController: UIViewController {
         guard let highSchoolData = highSchoolData else {
             return
         }
-        self.title = "NYC High Schools"
         
         self.highSchoolNameLabel.text = highSchoolData.schoolName
         if let primaryAddress = highSchoolData.primaryAddress {
@@ -152,6 +156,9 @@ class HighSchoolDetailViewController: UIViewController {
         }
 
         highSchoolData.debug()
+         
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
     }
     
     func updateMapWithSchoolLocation() {

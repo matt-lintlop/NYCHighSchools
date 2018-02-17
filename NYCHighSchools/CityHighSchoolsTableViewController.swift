@@ -84,10 +84,10 @@ class CityHighSchoolsTableViewController: UITableViewController {
         if segue.identifier == "ShowHighSchoolDetails" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let selectedRow = indexPath.row
-                let detailVC = segue.destination as! HighSchoolDetailViewController
                 let selectedRowHighSchoolData = self.sortedCityHighSchoolsSATData![selectedRow]
+                let detailVC = segue.destination as! HighSchoolDetailViewController
                 detailVC.highSchoolData = selectedRowHighSchoolData
-            }
+           }
         }
     }
 
