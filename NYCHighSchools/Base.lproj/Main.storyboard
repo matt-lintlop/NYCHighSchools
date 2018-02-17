@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ok-Ne-oUd">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14081.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -16,19 +17,19 @@
             <objects>
                 <tableViewController title="NYC High Schools" id="MLx-8d-qjB" customClass="CityHighSchoolsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GCQ-vs-WwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1112" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VG-4o-Kfc" id="JP0-gb-hCk">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
-                                            <rect key="frame" x="17" y="3.5" width="740" height="36.5"/>
+                                            <rect key="frame" x="17" y="3.5" width="1084" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -69,19 +70,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" title="Settings" id="GmE-z0-PyB" customClass="SettingsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r2b-MJ-BdH">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortDataTypeCell" id="rwp-qs-Cpx" customClass="SortDataTypeCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1112" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwp-qs-Cpx" id="rBg-Qm-jVG">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Average  SAT Math Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-PC-rtN">
-                                            <rect key="frame" x="16" y="12" width="739" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="1083" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -114,7 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ok-Ne-oUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih9-5g-60g">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1112" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -131,11 +132,83 @@
             <objects>
                 <viewController id="9cB-Y1-8KV" customClass="HighSchoolDetailViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErM-mL-sB7">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-qp-S6r">
+                                <rect key="frame" x="16" y="64" width="1080" height="126"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="15" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <attributedString key="attributedText">
+                                        <fragment>
+                                            <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
+</string>
+                                            <attributes>
+                                                <font key="NSFont" size="36" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </variation>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-qq-djf">
+                                <rect key="frame" x="20" y="558" width="1076" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="zuh-KI-Zvc"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zuh-KI-Zvc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="zuh-KI-Zvc"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-rW-4Ou" userLabel="Overview Paragraph Text View">
+                                <rect key="frame" x="20" y="447" width="1076" height="106"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="Xzq-09-0VB"/>
+                                    <constraint firstAttribute="height" constant="83" id="dV8-h5-Zm2">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                    </constraint>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xzq-09-0VB"/>
+                                        <exclude reference="dV8-h5-Zm2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dV8-h5-Zm2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <mask key="constraints">
+                                        <include reference="Xzq-09-0VB"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-UO-ohi">
-                                <rect key="frame" x="16" y="420" width="204.5" height="17"/>
+                                <rect key="frame" x="26" y="422" width="204.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Reading SAT:">
                                         <attributes>
@@ -149,7 +222,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Average Reading SAT:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -157,7 +230,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-B0-aAo">
-                                <rect key="frame" x="16" y="398" width="204.5" height="17"/>
+                                <rect key="frame" x="26" y="400" width="204.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Writing SAT:">
                                         <attributes>
@@ -171,7 +244,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Average Writing SAT:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -179,7 +252,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-i4-BwI">
-                                <rect key="frame" x="16" y="349" width="173.5" height="17"/>
+                                <rect key="frame" x="26" y="351" width="173.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Test Takers:">
                                         <attributes>
@@ -193,7 +266,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="# of Test Takers:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -201,7 +274,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al9-B0-4mB">
-                                <rect key="frame" x="199.5" y="371.5" width="29" height="16"/>
+                                <rect key="frame" x="209.5" y="374" width="29" height="16"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -210,7 +283,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-IX-uxV">
-                                <rect key="frame" x="230.5" y="398" width="31" height="17"/>
+                                <rect key="frame" x="240.5" y="400" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="415">
                                         <attributes>
@@ -230,7 +303,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llf-fy-kZX">
-                                <rect key="frame" x="199.5" y="349" width="31" height="17"/>
+                                <rect key="frame" x="210" y="351" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -250,7 +323,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myM-k6-u3C">
-                                <rect key="frame" x="16" y="327" width="143" height="17"/>
+                                <rect key="frame" x="26" y="329" width="143" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Students:">
                                         <attributes>
@@ -264,7 +337,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="# of Students:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -272,7 +345,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-wm-oVT">
-                                <rect key="frame" x="16" y="371" width="173.5" height="17"/>
+                                <rect key="frame" x="26" y="373" width="173.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Math SAT:">
                                         <attributes>
@@ -286,7 +359,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Average Math SAT:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -294,7 +367,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-fO-ZxX">
-                                <rect key="frame" x="230.5" y="420" width="31" height="17"/>
+                                <rect key="frame" x="240.5" y="422" width="31" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -303,7 +376,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtf-Lg-EUw">
-                                <rect key="frame" x="16" y="305" width="61.5" height="17"/>
+                                <rect key="frame" x="26" y="307" width="61.5" height="17"/>
                                 <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -311,7 +384,7 @@
                                         <fragment content="Email:">
                                             <attributes>
                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                                <font key="NSFont" size="14" name="Courier"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -322,14 +395,14 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Email:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-uh-Hdq">
-                                <rect key="frame" x="16" y="283" width="61.5" height="17"/>
+                                <rect key="frame" x="26" y="285" width="61.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="FAX:">
                                         <attributes>
@@ -342,14 +415,14 @@
                                     <attributedString key="attributedText">
                                         <fragment content="FAX:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Z-VW-wcQ">
-                                <rect key="frame" x="87.5" y="261" width="122.5" height="17"/>
+                                <rect key="frame" x="98" y="263" width="122.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -358,7 +431,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-By-KX1">
-                                <rect key="frame" x="87.5" y="283" width="122.5" height="17"/>
+                                <rect key="frame" x="97.5" y="285" width="122.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -367,7 +440,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-Ru-5dI">
-                                <rect key="frame" x="16" y="195" width="736" height="17"/>
+                                <rect key="frame" x="26" y="197" width="1080" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="lxf-Az-v0d"/>
                                 </constraints>
@@ -402,7 +475,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHf-Ta-VxK">
-                                <rect key="frame" x="16" y="239" width="51.5" height="17"/>
+                                <rect key="frame" x="26" y="241" width="51.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="94113">
                                         <attributes>
@@ -424,7 +497,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBO-VR-Y1c">
-                                <rect key="frame" x="128" y="217" width="20.5" height="17"/>
+                                <rect key="frame" x="138" y="219" width="20.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -432,34 +505,8 @@
                                     <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-qp-S6r">
-                                <rect key="frame" x="16" y="64" width="736" height="126"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="15" name=".SFNSText"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">City Polytechnic High School of Engineering, Architecture, and Technology
-</string>
-                                            <attributes>
-                                                <font key="NSFont" size="36" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Town" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-Xp-U2m">
-                                <rect key="frame" x="16" y="217" width="92" height="17"/>
+                                <rect key="frame" x="26" y="219" width="92" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -468,7 +515,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sig-KH-Hdi">
-                                <rect key="frame" x="16" y="261" width="61.5" height="17"/>
+                                <rect key="frame" x="26" y="263" width="61.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Phone:">
                                         <attributes>
@@ -481,14 +528,14 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Phone:">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="Courier"/>
+                                                <font key="NSFont" size="17" name="Courier-Bold"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-7s-n17">
-                                <rect key="frame" x="169" y="327" width="31" height="17"/>
+                                <rect key="frame" x="179" y="329" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -508,7 +555,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkj-Dn-Nf4">
-                                <rect key="frame" x="87.5" y="305" width="51.5" height="17"/>
+                                <rect key="frame" x="97.5" y="307" width="51.5" height="17"/>
                                 <attributedString key="attributedText"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -533,52 +580,6 @@
                                     </attributedString>
                                 </variation>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-qq-djf">
-                                <rect key="frame" x="20" y="558" width="732" height="422"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="zuh-KI-Zvc"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="zuh-KI-Zvc"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="zuh-KI-Zvc"/>
-                                    </mask>
-                                </variation>
-                            </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-rW-4Ou" userLabel="Overview Paragraph Text View">
-                                <rect key="frame" x="20" y="447" width="732" height="106"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="Xzq-09-0VB"/>
-                                    <constraint firstAttribute="height" constant="83" id="dV8-h5-Zm2">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
-                                    </constraint>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Xzq-09-0VB"/>
-                                        <exclude reference="dV8-h5-Zm2"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="dV8-h5-Zm2"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <mask key="constraints">
-                                        <include reference="Xzq-09-0VB"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -588,6 +589,7 @@
                             <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="qL4-qp-S6r" secondAttribute="trailing" constant="16" id="2Jq-eU-GCI"/>
                             <constraint firstItem="aBt-Ru-5dI" firstAttribute="top" secondItem="qL4-qp-S6r" secondAttribute="bottom" constant="5" id="2Xx-Xp-JZ5">
                                 <variation key="heightClass=compact-widthClass=compact" constant="21.5"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="7"/>
                             </constraint>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="width" secondItem="ErM-mL-sB7" secondAttribute="width" multiplier="0.5" id="30F-eD-3H0"/>
                             <constraint firstItem="qL4-qp-S6r" firstAttribute="leading" secondItem="4rO-be-lAJ" secondAttribute="leading" constant="16" id="3gS-UG-zHK"/>
@@ -622,7 +624,9 @@
                             <constraint firstItem="myM-k6-u3C" firstAttribute="top" secondItem="rtf-Lg-EUw" secondAttribute="bottom" constant="10" id="FNl-A7-Rf4">
                                 <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                             </constraint>
-                            <constraint firstItem="aBt-Ru-5dI" firstAttribute="leading" secondItem="4rO-be-lAJ" secondAttribute="leading" constant="16" id="FVI-Th-1K1"/>
+                            <constraint firstItem="aBt-Ru-5dI" firstAttribute="leading" secondItem="4rO-be-lAJ" secondAttribute="leading" constant="16" id="FVI-Th-1K1">
+                                <variation key="heightClass=regular-widthClass=regular" constant="26"/>
+                            </constraint>
                             <constraint firstItem="4Ub-B0-aAo" firstAttribute="leading" secondItem="4rO-be-lAJ" secondAttribute="leading" constant="16" id="FWh-JF-jwU"/>
                             <constraint firstItem="xBO-VR-Y1c" firstAttribute="baseline" secondItem="x7c-Xp-U2m" secondAttribute="baseline" id="Fgo-Ae-rTv"/>
                             <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="bpA-qq-djf" secondAttribute="trailing" constant="16" id="Fwb-bd-zml"/>
@@ -652,7 +656,9 @@
                             <constraint firstItem="fCC-7s-n17" firstAttribute="baseline" secondItem="myM-k6-u3C" secondAttribute="baseline" id="MXf-9g-Wqh"/>
                             <constraint firstItem="sDi-IX-uxV" firstAttribute="leading" secondItem="4Ub-B0-aAo" secondAttribute="trailing" constant="16" id="MrQ-kc-fy9"/>
                             <constraint firstItem="Vkj-Dn-Nf4" firstAttribute="baseline" secondItem="rtf-Lg-EUw" secondAttribute="baseline" id="NsS-Xn-ZbL"/>
-                            <constraint firstItem="Uqf-rW-4Ou" firstAttribute="top" secondItem="8PF-UO-ohi" secondAttribute="bottom" constant="10" id="NxQ-QW-McK"/>
+                            <constraint firstItem="Uqf-rW-4Ou" firstAttribute="top" secondItem="8PF-UO-ohi" secondAttribute="bottom" constant="10" id="NxQ-QW-McK">
+                                <variation key="heightClass=regular-widthClass=regular" constant="8"/>
+                            </constraint>
                             <constraint firstItem="fCC-7s-n17" firstAttribute="leading" secondItem="myM-k6-u3C" secondAttribute="trailing" constant="10" id="O8J-hR-AMB"/>
                             <constraint firstItem="4Ub-B0-aAo" firstAttribute="leading" secondItem="b6m-wm-oVT" secondAttribute="leading" id="OAy-5Z-Gat"/>
                             <constraint firstItem="qL4-qp-S6r" firstAttribute="top" secondItem="4rO-be-lAJ" secondAttribute="top" constant="32" id="OQY-o9-IFR">
@@ -682,7 +688,9 @@
                             <constraint firstItem="rtf-Lg-EUw" firstAttribute="baseline" secondItem="Vkj-Dn-Nf4" secondAttribute="baseline" id="ZmH-Ud-Afd"/>
                             <constraint firstItem="Z30-i4-BwI" firstAttribute="top" secondItem="myM-k6-u3C" secondAttribute="bottom" constant="5" id="ZmZ-Tk-qyg"/>
                             <constraint firstItem="myM-k6-u3C" firstAttribute="leading" secondItem="hH7-uh-Hdq" secondAttribute="leading" id="aEf-Lg-kMW"/>
-                            <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="aBt-Ru-5dI" secondAttribute="trailing" constant="16" id="aFu-0a-dWo"/>
+                            <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="aBt-Ru-5dI" secondAttribute="trailing" constant="16" id="aFu-0a-dWo">
+                                <variation key="heightClass=regular-widthClass=regular" constant="6"/>
+                            </constraint>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="leading" secondItem="Uqf-rW-4Ou" secondAttribute="leading" id="aIa-Qp-uQF"/>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="top" secondItem="Uqf-rW-4Ou" secondAttribute="bottom" constant="5" id="aUt-9f-HwP"/>
                             <constraint firstItem="Llf-fy-kZX" firstAttribute="leading" secondItem="Z30-i4-BwI" secondAttribute="trailing" constant="10" id="avc-tq-RD9"/>
@@ -725,7 +733,9 @@
                             <constraint firstItem="Uqf-rW-4Ou" firstAttribute="top" secondItem="ErM-mL-sB7" secondAttribute="top" constant="95" id="qi9-03-anG"/>
                             <constraint firstItem="al9-B0-4mB" firstAttribute="baseline" secondItem="b6m-wm-oVT" secondAttribute="baseline" id="qzH-dO-nNF"/>
                             <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="Vkj-Dn-Nf4" secondAttribute="trailing" constant="16" id="rS0-Lz-wVT"/>
-                            <constraint firstItem="aBt-Ru-5dI" firstAttribute="top" secondItem="qL4-qp-S6r" secondAttribute="bottom" constant="5" id="rlR-cg-rIn"/>
+                            <constraint firstItem="aBt-Ru-5dI" firstAttribute="top" secondItem="qL4-qp-S6r" secondAttribute="bottom" constant="5" id="rlR-cg-rIn">
+                                <variation key="heightClass=regular-widthClass=regular" constant="7"/>
+                            </constraint>
                             <constraint firstItem="Uqf-rW-4Ou" firstAttribute="top" secondItem="qL4-qp-S6r" secondAttribute="bottom" constant="5" id="sd4-CC-2z3"/>
                             <constraint firstItem="xBO-VR-Y1c" firstAttribute="baseline" secondItem="x7c-Xp-U2m" secondAttribute="baseline" id="so0-Fc-cmN"/>
                             <constraint firstItem="al9-B0-4mB" firstAttribute="leading" secondItem="b6m-wm-oVT" secondAttribute="trailing" constant="10" id="sqU-as-hRT"/>
@@ -757,11 +767,11 @@
                                 <exclude reference="ZTe-4L-HHQ"/>
                                 <exclude reference="Vav-1h-087"/>
                                 <exclude reference="d60-Xh-JPB"/>
+                                <exclude reference="Fgo-Ae-rTv"/>
+                                <exclude reference="Rtz-oY-cBw"/>
                                 <exclude reference="SHN-kg-5S9"/>
                                 <exclude reference="gFa-IC-FB3"/>
                                 <exclude reference="nKj-Aq-FC4"/>
-                                <exclude reference="Fgo-Ae-rTv"/>
-                                <exclude reference="Rtz-oY-cBw"/>
                                 <exclude reference="6QY-TN-cfV"/>
                                 <exclude reference="CzU-qj-atd"/>
                                 <exclude reference="DEG-mL-NpY"/>
@@ -778,11 +788,11 @@
                                 <exclude reference="jfe-VE-sV5"/>
                                 <exclude reference="6xy-Ps-tsV"/>
                                 <exclude reference="ZmZ-Tk-qyg"/>
+                                <exclude reference="3vf-xl-xSX"/>
+                                <exclude reference="dYM-Jb-Lwz"/>
                                 <exclude reference="Ifm-yv-B0u"/>
                                 <exclude reference="LWH-fw-Mep"/>
                                 <exclude reference="eD9-Lt-Rr1"/>
-                                <exclude reference="3vf-xl-xSX"/>
-                                <exclude reference="dYM-Jb-Lwz"/>
                                 <exclude reference="FWh-JF-jwU"/>
                                 <exclude reference="ScJ-eO-0b7"/>
                                 <exclude reference="VQQ-j7-7IW"/>
@@ -854,16 +864,16 @@
                                 <include reference="d60-Xh-JPB"/>
                                 <exclude reference="eGm-l3-W3l"/>
                                 <exclude reference="zGr-zq-QuQ"/>
+                                <include reference="Fgo-Ae-rTv"/>
+                                <include reference="Rtz-oY-cBw"/>
+                                <exclude reference="dbq-WW-H2a"/>
+                                <exclude reference="so0-Fc-cmN"/>
                                 <exclude reference="9i2-gt-lzB"/>
                                 <exclude reference="Aly-Ww-Md0"/>
                                 <include reference="SHN-kg-5S9"/>
                                 <exclude reference="f50-2O-Zn9"/>
                                 <include reference="gFa-IC-FB3"/>
                                 <exclude reference="nKj-Aq-FC4"/>
-                                <include reference="Fgo-Ae-rTv"/>
-                                <include reference="Rtz-oY-cBw"/>
-                                <exclude reference="dbq-WW-H2a"/>
-                                <exclude reference="so0-Fc-cmN"/>
                                 <include reference="6QY-TN-cfV"/>
                                 <include reference="CzU-qj-atd"/>
                                 <exclude reference="T5K-Vk-5LE"/>
@@ -894,15 +904,15 @@
                                 <include reference="ZmZ-Tk-qyg"/>
                                 <exclude reference="gg6-VG-oD3"/>
                                 <exclude reference="pfY-db-Vm4"/>
+                                <include reference="3vf-xl-xSX"/>
+                                <exclude reference="MXf-9g-Wqh"/>
+                                <exclude reference="O8J-hR-AMB"/>
+                                <include reference="dYM-Jb-Lwz"/>
                                 <exclude reference="1FD-hx-lc8"/>
                                 <exclude reference="93s-1c-BBC"/>
                                 <include reference="Ifm-yv-B0u"/>
                                 <include reference="LWH-fw-Mep"/>
                                 <include reference="eD9-Lt-Rr1"/>
-                                <include reference="3vf-xl-xSX"/>
-                                <exclude reference="MXf-9g-Wqh"/>
-                                <exclude reference="O8J-hR-AMB"/>
-                                <include reference="dYM-Jb-Lwz"/>
                                 <include reference="FWh-JF-jwU"/>
                                 <exclude reference="OAy-5Z-Gat"/>
                                 <include reference="ScJ-eO-0b7"/>
