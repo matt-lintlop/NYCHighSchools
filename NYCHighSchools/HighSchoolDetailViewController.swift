@@ -63,7 +63,8 @@ class HighSchoolDetailViewController: UIViewController {
         guard let highSchoolData = highSchoolData else {
             return
         }
-        self.title = highSchoolData.schoolName
+        self.title = "NYC High Schools"
+        
         self.highSchoolNameLabel.text = highSchoolData.schoolName
         if let primaryAddress = highSchoolData.primaryAddress {
             addressLabel.text = primaryAddress
