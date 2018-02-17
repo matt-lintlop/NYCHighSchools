@@ -53,6 +53,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                                 cityHighSchoolDataURL: URL(string: newYorkCitySchoolDataXMLPath),
                                                                 cityHighSchoolSATDataURL: URL(string: newYorkCitySchoolSATDataXMLPath))
         
+        // Application tintColor
+        window?.tintColor = UIColor.white
+
+        // Navigation bar background color
+        UINavigationBar.appearance().barTintColor = UIColor.black
+
+        // Make the text in the navigation bar white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey(rawValue: NSAttributedStringKey.foregroundColor.rawValue): UIColor.white]
+ 
         return true
     }
 
