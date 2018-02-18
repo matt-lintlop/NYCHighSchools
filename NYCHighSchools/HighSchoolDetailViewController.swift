@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class HighSchoolDetailViewController: UIViewController {
+class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var highSchoolNameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -189,19 +189,23 @@ class HighSchoolDetailViewController: UIViewController {
         var region = MKCoordinateRegion()
         region.center.latitude = CLLocationDegrees(latitude);
         region.center.longitude = CLLocationDegrees(longitude);
-        region.span.latitudeDelta = 0.007285714285714       // 1 mile
-        region.span.longitudeDelta = 0.007285714285714      // 1 mile
+        region.span.latitudeDelta = 0.007285714285714       // 0.5 mile
+        region.span.longitudeDelta = 0.007285714285714      // 0.5 mile
         mapView.region = region
 }
     
-    /*
-    // MARK: - Navigation
+    // MARK: - MKMapViewDelegate
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        print("Error loading the Map!")
     }
-    */
+    
+    func mapViewDidFinishRenderingMap(_ mapView: MKMapView,
+                                      fullyRendered: Bool) {
+        if !fullyRendered {
+            mapView.isHidden = true
+        }
+        print("Finished loading the Map!")
+    }
 
 }

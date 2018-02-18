@@ -172,6 +172,9 @@
                                         <include reference="zuh-KI-Zvc"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="9cB-Y1-8KV" id="FW6-fe-ieA"/>
+                                </connections>
                             </mapView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-rW-4Ou" userLabel="Overview Paragraph Text View">
                                 <rect key="frame" x="16" y="321" width="141" height="115"/>
