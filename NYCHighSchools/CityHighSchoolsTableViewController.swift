@@ -36,19 +36,12 @@ class CityHighSchoolsTableViewController: UITableViewController {
             self?.sortAndReloadTableviewData()
         }
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tableView.reloadData()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-   
+       
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -206,10 +199,8 @@ class CityHighSchoolsTableViewController: UITableViewController {
                 }
             }))
             
-            if self.navigationController?.topViewController == self {
-                self.tableView.reloadData()
-            }
-       }
+            self.tableView.reloadData()
+      }
     }
     
     @IBAction func settingsPressed(_ sender: Any) {
