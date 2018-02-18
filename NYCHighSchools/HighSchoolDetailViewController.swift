@@ -33,7 +33,6 @@ class HighSchoolDetailViewController: UIViewController {
         super.viewDidAppear(animated)
         
         showLabelsWithData()
-        updateMapWithSchoolLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,7 +49,8 @@ class HighSchoolDetailViewController: UIViewController {
         var frame = self.overviewParagrapTextView.frame
         frame.size.height = self.overviewParagrapTextView.contentSize.height
         self.overviewParagrapTextView.frame = frame
-     }
+        updateMapWithSchoolLocation()
+    }
 
     @objc func settingsTapped() {
         guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {
@@ -158,7 +158,6 @@ class HighSchoolDetailViewController: UIViewController {
         highSchoolData.debug()
          
         self.view.setNeedsLayout()
-        self.view.layoutIfNeeded()
     }
     
     func updateMapWithSchoolLocation() {
