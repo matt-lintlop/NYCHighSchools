@@ -50,10 +50,7 @@ class HighSchoolDetailViewController: UIViewController {
         var frame = self.overviewParagrapTextView.frame
         frame.size.height = self.overviewParagrapTextView.contentSize.height
         self.overviewParagrapTextView.frame = frame
-        
-        // show all of the high school data in labels
-        showLabelsWithData()
-    }
+     }
 
     @objc func settingsTapped() {
         guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {

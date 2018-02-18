@@ -148,13 +148,7 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <attributedString key="attributedText">
-                                        <fragment content="This is a School Name">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="   ">
+                                        <fragment content="This is a School Name   ">
                                             <attributes>
                                                 <font key="NSFont" size="36" name=".SFNSText"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
