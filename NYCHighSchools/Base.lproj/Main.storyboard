@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ok-Ne-oUd">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,19 +17,19 @@
             <objects>
                 <tableViewController title="NYC High Schools" id="MLx-8d-qjB" customClass="CityHighSchoolsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GCQ-vs-WwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="736" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VG-4o-Kfc" id="JP0-gb-hCk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
-                                            <rect key="frame" x="13" y="3.5" width="355" height="36.5"/>
+                                            <rect key="frame" x="17" y="3.6666666666666679" width="708" height="36.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -70,19 +70,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" title="Settings" id="GmE-z0-PyB" customClass="SettingsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r2b-MJ-BdH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortDataTypeCell" id="rwp-qs-Cpx" customClass="SortDataTypeCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="736" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwp-qs-Cpx" id="rBg-Qm-jVG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Average  SAT Math Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-PC-rtN">
-                                            <rect key="frame" x="16" y="12" width="350" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="707" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ok-Ne-oUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih9-5g-60g">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -132,11 +132,11 @@
             <objects>
                 <viewController id="9cB-Y1-8KV" customClass="HighSchoolDetailViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErM-mL-sB7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL4-qp-S6r">
-                                <rect key="frame" x="16" y="74" width="343" height="21"/>
+                                <rect key="frame" x="16" y="54" width="704" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="This is a School Name">
                                         <attributes>
@@ -158,7 +158,7 @@
                                 </variation>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-qq-djf">
-                                <rect key="frame" x="187.5" y="324" width="187.5" height="299"/>
+                                <rect key="frame" x="252" y="199" width="484" height="171"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="zuh-KI-Zvc"/>
                                 </constraints>
@@ -174,7 +174,7 @@
                                 </variation>
                             </mapView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-rW-4Ou" userLabel="Overview Paragraph Text View">
-                                <rect key="frame" x="16" y="324" width="168.5" height="299"/>
+                                <rect key="frame" x="252" y="80" width="468" height="78"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="Xzq-09-0VB"/>
@@ -204,7 +204,7 @@
                                 </variation>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-UO-ohi">
-                                <rect key="frame" x="16" y="300" width="168.5" height="14"/>
+                                <rect key="frame" x="16" y="275" width="168.66666666666666" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Reading SAT:">
                                         <attributes>
@@ -226,7 +226,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-B0-aAo">
-                                <rect key="frame" x="16" y="276" width="168.5" height="14"/>
+                                <rect key="frame" x="16" y="256" width="168.66666666666666" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Writing SAT:">
                                         <attributes>
@@ -248,7 +248,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-i4-BwI">
-                                <rect key="frame" x="16" y="238" width="143" height="14"/>
+                                <rect key="frame" x="16" y="218" width="143" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Test Takers:">
                                         <attributes>
@@ -270,7 +270,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al9-B0-4mB">
-                                <rect key="frame" x="169" y="257.5" width="23.5" height="13"/>
+                                <rect key="frame" x="169" y="237.66666666666666" width="23.666666666666657" height="13"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -279,7 +279,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-IX-uxV">
-                                <rect key="frame" x="194.5" y="276" width="25.5" height="14"/>
+                                <rect key="frame" x="194.66666666666666" y="256" width="25.333333333333343" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="415">
                                         <attributes>
@@ -299,7 +299,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llf-fy-kZX">
-                                <rect key="frame" x="169.5" y="238" width="25.5" height="14"/>
+                                <rect key="frame" x="169.66666666666666" y="218" width="25.333333333333343" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -319,7 +319,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myM-k6-u3C">
-                                <rect key="frame" x="16" y="219" width="118" height="14"/>
+                                <rect key="frame" x="16" y="199" width="118" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Students:">
                                         <attributes>
@@ -341,7 +341,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-wm-oVT">
-                                <rect key="frame" x="16" y="257" width="143" height="14"/>
+                                <rect key="frame" x="16" y="237" width="143" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Math SAT:">
                                         <attributes>
@@ -363,7 +363,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-fO-ZxX">
-                                <rect key="frame" x="194.5" y="300" width="25.5" height="14"/>
+                                <rect key="frame" x="194.66666666666666" y="275" width="25.333333333333343" height="14"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -372,7 +372,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtf-Lg-EUw">
-                                <rect key="frame" x="16" y="200" width="50.5" height="14"/>
+                                <rect key="frame" x="15.999999999999996" y="180" width="50.666666666666657" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Email:">
                                         <attributes>
@@ -405,7 +405,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-uh-Hdq">
-                                <rect key="frame" x="16" y="181" width="50.5" height="14"/>
+                                <rect key="frame" x="15.999999999999996" y="161" width="50.666666666666657" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="FAX:">
                                         <attributes>
@@ -425,7 +425,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-By-KX1">
-                                <rect key="frame" x="76.5" y="181" width="101" height="14"/>
+                                <rect key="frame" x="76.666666666666671" y="161" width="101.00000000000001" height="14"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -434,7 +434,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-Ru-5dI">
-                                <rect key="frame" x="16" y="100" width="343" height="16.5"/>
+                                <rect key="frame" x="16" y="80" width="704" height="16.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="lxf-Az-v0d"/>
                                 </constraints>
@@ -469,7 +469,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHf-Ta-VxK">
-                                <rect key="frame" x="16" y="143" width="42.5" height="14"/>
+                                <rect key="frame" x="15.999999999999996" y="123" width="42.666666666666657" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="94113">
                                         <attributes>
@@ -491,7 +491,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBO-VR-Y1c">
-                                <rect key="frame" x="104.5" y="121.5" width="19.5" height="16.5"/>
+                                <rect key="frame" x="104.66666666666667" y="101.66666666666667" width="19.333333333333329" height="16.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -500,7 +500,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Town" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-Xp-U2m">
-                                <rect key="frame" x="16" y="121.5" width="68.5" height="16.5"/>
+                                <rect key="frame" x="16" y="101.66666666666667" width="68.666666666666671" height="16.333333333333329"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -509,7 +509,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sig-KH-Hdi">
-                                <rect key="frame" x="16" y="162" width="50.5" height="14"/>
+                                <rect key="frame" x="15.999999999999996" y="142" width="50.666666666666657" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Phone:">
                                         <attributes>
@@ -529,7 +529,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-7s-n17">
-                                <rect key="frame" x="144" y="219" width="25.5" height="14"/>
+                                <rect key="frame" x="144" y="199" width="25.666666666666657" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -549,7 +549,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkj-Dn-Nf4">
-                                <rect key="frame" x="76.5" y="200" width="92.5" height="14"/>
+                                <rect key="frame" x="76.666666666666686" y="180" width="92.333333333333314" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="awesome.com">
                                         <attributes>
@@ -582,7 +582,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Z-VW-wcQ">
-                                <rect key="frame" x="76.5" y="162" width="101" height="14"/>
+                                <rect key="frame" x="76.666666666666671" y="142" width="101.00000000000001" height="14"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -729,7 +729,7 @@
                             <constraint firstItem="Ajr-By-KX1" firstAttribute="leading" secondItem="hH7-uh-Hdq" secondAttribute="trailing" constant="5" id="kSt-mB-zCX"/>
                             <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="Uqf-rW-4Ou" secondAttribute="trailing" constant="16" id="mpM-nQ-59b"/>
                             <constraint firstItem="sig-KH-Hdi" firstAttribute="top" secondItem="QHf-Ta-VxK" secondAttribute="bottom" constant="5" id="nKj-Aq-FC4"/>
-                            <constraint firstItem="8PF-UO-ohi" firstAttribute="top" secondItem="4Ub-B0-aAo" secondAttribute="bottom" constant="10" id="nS9-hV-sKy">
+                            <constraint firstItem="8PF-UO-ohi" firstAttribute="top" secondItem="4Ub-B0-aAo" secondAttribute="bottom" constant="5" id="nS9-hV-sKy">
                                 <variation key="heightClass=compact-widthClass=compact" constant="-48"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="5"/>
                             </constraint>
