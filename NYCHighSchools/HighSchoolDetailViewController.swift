@@ -29,22 +29,19 @@ class HighSchoolDetailViewController: UIViewController {
     
     var highSchoolData: HighSchoolData?         // high school's data including average SAT scores
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        showLabelsWithData()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
+        showLabelsWithData()
+ }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
-    }
+        showLabelsWithData()
+  }
 
     @objc func settingsTapped() {
         guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {
