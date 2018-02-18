@@ -38,6 +38,7 @@ class HighSchoolDetailViewController: UIViewController {
     override func viewDidLoad() {
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
+        showHighSchoolData()
     }
 
     @objc func settingsTapped() {
@@ -166,9 +167,11 @@ class HighSchoolDetailViewController: UIViewController {
         }
         
         // show all of the overview paragraph text
-        var frame = self.overviewParagrapTextView.frame
-        frame.size.height = self.overviewParagrapTextView.contentSize.height
-        self.overviewParagrapTextView.frame = frame
+//        var frame = self.overviewParagrapTextView.frame
+//        frame.size.height = self.overviewParagrapTextView.contentSize.height
+//        self.overviewParagrapTextView.frame = frame
+        
+        // show the school's location in the map view
         updateMapWithSchoolLocation()
 
         self.view.setNeedsLayout()
