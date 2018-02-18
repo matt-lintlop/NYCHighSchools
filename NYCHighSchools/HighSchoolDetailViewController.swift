@@ -32,16 +32,13 @@ class HighSchoolDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showLabelsWithData()
- }
+        showHighSchoolData()
+    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         let settingsButton = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsTapped))
         navigationItem.rightBarButtonItem = settingsButton
-        showLabelsWithData()
-  }
+    }
 
     @objc func settingsTapped() {
         guard let settingViewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsTableViewController") else {
@@ -55,34 +52,48 @@ class HighSchoolDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showLabelsWithData() {
-        guard let highSchoolData = highSchoolData else {
+    func showHighSchoolData() {
+        guard let highSchoolData = self.highSchoolData else {
+            print("In showHighSchoolData() highSchoolData = NIL")
             return
         }
         
+        print("=========================================")
+        self.highSchoolData?.debug("Showing High School Data")
+        
+        // show the shool name
         self.highSchoolNameLabel.text = highSchoolData.schoolName
+        
+        // show the school's primary address
         if let primaryAddress = highSchoolData.primaryAddress {
             addressLabel.text = primaryAddress
         }
 
+        // show the school's city
         if let city = highSchoolData.city {
             cityLabel.text = city
         }
         else {
             cityLabel.text = ""
         }
+ 
+        // show the school's zip code
         if let zip = highSchoolData.zip {
             zipCodeLabel.text = zip
         }
         else {
             zipCodeLabel.text = ""
         }
+ 
+        // show the school's state
         if let state = highSchoolData.state {
             stateLabel.text = state
         }
         else {
             stateLabel.text = ""
         }
+
+        // show the number of SAT test takers at the school
         if let numberOfSATTestTakers = highSchoolData.numberOfSATTestTakers {
             numberOfTestTakersLabel.text = String(numberOfSATTestTakers)
         }
@@ -90,6 +101,7 @@ class HighSchoolDetailViewController: UIViewController {
             numberOfTestTakersLabel.text = ""
         }
         
+        // show the average SAT reading score at the school
         if let averageSATReadingScore = highSchoolData.averageSATReadingScore {
             avgReadingSATLabel.text = String(averageSATReadingScore)
         }
@@ -97,6 +109,7 @@ class HighSchoolDetailViewController: UIViewController {
             avgReadingSATLabel.text = ""
         }
         
+        // show the average SAT math score at the school
         if let averageSATMathScore = highSchoolData.averageSATMathScore {
             avgMathSATLabel.text = String(averageSATMathScore)
         }
@@ -104,6 +117,7 @@ class HighSchoolDetailViewController: UIViewController {
             avgMathSATLabel.text = ""
         }
         
+        // show the average SAT writing score at the school
         if let averageSATWritingScore = highSchoolData.averageSATWritingScore {
             avgWritingSAT.text = String(averageSATWritingScore)
         }
@@ -111,6 +125,7 @@ class HighSchoolDetailViewController: UIViewController {
             avgWritingSAT.text = ""
         }
         
+        // show theschool's email address
         if let schoolEmail = highSchoolData.schoolEmail {
             emailLabel.text = schoolEmail
         }
@@ -118,6 +133,7 @@ class HighSchoolDetailViewController: UIViewController {
             emailLabel.text = ""
         }
         
+        // show the school's overview paragraph
         if let overview = highSchoolData.overViewParagraph {
             overviewParagrapTextView.text = overview
         }
@@ -125,13 +141,15 @@ class HighSchoolDetailViewController: UIViewController {
             overviewParagrapTextView.text = ""
         }
         
-        if let phonNumber = highSchoolData.phonNumber {
-            phoneLabel.text = phonNumber
+        // show the school's phone number
+        if let phoneNumber = highSchoolData.phoneNumber {
+            phoneLabel.text = phoneNumber
         }
         else {
             phoneLabel.text = ""
         }
         
+        // show the school's fax number
         if let faxNumber = highSchoolData.faxNumber {
             faxLabel.text = faxNumber
         }
@@ -139,14 +157,13 @@ class HighSchoolDetailViewController: UIViewController {
             faxLabel.text = ""
         }
         
+        // show the total number of students at the school
         if let numberOfStudents = highSchoolData.numberOfStudents {
             numberOfStudentsLabel.text = String(numberOfStudents)
         }
         else {
             numberOfStudentsLabel.text = ""
         }
-
-        highSchoolData.debug()
         
         // show all of the overview paragraph text
         var frame = self.overviewParagrapTextView.frame

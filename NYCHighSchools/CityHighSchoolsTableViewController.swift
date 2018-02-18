@@ -124,7 +124,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
             sortAndReloadTableviewData()
             
             print("SUCCESS! Parsed \(cityHighSchoolsSATData!.count) High School's SAT Data")
- //           debug(cityHighSchoolsDataDict)
+ //           debug("SUCCESS! Parsed")
         }
         else {
             print("PARSE ERROR! Could not parse City High School's SAT Data")

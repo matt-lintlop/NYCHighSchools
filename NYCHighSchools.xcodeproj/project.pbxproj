@@ -123,11 +123,11 @@
 		34B28C452023E58D0025DE07 /* NYCHighSchools */ = {
 			isa = PBXGroup;
 			children = (
-				1766BBF5203495A900F4228C /* SortDataTypeCell.swift */,
-				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
 				17C84A49202FA0A10074EA56 /* CityHighSchoolsTableViewController.swift */,
-				17DD574C203123C100C4E29F /* SettingsTableViewController.swift */,
 				17C0BE43203371B500BFEB38 /* HighSchoolDetailViewController.swift */,
+				17DD574C203123C100C4E29F /* SettingsTableViewController.swift */,
+				17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */,
+				1766BBF5203495A900F4228C /* SortDataTypeCell.swift */,
 				348F8E982024097000762920 /* HighSchoolData.swift */,
 				17DD574A203101ED00C4E29F /* ParseCityHighSchoolsDataXMLOperation.swift */,
 				179A9CAC2032573900C4E980 /* ParseCityHighSchoolsSATDataXMLTask.swift */,

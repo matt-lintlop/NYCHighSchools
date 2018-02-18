@@ -583,10 +583,6 @@
                             <constraint firstItem="aBt-Ru-5dI" firstAttribute="leading" secondItem="qL4-qp-S6r" secondAttribute="leading" id="1ZF-d7-UNN"/>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="top" secondItem="8PF-UO-ohi" secondAttribute="bottom" constant="10" id="1Zr-6L-ZE0"/>
                             <constraint firstItem="4rO-be-lAJ" firstAttribute="trailing" secondItem="qL4-qp-S6r" secondAttribute="trailing" constant="16" id="2Jq-eU-GCI"/>
-                            <constraint firstItem="aBt-Ru-5dI" firstAttribute="top" secondItem="qL4-qp-S6r" secondAttribute="bottom" constant="5" id="2Xx-Xp-JZ5">
-                                <variation key="heightClass=compact-widthClass=compact" constant="21.5"/>
-                                <variation key="heightClass=regular-widthClass=regular" constant="7"/>
-                            </constraint>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="width" secondItem="ErM-mL-sB7" secondAttribute="width" multiplier="0.5" id="30F-eD-3H0"/>
                             <constraint firstItem="bpA-qq-djf" firstAttribute="top" secondItem="36Z-VW-wcQ" secondAttribute="top" id="3XJ-rm-rrV"/>
                             <constraint firstItem="qL4-qp-S6r" firstAttribute="leading" secondItem="4rO-be-lAJ" secondAttribute="leading" constant="16" id="3gS-UG-zHK"/>
@@ -851,7 +847,6 @@
                                 <include reference="GSJ-hS-nPf"/>
                                 <exclude reference="OQY-o9-IFR"/>
                                 <include reference="1ZF-d7-UNN"/>
-                                <exclude reference="2Xx-Xp-JZ5"/>
                                 <include reference="CBn-c3-i8c"/>
                                 <exclude reference="FVI-Th-1K1"/>
                                 <include reference="DNR-fr-1v3"/>

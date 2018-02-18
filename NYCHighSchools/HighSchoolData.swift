@@ -16,7 +16,7 @@ class HighSchoolData {
     var averageSATMathScore: Float?     // average SAT math score
     var averageSATWritingScore: Float?  // average SAT writing score
     var overViewParagraph: String?      // overview paragraph
-    var phonNumber: String?             // phone number
+    var phoneNumber: String?             // phone number
     var faxNumber: String?              // fax number
     var primaryAddress: String?         // primary address
     var schoolEmail: String?            // school email
@@ -37,14 +37,17 @@ class HighSchoolData {
     
     // MARK: Debugging
     
-    func debug() {
+    func debug(_ message: String? = nil) {
+        if let message = message {
+            print(message)
+        }
         print("\nHighSchoolData for school name: \(schoolName)")
         print("numberOfSATTestTakers: \(String(describing: numberOfSATTestTakers))")
         print("averageSATReadingScore: \(String(describing: averageSATReadingScore))")
         print("averageSATMathScore: \(String(describing: averageSATMathScore))")
         print("averageSATWritingScore: \(String(describing: averageSATWritingScore))")
         print("overViewParagraph: \(String(describing: overViewParagraph))")
-        print("phonNumber: \(String(describing: phonNumber))")
+        print("phonNumber: \(String(describing: phoneNumber))")
         print("faxNumber: \(String(describing: faxNumber))")
         print("primaryAddress: \(String(describing: primaryAddress))")
         print("schoolEmail: \(String(describing: schoolEmail))")

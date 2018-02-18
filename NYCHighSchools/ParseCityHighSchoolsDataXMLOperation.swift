@@ -169,7 +169,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
                 case HighSchoolDataJSONItens.overViewParagraph.rawValue:
                     highSchoolData.overViewParagraph = string
                 case HighSchoolDataJSONItens.phonNumber.rawValue:
-                    highSchoolData.phonNumber = string
+                    highSchoolData.phoneNumber = string
                 case HighSchoolDataJSONItens.faxNumber.rawValue:
                     highSchoolData.faxNumber = string
                 case HighSchoolDataJSONItens.schoolEmail.rawValue:
