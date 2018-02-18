@@ -30,7 +30,7 @@ class CityHighSchoolsTableViewController: UITableViewController {
         self.title = "NYC High Schools"
     
         downloadAndParseCityHighSchoolsSATData()
-        
+
         NotificationCenter.default.addObserver(forName: didSetSetHighSchoolDataSortTypeNotification, object: nil, queue: nil) { [weak self] (notification) in
             
             self?.sortAndReloadTableviewData()

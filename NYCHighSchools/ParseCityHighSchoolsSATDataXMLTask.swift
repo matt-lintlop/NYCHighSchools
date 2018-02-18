@@ -23,7 +23,8 @@ class ParseCityHighSchoolsSATDataXMLTask {
     var completionHandler: ParseXMLDataCompletionHandler?                           // copletion handler
     var hasNetwork: Bool = false                                                    // network available flag
     var cityHighSchoolsDataDict: [String:HighSchoolData]?                           // city high schools data dictionary has data about every high school in city
-    
+    var useOfflineData = false                                                      // trie if network error and offline data should be used
+
     init(withCitySATDataInfo citySATDataInfo: CityHighSchoolsSATDataInfo) {
         self.citySATDataInfo = citySATDataInfo
         self.hasNetwork = false
@@ -41,7 +42,7 @@ class ParseCityHighSchoolsSATDataXMLTask {
     }
     
     func parseCityHighSchoolsData() {
-        if hasNetwork {
+        if hasNetwork && !useOfflineData {
             if let url = citySATDataInfo.cityHighSchoolDataURL {
                 parseCityHighSchoolsData(with: url)
                 return
@@ -141,10 +142,17 @@ class ParseCityHighSchoolsSATDataXMLTask {
                                                    error: ParseHighSchoolDataXMLError?) {
   
         if (cityHighSchoolsDataDict != nil) && (error == nil) {
+            if cityHighSchoolsDataDict?.count == 0 {
+                print("Forcing Loading offlead data!")
+                self.useOfflineData = true
+                self.parseCityHighSchoolsData()
+                return
+            }
             print("SUCCESS! Parsing City High School Data")
             self.cityHighSchoolsDataDict = cityHighSchoolsDataDict
             parseCityHighSchoolsSATData()
-        }
+
+         }
         else {
             print("Error Parsing City High School Data")
             completionHandler?(nil, error)
