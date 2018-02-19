@@ -197,7 +197,7 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
     // MARK: - MKMapViewDelegate
 
     func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
-        print("Error loading the Map!")
+        mapView.isHidden = true
     }
     
     func mapViewDidFinishRenderingMap(_ mapView: MKMapView,
@@ -205,7 +205,6 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
         if !fullyRendered {
             mapView.isHidden = true
         }
-        print("Finished loading the Map!")
     }
 
 }
