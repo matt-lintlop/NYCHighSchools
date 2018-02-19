@@ -55,13 +55,9 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
     
     func showHighSchoolData() {
         guard let highSchoolData = self.highSchoolData else {
-            print("In showHighSchoolData() highSchoolData = NIL")
             return
         }
-        
-        print("=========================================")
-        self.highSchoolData?.debug("Showing High School Data")
-        
+         
         // show the shool name
         self.highSchoolNameLabel.text = highSchoolData.schoolName
         

@@ -69,6 +69,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     }
     
     deinit {
+        cancel()
         completionHandler = nil
     }
     
@@ -104,7 +105,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
         self.completionHandler?(nil, .parseXMLDataError)
-        print(">> Parser Error: \(parseError)")
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
@@ -179,7 +179,7 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
                 case HighSchoolDataJSONItens.primaryAddress.rawValue:
                     highSchoolData.primaryAddress = string
                 default:
-                    print("Skipped parsing element named: \(currentElementName)")
+                    break;
             }
         }
     }
@@ -225,7 +225,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
     // MARK: FILE IO
     
     func downloadXMLData(withURL url: URL) {
-        print("Downloading data from url: \(url.absoluteString)")
         self.xmlDataURL = url
         if url.isFileURL {
             // load the xml data from a file
@@ -248,7 +247,6 @@ class ParseCityHighSchoolsDataXMLOperation: Operation, XMLParserDelegate {
 
         if let dataTask = downloadXMLDataTask {
             dataTask.cancel()
-            print("Canceled Download of URL: \(String(describing: xmlDataURL?.absoluteString))")
         }
     }
     

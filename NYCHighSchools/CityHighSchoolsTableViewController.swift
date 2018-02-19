@@ -53,7 +53,6 @@ class CityHighSchoolsTableViewController: UITableViewController {
             return 0
         }
         let rowCount = sortedCityHighSchoolsSATData.count
-        print("There are \(rowCount) rows in the table view.")
         return rowCount
     }
 
@@ -123,11 +122,6 @@ class CityHighSchoolsTableViewController: UITableViewController {
             })
             sortAndReloadTableviewData()
             
-            print("SUCCESS! Parsed \(cityHighSchoolsSATData!.count) High School's SAT Data")
- //           debug("SUCCESS! Parsed")
-        }
-        else {
-            print("PARSE ERROR! Could not parse City High School's SAT Data")
         }
     }
     

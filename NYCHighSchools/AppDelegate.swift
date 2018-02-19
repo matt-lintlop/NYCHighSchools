@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // get the current high school data sort type
         let dataSortType = getHighSchoolDataSortType()
-        print("Current High School Data Sort Type: \(dataSortType.rawValue)")
         
         // initialize the URLS to the city's data & SAT data
         var offlineCityHighSchoolDataXMLURL: URL?
@@ -134,7 +133,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setHighSchoolDataSortType(_ dataSortType: HighSchoolDataSortType) {
-        print("Set Data Sort Type: \(dataSortType.rawValue)")
         UserDefaults().setValue(dataSortType.rawValue, forKeyPath: AppUserDefaultKeys.highSchoolDataSortKey.rawValue)
         NotificationCenter.default.post(name: didSetSetHighSchoolDataSortTypeNotification, object: dataSortType)
     }
