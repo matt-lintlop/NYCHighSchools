@@ -26,6 +26,9 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var numberOfTestTakersLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
+    @IBOutlet weak var emailItem: UILabel!
+    
+    
     
     var highSchoolData: HighSchoolData?         // high school's data including average SAT scores
     
@@ -125,9 +128,12 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
         // show theschool's email address
         if let schoolEmail = highSchoolData.schoolEmail {
             emailLabel.text = schoolEmail
-        }
+            emailLabel.isHidden = false
+            emailItem.isHidden = false
+       }
         else {
-            emailLabel.text = ""
+            emailItem.isHidden = true
+            emailLabel.isHidden = true
         }
         
         // show the school's overview paragraph

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14092" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ok-Ne-oUd">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -17,19 +17,19 @@
             <objects>
                 <tableViewController title="NYC High Schools" id="MLx-8d-qjB" customClass="CityHighSchoolsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GCQ-vs-WwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HighSchoolNameCell" id="9VG-4o-Kfc" customClass="HighSchoolNameCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1112" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VG-4o-Kfc" id="JP0-gb-hCk">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqs-s2-kgO">
-                                            <rect key="frame" x="17" y="3.5" width="740" height="36.5"/>
+                                            <rect key="frame" x="17" y="3.5" width="1084" height="36.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -70,19 +70,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTableViewController" title="Settings" id="GmE-z0-PyB" customClass="SettingsTableViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r2b-MJ-BdH">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SortDataTypeCell" id="rwp-qs-Cpx" customClass="SortDataTypeCell" customModule="NYCHighSchools" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="1112" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwp-qs-Cpx" id="rBg-Qm-jVG">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1112" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Average  SAT Math Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-PC-rtN">
-                                            <rect key="frame" x="16" y="12" width="739" height="21"/>
+                                            <rect key="frame" x="16" y="12" width="1083" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ok-Ne-oUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih9-5g-60g">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1112" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -132,11 +132,11 @@
             <objects>
                 <viewController id="9cB-Y1-8KV" customClass="HighSchoolDetailViewController" customModule="NYCHighSchools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ErM-mL-sB7">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-qq-djf">
-                                <rect key="frame" x="20" y="481" width="732" height="499"/>
+                                <rect key="frame" x="20" y="495" width="1076" height="295"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="171" id="zuh-KI-Zvc"/>
                                 </constraints>
@@ -155,7 +155,7 @@
                                 </connections>
                             </mapView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqf-rW-4Ou" userLabel="Overview Paragraph Text View">
-                                <rect key="frame" x="20" y="370" width="732" height="106"/>
+                                <rect key="frame" x="20" y="384" width="1076" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="Xzq-09-0VB"/>
@@ -185,7 +185,7 @@
                                 </variation>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtf-Lg-EUw">
-                                <rect key="frame" x="16" y="235" width="61.5" height="17"/>
+                                <rect key="frame" x="16" y="249" width="61.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Email:">
                                         <attributes>
@@ -218,7 +218,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-uh-Hdq">
-                                <rect key="frame" x="16" y="213" width="61.5" height="17"/>
+                                <rect key="frame" x="16" y="227" width="61.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="FAX:">
                                         <attributes>
@@ -238,7 +238,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-By-KX1">
-                                <rect key="frame" x="87.5" y="213" width="122.5" height="17"/>
+                                <rect key="frame" x="87.5" y="227" width="122.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -247,14 +247,14 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-Ru-5dI">
-                                <rect key="frame" x="16" y="116" width="746" height="20"/>
+                                <rect key="frame" x="16" y="116" width="1090" height="23.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="lxf-Az-v0d"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Address Line 1">
                                         <attributes>
-                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="20" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -274,7 +274,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Address Line 1">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -282,47 +282,57 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHf-Ta-VxK">
-                                <rect key="frame" x="16" y="166" width="47.5" height="20"/>
+                                <rect key="frame" x="16" y="174" width="61.5" height="26"/>
                                 <attributedString key="attributedText">
                                     <fragment content="94113">
                                         <attributes>
-                                            <font key="NSFont" size="14" name="Courier"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <attributedString key="attributedText">
+                                        <fragment content="94113">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <attributedString key="attributedText">
                                         <fragment content="94113">
                                             <attributes>
-                                                <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBO-VR-Y1c">
-                                <rect key="frame" x="119.5" y="141" width="23.5" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="139" y="145" width="29" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Town" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-Xp-U2m">
-                                <rect key="frame" x="16" y="141" width="83.5" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="16" y="144.5" width="103" height="24.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sig-KH-Hdi">
-                                <rect key="frame" x="16" y="191" width="61.5" height="17"/>
+                                <rect key="frame" x="16" y="205" width="61.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Phone:">
                                         <attributes>
@@ -342,7 +352,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkj-Dn-Nf4">
-                                <rect key="frame" x="87.5" y="235" width="51.5" height="17"/>
+                                <rect key="frame" x="87.5" y="249" width="51.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="awesome.com">
                                         <attributes>
@@ -375,7 +385,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415-305-6879" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Z-VW-wcQ">
-                                <rect key="frame" x="87.5" y="191" width="122.5" height="17"/>
+                                <rect key="frame" x="87.5" y="205" width="122.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -384,7 +394,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PF-UO-ohi">
-                                <rect key="frame" x="16" y="345" width="204.5" height="17"/>
+                                <rect key="frame" x="16" y="359" width="204.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Reading SAT:">
                                         <attributes>
@@ -406,7 +416,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-B0-aAo">
-                                <rect key="frame" x="16" y="323" width="204.5" height="17"/>
+                                <rect key="frame" x="16" y="337" width="204.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Writing SAT:">
                                         <attributes>
@@ -428,7 +438,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z30-i4-BwI">
-                                <rect key="frame" x="16" y="279" width="173.5" height="17"/>
+                                <rect key="frame" x="16" y="293" width="173.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Test Takers:">
                                         <attributes>
@@ -450,7 +460,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="al9-B0-4mB">
-                                <rect key="frame" x="199.5" y="301.5" width="29" height="16"/>
+                                <rect key="frame" x="199.5" y="315.5" width="29" height="16"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -459,7 +469,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-IX-uxV">
-                                <rect key="frame" x="230.5" y="323" width="31" height="17"/>
+                                <rect key="frame" x="230.5" y="337" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="415">
                                         <attributes>
@@ -479,7 +489,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llf-fy-kZX">
-                                <rect key="frame" x="199.5" y="279" width="31" height="17"/>
+                                <rect key="frame" x="199.5" y="293" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -499,7 +509,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myM-k6-u3C">
-                                <rect key="frame" x="16" y="257" width="143" height="17"/>
+                                <rect key="frame" x="16" y="271" width="143" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="# of Students:">
                                         <attributes>
@@ -521,7 +531,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6m-wm-oVT">
-                                <rect key="frame" x="16" y="301" width="173.5" height="17"/>
+                                <rect key="frame" x="16" y="315" width="173.5" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Average Math SAT:">
                                         <attributes>
@@ -543,7 +553,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="415" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-fO-ZxX">
-                                <rect key="frame" x="230.5" y="345" width="31" height="17"/>
+                                <rect key="frame" x="230.5" y="359" width="31" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -552,7 +562,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCC-7s-n17">
-                                <rect key="frame" x="169" y="257" width="31" height="17"/>
+                                <rect key="frame" x="169" y="271" width="31" height="17"/>
                                 <attributedString key="attributedText">
                                     <fragment content="777">
                                         <attributes>
@@ -572,7 +582,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdU-xv-kuH">
-                                <rect key="frame" x="16" y="69" width="736" height="42"/>
+                                <rect key="frame" x="16" y="69" width="1080" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Your School Here">
                                         <attributes>
@@ -785,15 +795,6 @@
                         <viewLayoutGuide key="safeArea" id="4rO-be-lAJ"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="YXT-Du-4Ef"/>
-                                <exclude reference="aEf-Lg-kMW"/>
-                                <exclude reference="jfe-VE-sV5"/>
-                                <exclude reference="6xy-Ps-tsV"/>
-                                <exclude reference="ZmZ-Tk-qyg"/>
-                                <exclude reference="3vf-xl-xSX"/>
-                                <exclude reference="dYM-Jb-Lwz"/>
-                                <exclude reference="VQQ-j7-7IW"/>
-                                <exclude reference="avc-tq-RD9"/>
                                 <exclude reference="4lI-JG-0eF"/>
                                 <exclude reference="Fwb-bd-zml"/>
                                 <exclude reference="KAD-vD-4pf"/>
@@ -803,13 +804,8 @@
                                 <exclude reference="ZTe-4L-HHQ"/>
                                 <exclude reference="Vav-1h-087"/>
                                 <exclude reference="d60-Xh-JPB"/>
-                                <exclude reference="JWG-3T-KmP"/>
-                                <exclude reference="e2a-jy-Xcd"/>
                                 <exclude reference="Fgo-Ae-rTv"/>
                                 <exclude reference="Rtz-oY-cBw"/>
-                                <exclude reference="Z03-uG-8JZ"/>
-                                <exclude reference="jQw-Tk-69Q"/>
-                                <exclude reference="yDj-GT-BV4"/>
                                 <exclude reference="SHN-kg-5S9"/>
                                 <exclude reference="gFa-IC-FB3"/>
                                 <exclude reference="nKj-Aq-FC4"/>
@@ -820,9 +816,30 @@
                                 <exclude reference="uAZ-QR-grb"/>
                                 <exclude reference="g1a-Na-Qc8"/>
                                 <exclude reference="kSt-mB-zCX"/>
+                                <exclude reference="JWG-3T-KmP"/>
+                                <exclude reference="e2a-jy-Xcd"/>
+                                <exclude reference="Z03-uG-8JZ"/>
+                                <exclude reference="jQw-Tk-69Q"/>
+                                <exclude reference="yDj-GT-BV4"/>
+                                <exclude reference="YXT-Du-4Ef"/>
+                                <exclude reference="aEf-Lg-kMW"/>
+                                <exclude reference="jfe-VE-sV5"/>
+                                <exclude reference="6xy-Ps-tsV"/>
+                                <exclude reference="ZmZ-Tk-qyg"/>
                                 <exclude reference="Ifm-yv-B0u"/>
                                 <exclude reference="LWH-fw-Mep"/>
                                 <exclude reference="eD9-Lt-Rr1"/>
+                                <exclude reference="3vf-xl-xSX"/>
+                                <exclude reference="dYM-Jb-Lwz"/>
+                                <exclude reference="FWh-JF-jwU"/>
+                                <exclude reference="ScJ-eO-0b7"/>
+                                <exclude reference="VQQ-j7-7IW"/>
+                                <exclude reference="avc-tq-RD9"/>
+                                <exclude reference="H0s-It-zDr"/>
+                                <exclude reference="RJC-aY-mXk"/>
+                                <exclude reference="fcM-31-UhY"/>
+                                <exclude reference="n1E-h6-Nx0"/>
+                                <exclude reference="MSd-tv-W74"/>
                                 <exclude reference="Ld8-w3-A1x"/>
                                 <exclude reference="Lez-Db-Q6Z"/>
                                 <exclude reference="NxQ-QW-McK"/>
@@ -832,12 +849,11 @@
                                 <exclude reference="WK7-80-b5L"/>
                                 <exclude reference="XnE-sp-iWH"/>
                                 <exclude reference="qi9-03-anG"/>
-                                <exclude reference="H0s-It-zDr"/>
-                                <exclude reference="RJC-aY-mXk"/>
-                                <exclude reference="fcM-31-UhY"/>
-                                <exclude reference="n1E-h6-Nx0"/>
-                                <exclude reference="FWh-JF-jwU"/>
-                                <exclude reference="ScJ-eO-0b7"/>
+                                <exclude reference="MrQ-kc-fy9"/>
+                                <exclude reference="f2k-7R-VfC"/>
+                                <exclude reference="ugq-So-zVE"/>
+                                <exclude reference="xEb-fY-g4A"/>
+                                <exclude reference="ve1-s9-Kn3"/>
                                 <exclude reference="3XJ-rm-rrV"/>
                                 <exclude reference="C9E-e2-EiE"/>
                                 <exclude reference="Cpd-us-BYG"/>
@@ -856,12 +872,6 @@
                                 <exclude reference="j0V-Pr-XXH"/>
                                 <exclude reference="sl0-yV-8qs"/>
                                 <exclude reference="tf5-nP-Rcj"/>
-                                <exclude reference="ve1-s9-Kn3"/>
-                                <exclude reference="MSd-tv-W74"/>
-                                <exclude reference="MrQ-kc-fy9"/>
-                                <exclude reference="f2k-7R-VfC"/>
-                                <exclude reference="ugq-So-zVE"/>
-                                <exclude reference="xEb-fY-g4A"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
@@ -872,23 +882,6 @@
                                 <exclude reference="fCC-7s-n17"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="FNl-A7-Rf4"/>
-                                <exclude reference="PCp-l5-h2e"/>
-                                <include reference="YXT-Du-4Ef"/>
-                                <exclude reference="aEf-Lg-kMW"/>
-                                <exclude reference="jfe-VE-sV5"/>
-                                <include reference="6xy-Ps-tsV"/>
-                                <include reference="ZmZ-Tk-qyg"/>
-                                <exclude reference="gg6-VG-oD3"/>
-                                <exclude reference="pfY-db-Vm4"/>
-                                <include reference="3vf-xl-xSX"/>
-                                <exclude reference="MXf-9g-Wqh"/>
-                                <exclude reference="O8J-hR-AMB"/>
-                                <include reference="dYM-Jb-Lwz"/>
-                                <exclude reference="Ew9-gL-Djc"/>
-                                <include reference="VQQ-j7-7IW"/>
-                                <include reference="avc-tq-RD9"/>
-                                <exclude reference="pI0-8F-kg2"/>
                                 <include reference="4lI-JG-0eF"/>
                                 <include reference="Fwb-bd-zml"/>
                                 <exclude reference="aFu-0a-dWo"/>
@@ -901,20 +894,10 @@
                                 <include reference="d60-Xh-JPB"/>
                                 <exclude reference="eGm-l3-W3l"/>
                                 <exclude reference="zGr-zq-QuQ"/>
-                                <exclude reference="GKb-wI-EgN"/>
-                                <include reference="JWG-3T-KmP"/>
-                                <exclude reference="Rbj-JA-YsS"/>
-                                <exclude reference="ZmH-Ud-Afd"/>
-                                <include reference="e2a-jy-Xcd"/>
                                 <include reference="Fgo-Ae-rTv"/>
                                 <include reference="Rtz-oY-cBw"/>
                                 <exclude reference="dbq-WW-H2a"/>
                                 <exclude reference="so0-Fc-cmN"/>
-                                <exclude reference="MFf-U7-ciQ"/>
-                                <exclude reference="T9B-XL-ob3"/>
-                                <include reference="Z03-uG-8JZ"/>
-                                <include reference="jQw-Tk-69Q"/>
-                                <include reference="yDj-GT-BV4"/>
                                 <exclude reference="9i2-gt-lzB"/>
                                 <exclude reference="Aly-Ww-Md0"/>
                                 <include reference="SHN-kg-5S9"/>
@@ -933,11 +916,49 @@
                                 <include reference="g1a-Na-Qc8"/>
                                 <include reference="kSt-mB-zCX"/>
                                 <exclude reference="qMy-gM-BoE"/>
+                                <exclude reference="GKb-wI-EgN"/>
+                                <include reference="JWG-3T-KmP"/>
+                                <exclude reference="Rbj-JA-YsS"/>
+                                <exclude reference="ZmH-Ud-Afd"/>
+                                <include reference="e2a-jy-Xcd"/>
+                                <exclude reference="MFf-U7-ciQ"/>
+                                <exclude reference="T9B-XL-ob3"/>
+                                <include reference="Z03-uG-8JZ"/>
+                                <include reference="jQw-Tk-69Q"/>
+                                <include reference="yDj-GT-BV4"/>
+                                <exclude reference="FNl-A7-Rf4"/>
+                                <exclude reference="PCp-l5-h2e"/>
+                                <include reference="YXT-Du-4Ef"/>
+                                <exclude reference="aEf-Lg-kMW"/>
+                                <exclude reference="jfe-VE-sV5"/>
+                                <include reference="6xy-Ps-tsV"/>
+                                <include reference="ZmZ-Tk-qyg"/>
+                                <exclude reference="gg6-VG-oD3"/>
+                                <exclude reference="pfY-db-Vm4"/>
                                 <exclude reference="1FD-hx-lc8"/>
                                 <exclude reference="93s-1c-BBC"/>
                                 <include reference="Ifm-yv-B0u"/>
                                 <include reference="LWH-fw-Mep"/>
                                 <include reference="eD9-Lt-Rr1"/>
+                                <include reference="3vf-xl-xSX"/>
+                                <exclude reference="MXf-9g-Wqh"/>
+                                <exclude reference="O8J-hR-AMB"/>
+                                <include reference="dYM-Jb-Lwz"/>
+                                <include reference="FWh-JF-jwU"/>
+                                <exclude reference="OAy-5Z-Gat"/>
+                                <include reference="ScJ-eO-0b7"/>
+                                <exclude reference="YZR-vv-dXx"/>
+                                <exclude reference="Ew9-gL-Djc"/>
+                                <include reference="VQQ-j7-7IW"/>
+                                <include reference="avc-tq-RD9"/>
+                                <exclude reference="pI0-8F-kg2"/>
+                                <exclude reference="7hq-fa-OiZ"/>
+                                <include reference="H0s-It-zDr"/>
+                                <include reference="fcM-31-UhY"/>
+                                <exclude reference="nS9-hV-sKy"/>
+                                <include reference="MSd-tv-W74"/>
+                                <exclude reference="qzH-dO-nNF"/>
+                                <exclude reference="sqU-as-hRT"/>
                                 <exclude reference="4Ml-n9-i1p"/>
                                 <exclude reference="EZh-LT-Mwd"/>
                                 <exclude reference="JRy-FJ-nu2"/>
@@ -946,14 +967,15 @@
                                 <exclude reference="UXs-fY-q2X"/>
                                 <exclude reference="WK7-80-b5L"/>
                                 <exclude reference="qi9-03-anG"/>
-                                <exclude reference="7hq-fa-OiZ"/>
-                                <include reference="H0s-It-zDr"/>
-                                <include reference="fcM-31-UhY"/>
-                                <exclude reference="nS9-hV-sKy"/>
-                                <include reference="FWh-JF-jwU"/>
-                                <exclude reference="OAy-5Z-Gat"/>
-                                <include reference="ScJ-eO-0b7"/>
-                                <exclude reference="YZR-vv-dXx"/>
+                                <exclude reference="IG0-f5-sDt"/>
+                                <exclude reference="J0y-Tv-aFS"/>
+                                <include reference="MrQ-kc-fy9"/>
+                                <include reference="f2k-7R-VfC"/>
+                                <include reference="ugq-So-zVE"/>
+                                <include reference="xEb-fY-g4A"/>
+                                <exclude reference="7fa-TC-nqC"/>
+                                <exclude reference="e1b-d2-926"/>
+                                <include reference="ve1-s9-Kn3"/>
                                 <exclude reference="1Zr-6L-ZE0"/>
                                 <exclude reference="30F-eD-3H0"/>
                                 <exclude reference="3XJ-rm-rrV"/>
@@ -967,31 +989,19 @@
                                 <exclude reference="j0V-Pr-XXH"/>
                                 <include reference="sl0-yV-8qs"/>
                                 <exclude reference="tf5-nP-Rcj"/>
-                                <exclude reference="7fa-TC-nqC"/>
-                                <exclude reference="e1b-d2-926"/>
-                                <include reference="ve1-s9-Kn3"/>
-                                <include reference="MSd-tv-W74"/>
-                                <exclude reference="qzH-dO-nNF"/>
-                                <exclude reference="sqU-as-hRT"/>
-                                <exclude reference="IG0-f5-sDt"/>
-                                <exclude reference="J0y-Tv-aFS"/>
-                                <include reference="MrQ-kc-fy9"/>
-                                <include reference="f2k-7R-VfC"/>
-                                <include reference="ugq-So-zVE"/>
-                                <include reference="xEb-fY-g4A"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="FNl-A7-Rf4"/>
                                 <include reference="xov-RT-7Ld"/>
+                                <exclude reference="FNl-A7-Rf4"/>
+                                <exclude reference="RJC-aY-mXk"/>
+                                <include reference="n1E-h6-Nx0"/>
                                 <exclude reference="4Ml-n9-i1p"/>
                                 <exclude reference="EZh-LT-Mwd"/>
                                 <exclude reference="JRy-FJ-nu2"/>
                                 <include reference="Ld8-w3-A1x"/>
                                 <include reference="S3P-zO-3jJ"/>
-                                <exclude reference="RJC-aY-mXk"/>
-                                <include reference="n1E-h6-Nx0"/>
                                 <exclude reference="1Zr-6L-ZE0"/>
                                 <exclude reference="30F-eD-3H0"/>
                                 <include reference="C9E-e2-EiE"/>
@@ -1033,6 +1043,7 @@
                         <outlet property="avgReadingSATLabel" destination="qZI-fO-ZxX" id="Obo-kc-2lf"/>
                         <outlet property="avgWritingSAT" destination="sDi-IX-uxV" id="7J7-Le-nmL"/>
                         <outlet property="cityLabel" destination="x7c-Xp-U2m" id="eF5-WC-e1v"/>
+                        <outlet property="emailItem" destination="rtf-Lg-EUw" id="3vt-FZ-VOr"/>
                         <outlet property="emailLabel" destination="Vkj-Dn-Nf4" id="ZnC-Cp-Yz3"/>
                         <outlet property="faxLabel" destination="Ajr-By-KX1" id="urC-Co-I4y"/>
                         <outlet property="highSchoolNameLabel" destination="SdU-xv-kuH" id="5dw-lM-imG"/>
