@@ -1,9 +1,9 @@
 //
 //  ParseCityHighSchoolsSATDataXMLTask.swift
-//  NYCHighSchools
+//  20190129-MattLintlop-NYCSchools
 //
 //  Created by Matt Lintlop on 2/12/18.
-//  Copyright © 2018 Matthew Lintlop. All rights reserved.
+//  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 
 // City high school SAT data information

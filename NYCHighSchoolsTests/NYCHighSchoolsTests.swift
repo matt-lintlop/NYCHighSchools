@@ -1,9 +1,9 @@
 //
-//  NYCHighSchoolsTests.swift
-//  NYCHighSchoolsTests
+//  20190129-MattLintlop-NYCSchoolsTests.swift
+//  20190129-MattLintlop-NYCSchoolsTests
 //
-//  Created by Matthew Lintlop on 2/1/18.
-//  Copyright © 2018 Matthew Lintlop. All rights reserved.
+//  Created by Matthew Lintlop on 1/29/2019.
+//  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 
 import XCTest

@@ -1,9 +1,9 @@
 //
 //  CityHighSchoolsTableViewController.swift
-//  NYCHighSchools
+//  20190129-MattLintlop-NYCSchools
 //
 //  Created by Matt Lintlop on 2/10/18.
-//  Copyright © 2018 Matthew Lintlop. All rights reserved.
+//  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 
 import UIKit
