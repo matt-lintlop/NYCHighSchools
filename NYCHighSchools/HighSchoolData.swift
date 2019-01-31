@@ -1,6 +1,6 @@
 //
 //  HighSchoolData.swift
-//  20190129-MattLintlop-NYCSchools
+//  20190130-MattLintlop-NYCSchools
 //
 //  This class has information about a single city high school.
 //  Created by Matthew Lintlop on 1/29/2019.
