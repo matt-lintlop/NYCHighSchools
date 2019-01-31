@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NYCHighSchools
+@testable import 20190131-MattLintlop-NYCSchools
 
 class NYCHighSchoolsTests: XCTestCase {
     
