@@ -2,12 +2,12 @@
 //  20190131-MattLintlop-NYCSchoolsTests.swift
 //  20190131-MattLintlop-NYCSchoolsTests
 //
-//  Created by Matthew Lintlop on 1/29/2019.
+//  Created by Matthew Lintlop on 1/30/2019.
 //  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 
 import XCTest
-@testable import 20190131-MattLintlop-NYCSchools
+@testable import NYCSchools
 
 class NYCHighSchoolsTests: XCTestCase {
     

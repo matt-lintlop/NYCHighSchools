@@ -3,7 +3,7 @@
 //  20190131-MattLintlop-NYCSchools
 //
 //  This class has information about a single city high school.
-//  Created by Matthew Lintlop on 1/29/2019.
+//  Created by Matthew Lintlop on 1/30/2019.
 //  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 

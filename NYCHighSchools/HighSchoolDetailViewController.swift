@@ -172,6 +172,8 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
 //        frame.size.height = self.overviewParagrapTextView.contentSize.height
 //        self.overviewParagrapTextView.frame = frame
         
+        self.overviewParagrapTextView.contentOffset = CGPoint.zero      // testing
+                
         // show the school's location in the map view
         updateMapWithSchoolLocation()
 
