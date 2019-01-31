@@ -15,17 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case highSchoolDataSortKey = "high_school_data_sort_type"
     }
     
-    // URL of NYC High Schools Names XML
-    let newYorkCitySchoolDataXMLPath = "https://data.cityofnewyork.us/api/views/s3k6-pzi2/rows.xml?accessType=DOWNLOAD"
-    
     // Offline NYC High Schools Names XML Filename
-    let offlineNewYorkCitySchoolDataXMLFile = "NYC_2017_High_Schools_Names"
+    let offlineNewYorkCitySchoolDataXMLFile = "2017-NYC-Schools-Directory"
     
-    // URL of NYC High Schools SAT Data XML
-    let newYorkCitySchoolSATDataXMLPath = "https://data.cityofnewyork.us/api/views/f9bf-2cp4/rows.xml?accessType=DOWNLOAD"
-
     // Offline NYC High Schools SAT Data XML Filename
-    let offlineNewYorkCitySchoolSATDataXMLFile = "NYC_2017_High_Schools_SAT_Data"
+    let offlineNewYorkCitySchoolSATDataXMLFile = "2012-NYC-Schools-SAT-Results"
     
     let cityName = "NYC"
 
@@ -33,10 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var cityHighSchoolsSATDataInfo: CityHighSchoolsSATDataInfo?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        // get the current high school data sort type
-        let dataSortType = getHighSchoolDataSortType()
-        
         // initialize the URLS to the city's data & SAT data
         var offlineCityHighSchoolDataXMLURL: URL?
         var offlineCityHighSchoolSATDataXMLURL: URL?
@@ -48,9 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         cityHighSchoolsSATDataInfo = CityHighSchoolsSATDataInfo(city: cityName,
                                                                 cityOfflineHighSchoolDataURL: offlineCityHighSchoolDataXMLURL,
-                                                                cityOfflineHighSchoolSATDataURL: offlineCityHighSchoolSATDataXMLURL,
-                                                                cityHighSchoolDataURL: URL(string: newYorkCitySchoolDataXMLPath),
-                                                                cityHighSchoolSATDataURL: URL(string: newYorkCitySchoolSATDataXMLPath))
+                                                                cityOfflineHighSchoolSATDataURL: offlineCityHighSchoolSATDataXMLURL)
         
         // Application tintColor
         window?.tintColor = UIColor.white

@@ -11,8 +11,6 @@ struct CityHighSchoolsSATDataInfo {
     var city: String                                    // name of city for showing SAT data
     var cityOfflineHighSchoolDataURL: URL?              // url of offline city high school data xml
     var cityOfflineHighSchoolSATDataURL: URL?           // url of offline city high school SAT data xml
-    var cityHighSchoolDataURL: URL?                     // url of city high school data xml
-    var cityHighSchoolSATDataURL: URL?                  // url of city high school SAT data xml
 }
 import UIKit
 
@@ -42,12 +40,6 @@ class ParseCityHighSchoolsSATDataXMLTask {
     }
     
     func parseCityHighSchoolsData() {
-        if hasNetwork && !useOfflineData {
-            if let url = citySATDataInfo.cityHighSchoolDataURL {
-                parseCityHighSchoolsData(with: url)
-                return
-            }
-        }
         if let url = citySATDataInfo.cityOfflineHighSchoolDataURL {
             parseCityHighSchoolsData(with: url)
         }
@@ -78,7 +70,7 @@ class ParseCityHighSchoolsSATDataXMLTask {
     }
     
     func checkForNetwork() -> Bool {
-        guard let url = citySATDataInfo.cityHighSchoolDataURL else {
+        guard let url = URL(string:"https://data.cityofnewyork.us/api/views/s3k6-pzi2") else {
             return false
         }
         guard let hostName = url.host else {
@@ -110,12 +102,6 @@ class ParseCityHighSchoolsSATDataXMLTask {
     }
     
     func parseCityHighSchoolsSATData() {
-        if hasNetwork {
-            if let url = citySATDataInfo.cityHighSchoolSATDataURL {
-                parseCityHighSchoolsSATData(with: url)
-                return
-            }
-        }
         if let url = citySATDataInfo.cityOfflineHighSchoolSATDataURL {
             parseCityHighSchoolsSATData(with: url)
         }
