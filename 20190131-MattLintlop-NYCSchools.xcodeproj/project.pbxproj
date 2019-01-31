@@ -55,13 +55,13 @@
 		17DD574C203123C100C4E29F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		17DD574E2031245E00C4E29F /* HighSchoolNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolNameCell.swift; sourceTree = "<group>"; };
 		348F8E982024097000762920 /* HighSchoolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighSchoolData.swift; sourceTree = "<group>"; };
-		34B28C432023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20190130-MattLintlop-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B28C432023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "20190131-MattLintlop-NYCSchools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B28C462023E58D0025DE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34B28C4B2023E58D0025DE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34B28C4D2023E58D0025DE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34B28C502023E58D0025DE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34B28C522023E58D0025DE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34B28C572023E58D0025DE07 /* 20190130-MattLintlop-NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20190130-MattLintlop-NYCSchoolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B28C572023E58D0025DE07 /* 20190131-MattLintlop-NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "20190131-MattLintlop-NYCSchoolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B28C5B2023E58E0025DE07 /* NYCHighSchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCHighSchoolsTests.swift; sourceTree = "<group>"; };
 		34B28C5D2023E58E0025DE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E93D852202722500D21D45 /* 2012-NYC-Schools-SAT-Results.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "2012-NYC-Schools-SAT-Results.xml"; sourceTree = "<group>"; };
@@ -116,8 +116,8 @@
 		34B28C442023E58D0025DE07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				34B28C432023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools.app */,
-				34B28C572023E58D0025DE07 /* 20190130-MattLintlop-NYCSchoolsTests.xctest */,
+				34B28C432023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools.app */,
+				34B28C572023E58D0025DE07 /* 20190131-MattLintlop-NYCSchoolsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		34B28C422023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools */ = {
+		34B28C422023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34B28C602023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190130-MattLintlop-NYCSchools" */;
+			buildConfigurationList = 34B28C602023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190131-MattLintlop-NYCSchools" */;
 			buildPhases = (
 				34B28C3F2023E58D0025DE07 /* Sources */,
 				34B28C402023E58D0025DE07 /* Frameworks */,
@@ -172,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = "20190130-MattLintlop-NYCSchools";
+			name = "20190131-MattLintlop-NYCSchools";
 			productName = NYCHighSchools;
-			productReference = 34B28C432023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools.app */;
+			productReference = 34B28C432023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools.app */;
 			productType = "com.apple.product-type.application";
 		};
-		34B28C562023E58D0025DE07 /* 20190130-MattLintlop-NYCSchoolsTests */ = {
+		34B28C562023E58D0025DE07 /* 20190131-MattLintlop-NYCSchoolsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 34B28C632023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190130-MattLintlop-NYCSchoolsTests" */;
+			buildConfigurationList = 34B28C632023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190131-MattLintlop-NYCSchoolsTests" */;
 			buildPhases = (
 				34B28C532023E58D0025DE07 /* Sources */,
 				34B28C542023E58D0025DE07 /* Frameworks */,
@@ -190,9 +190,9 @@
 			dependencies = (
 				34B28C592023E58D0025DE07 /* PBXTargetDependency */,
 			);
-			name = "20190130-MattLintlop-NYCSchoolsTests";
+			name = "20190131-MattLintlop-NYCSchoolsTests";
 			productName = NYCHighSchoolsTests;
-			productReference = 34B28C572023E58D0025DE07 /* 20190130-MattLintlop-NYCSchoolsTests.xctest */;
+			productReference = 34B28C572023E58D0025DE07 /* 20190131-MattLintlop-NYCSchoolsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 34B28C3E2023E58D0025DE07 /* Build configuration list for PBXProject "20190130-MattLintlop-NYCSchools" */;
+			buildConfigurationList = 34B28C3E2023E58D0025DE07 /* Build configuration list for PBXProject "20190131-MattLintlop-NYCSchools" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -230,8 +230,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				34B28C422023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools */,
-				34B28C562023E58D0025DE07 /* 20190130-MattLintlop-NYCSchoolsTests */,
+				34B28C422023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools */,
+				34B28C562023E58D0025DE07 /* 20190131-MattLintlop-NYCSchoolsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 /* Begin PBXTargetDependency section */
 		34B28C592023E58D0025DE07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 34B28C422023E58D0025DE07 /* 20190130-MattLintlop-NYCSchools */;
+			target = 34B28C422023E58D0025DE07 /* 20190131-MattLintlop-NYCSchools */;
 			targetProxy = 34B28C582023E58D0025DE07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -476,7 +476,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20190130-MattLintlop-NYCSchools.app/20190130-MattLintlop-NYCSchools";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20190131-MattLintlop-NYCSchools.app/20190131-MattLintlop-NYCSchools";
 			};
 			name = Debug;
 		};
@@ -493,14 +493,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20190130-MattLintlop-NYCSchools.app/20190130-MattLintlop-NYCSchools";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20190131-MattLintlop-NYCSchools.app/20190131-MattLintlop-NYCSchools";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		34B28C3E2023E58D0025DE07 /* Build configuration list for PBXProject "20190130-MattLintlop-NYCSchools" */ = {
+		34B28C3E2023E58D0025DE07 /* Build configuration list for PBXProject "20190131-MattLintlop-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				34B28C5E2023E58E0025DE07 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34B28C602023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190130-MattLintlop-NYCSchools" */ = {
+		34B28C602023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190131-MattLintlop-NYCSchools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				34B28C612023E58E0025DE07 /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		34B28C632023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190130-MattLintlop-NYCSchoolsTests" */ = {
+		34B28C632023E58E0025DE07 /* Build configuration list for PBXNativeTarget "20190131-MattLintlop-NYCSchoolsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				34B28C642023E58E0025DE07 /* Debug */,

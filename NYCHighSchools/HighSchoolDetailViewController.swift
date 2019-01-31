@@ -1,8 +1,8 @@
 //
 //  HighSchoolDetailViewController.swift
-//  20190130-MattLintlop-NYCSchools
+//  20190131-MattLintlop-NYCSchools
 //
-//  Created by Matt Lintlop on 1/30/2019.
+//  Created by Matt Lintlop on 1/31/2019.
 //  Copyright © 2019 Matthew Lintlop. All rights reserved.
 //
 
@@ -27,7 +27,6 @@ class HighSchoolDetailViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var emailItem: UILabel!
-    
     
     
     var highSchoolData: HighSchoolData?         // high school's data including average SAT scores
